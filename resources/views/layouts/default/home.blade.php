@@ -2,7 +2,6 @@
 @section('title', __('home.welcome.title'))
 
 @section('content')
-aaaaaaaaaaaaaaaaaaaaaaaa
 <div class="row">
   <div class="col-sm-12">
   </div>

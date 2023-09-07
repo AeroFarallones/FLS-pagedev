@@ -2,14 +2,13 @@
 @section('title', __('home.welcome.title'))
 
 @section('content')
-Esta es la rama dev
 <div class="row">
   <div class="col-sm-12">
   </div>
 </div>
 <div class="row">
   <div class="col-sm-12">
-    <h2 class="description">@lang('common.newestpilots')</h2>
+    <h2 class="description">Bienvenido a la rama dev</h2>
     @foreach($users as $user)
     <div class="card card-signup blue-bg">
       <div class="header header-primary text-center blue-bg">

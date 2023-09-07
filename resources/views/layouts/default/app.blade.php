@@ -7,7 +7,7 @@
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
 
-  <title>@yield('title') s - {{ config('app.name') }}</title>
+  <title>@yield('title') - {{ config('app.name') }}</title>
 
   {{-- Start of required lines block. DON'T REMOVE THESE LINES! They're required or might break things --}}
   <meta name="base-url" content="{!! url('') !!}">

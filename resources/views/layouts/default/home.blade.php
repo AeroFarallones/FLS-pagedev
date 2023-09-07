@@ -2,7 +2,7 @@
 @section('title', __('home.welcome.title'))
 
 @section('content')
-aaaaaaaaaaaaaaaaaaaaaaaa
+Esta es la rama dev
 <div class="row">
   <div class="col-sm-12">
   </div>

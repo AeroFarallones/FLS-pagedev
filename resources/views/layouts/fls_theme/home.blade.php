@@ -8,7 +8,7 @@
 </div>
 <div class="row">
   <div class="col-sm-12">
-    <h2 class="description">Bienvenido a la rama dev y al theme <b>AeroFarallones</b></h2>
+    <h2 class="description">Bienvenido a la rama tours module y al theme <b>AeroFarallones</b></h2>
     @foreach($users as $user)
     <div class="card card-signup blue-bg">
       <div class="header header-primary text-center blue-bg">

@@ -1,0 +1,16 @@
+{
+    "name": "ToursFls",
+    "alias": "toursfls",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\ToursFls\\Providers\\AppServiceProvider",
+        "Modules\\ToursFls\\Providers\\EventServiceProvider",
+        "Modules\\ToursFls\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

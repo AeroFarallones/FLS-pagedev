@@ -20,7 +20,7 @@
   <link href="{{ public_asset('/assets/frontend/css/bootstrap.min.css') }}" rel="stylesheet" />
   <link href="{{ public_mix('/assets/frontend/css/now-ui-kit.css') }}" rel="stylesheet" />
   <link href="{{ public_asset('/assets/frontend/css/styles.css') }}" rel="stylesheet" />
-
+  <link href="{{ public_asset('/assets/frontend/css/custom.css') }}" rel="stylesheet" />
   {{-- Start of the required files in the head block --}}
   <link href="{{ public_mix('/assets/global/css/vendor.css') }}" rel="stylesheet" />
   @yield('css')

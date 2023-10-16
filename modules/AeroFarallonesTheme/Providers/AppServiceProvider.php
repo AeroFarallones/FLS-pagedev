@@ -3,6 +3,7 @@
 namespace Modules\AeroFarallonesTheme\Providers;
 
 use App\Contracts\Modules\ServiceProvider;
+use App\Services\ModuleService;
 
 /**
  * @package $NAMESPACE$
@@ -18,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->moduleSvc = app('App\Services\ModuleService');
+        $this->moduleSvc = app(ModuleService::class);
 
         $this->registerTranslations();
         $this->registerConfig();
@@ -28,6 +29,8 @@ class AppServiceProvider extends ServiceProvider
 
         // Uncomment this if you have migrations
         // $this->loadMigrationsFrom(__DIR__ . '/../$MIGRATIONS_PATH$');
+
+        app('arrilot.widget-namespaces')->registerNamespace('Fls', 'Modules\AeroFarallonesTheme\Widgets');
     }
 
     /**
@@ -56,10 +59,10 @@ class AppServiceProvider extends ServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
-            __DIR__.'/../Config/config.php' => config_path('aerofarallonestheme.php'),
+            __DIR__ . '/../Config/config.php' => config_path('aerofarallonestheme.php'),
         ], 'aerofarallonestheme');
 
-        $this->mergeConfigFrom(__DIR__.'/../Config/config.php', 'aerofarallonestheme');
+        $this->mergeConfigFrom(__DIR__ . '/../Config/config.php', 'aerofarallonestheme');
     }
 
     /**
@@ -68,9 +71,9 @@ class AppServiceProvider extends ServiceProvider
     public function registerViews()
     {
         $viewPath = resource_path('views/modules/aerofarallonestheme');
-        $sourcePath = __DIR__.'/../Resources/views';
+        $sourcePath = __DIR__ . '/../Resources/views';
 
-        $this->publishes([$sourcePath => $viewPath],'views');
+        $this->publishes([$sourcePath => $viewPath], 'views');
 
         $this->loadViewsFrom(array_merge(array_map(function ($path) {
             return $path . '/modules/aerofarallonestheme';
@@ -87,7 +90,7 @@ class AppServiceProvider extends ServiceProvider
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, 'aerofarallonestheme');
         } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'aerofarallonestheme');
+            $this->loadTranslationsFrom(__DIR__ . '/../Resources/lang', 'aerofarallonestheme');
         }
     }
 }

@@ -1,10 +1,9 @@
 {{-- Incio de las tarjetas leader --}}
 
 {{-- @if ($title) --}}
-<div class="w-50 h-100 bg-warning border border-black"  >
+<div class="w-50 h-5 bg-warning border border-black margin mt-4"  >
     <div class="border border-black">
         <span>Leaderboard | October (2023)</span>
-        
     </div>
     <div>
         <div class="container text-center">

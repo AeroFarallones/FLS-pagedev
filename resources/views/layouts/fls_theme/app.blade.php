@@ -26,7 +26,7 @@
   <link href="{{ public_mix('/assets/global/css/vendor.css') }}" rel="stylesheet" />
   @yield('css')
   @yield('scripts_head')
-  {{-- End of the required stuff in the head block --}}
+  {{-- End of the required stuff in| the head block --}}
 
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"

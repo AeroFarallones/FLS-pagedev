@@ -1,5 +1,4 @@
 {
   "name": "AeroFarallones",
-  "parent_theme": null,
-  "extends": "default"
+  "parent_theme": null
 }

@@ -17,7 +17,8 @@
 
   <link rel="shortcut icon" type="image/png" href="{{ public_asset('/assets/img/favicon.png') }}" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-  <link href="{{ public_asset('/assets/frontend/css/bootstrap.min.css') }}" rel="stylesheet" />
+  {{--
+  <link href="{{ public_asset('/assets/frontend/css/bootstrap.min.css') }}" rel="stylesheet" /> --}}
   <link href="{{ public_mix('/assets/frontend/css/now-ui-kit.css') }}" rel="stylesheet" />
   <link href="{{ public_asset('/assets/frontend/css/styles.css') }}" rel="stylesheet" />
   <link href="{{ public_asset('/assets/frontend/css/custom.css') }}" rel="stylesheet" />
@@ -27,22 +28,40 @@
   @yield('scripts_head')
   {{-- End of the required stuff in the head block --}}
 
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg " style="background: #067ec1;">
+
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+
     <a class="navbar-brand text-white" href="{{ url('/') }}" style="margin-left: 20px;">
-      <img src="{{ public_asset('/assets/img/logo_blue_bg.svg') }}" width="135px" alt="" />
+      AeroFarallones
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars text-white"></i>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+      aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse justify-content-end" id="navigation">
       @include('nav')
     </div>
   </nav>
+
+  {{-- <nav class="navbar navbar-dark bg-dark fixed-top" style="background: #067ec1;">
+
+
+
+
+  </nav> --}}
+
+
+
   <!-- End Navbar -->
   <div id="top_anchor" class="clearfix" style="height: 25px;"></div>
   <div class="wrapper">
@@ -57,22 +76,19 @@
     </div>
     <div class="clearfix" style="height: 200px;"></div>
 
-    <footer class="footer footer-default">
+    {{-- <footer class="footer footer-default">
       <div class="container">
         <div class="copyright">
-          {{--
-          This "powered by phpVMS" must be kept visible. as-per the the license
-          If you want to remove the attribution, a license can be purchased
-          https://docs.phpvms.net/#license
-          --}}
           powered by <a href="http://www.phpvms.net" target="_blank">phpvms</a>
         </div>
       </div>
-    </footer>
+    </footer> --}}
   </div>
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
   {{-- Start of the required tags block. Don't remove these or things will break!! --}}
   <script src="{{ public_mix('/assets/global/js/vendor.js') }}"></script>
   <script src="{{ public_mix('/assets/frontend/js/vendor.js') }}"></script>

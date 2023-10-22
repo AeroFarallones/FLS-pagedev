@@ -43,5 +43,5 @@
 
   </div>
 </div>
-@widget('Fls::LeaderBoard', ['title' => "", 'date' => false])
+@widget('Fls::LeaderBoard', ['title' => "Pilotos", 'date' => true])
 @endsection

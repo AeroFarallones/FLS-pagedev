@@ -26,7 +26,7 @@
   <link href="{{ public_mix('/assets/global/css/vendor.css') }}" rel="stylesheet" />
   @yield('css')
   @yield('scripts_head')
-  {{-- End of the required stuff in| the head block --}}
+  {{-- End of the required stuff in the head block --}}
 
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -38,7 +38,7 @@
 <body>
   <!-- Navbar -->
 
-  <nav class="navbar navbar-dark bg-dark fixed-top">
+  {{-- <nav class="navbar navbar-dark bg-dark fixed-top">
 
     <a class="navbar-brand text-white" href="{{ url('/') }}" style="margin-left: 20px;">
       AeroFarallones
@@ -51,15 +51,20 @@
     <div class="collapse navbar-collapse justify-content-end" id="navigation">
       @include('nav')
     </div>
-  </nav>
-
-  {{-- <nav class="navbar navbar-dark bg-dark fixed-top" style="background: #067ec1;">
-
-
-
-
   </nav> --}}
 
+  <nav class="navbar navbar-expand-lg " style="background: #067ec1;">
+    <a class="navbar-brand text-white" href="{{ url('/') }}" style="margin-left: 20px;">
+      <img src="{{ public_asset('/assets/img/logo_blue_bg.svg') }}" width="135px" alt="" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+      @include('nav')
+    </div>
+  </nav>
 
 
   <!-- End Navbar -->
@@ -142,6 +147,7 @@
   gtag('config', '{{ $gtag }}');
   </script>
   @endif
+  <script src="https://kit.fontawesome.com/03b0ac721b.js" crossorigin="anonymous"></script>
   {{-- End of the Google Analytics code --}}
 
 </body>

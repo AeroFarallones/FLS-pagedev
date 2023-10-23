@@ -2,8 +2,8 @@
 
 {{-- @if ($title) --}}
 <div class="w-25 border rounded border-black margin mt-4" style="height: 12rem">
-  <div class="border border-black text-white" style="background-color: #00157f; font-weight:bold">
-    <span>Leaderboard | October (2023)</span>
+  <div class="border border-black text-white" style="background-color: #00157f; font-weight:bold; font-family: 'Open Sans', sans-serif;">
+    <span class="" style="-webkit-text-stroke: 0.02rem #fd7e14">Leaderboard | October (2023)</span>
   </div>
   <div>
     <div class="container text-center">
@@ -24,7 +24,7 @@
             <li>44</li>
           </ul>
         </div>
-        <div class="border border-black rounded-pill w-50">
+        <div class="border border-black rounded-pill w-50 mb-auto" style="border-color: #000a54">
           <span>Flights</span>
         </div>
       </div>

@@ -8,7 +8,7 @@
   <div>
     <div class="container text-center">
       <div class="row justify-content-center">
-        <div class="col text-start">
+        <div class="col-6 text-start">
           <span class="fw-semibold">Pilot</span>
           <ul class="list-unstyled">
             <li><i class="fa-solid fa-medal"></i> Marlon</li>
@@ -16,7 +16,7 @@
             <li><i class="fa-solid fa-medal"></i> Julian</li>
           </ul>
         </div>
-        <div class="col text-end">
+        <div class="col-6 text-end">
           <span class="fw-semibold">Record</span>
           <ul style="list-style-type: none">
             <li>44</li>

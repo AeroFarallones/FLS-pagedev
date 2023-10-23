@@ -1,9 +1,9 @@
-<nav class="navbar  fixed-top" style="background: #000a54">
+<nav class="navbar" style="background: #000a54">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{route('frontend.home')}}">Offcanvas dark navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-      aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler btn-close-white border-white" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <i class="fa fa-bars navbar-toggler-icon text-white" aria-hidden="true"></i>
     </button>
     <div class="offcanvas offcanvas-end" style="background: #000a54" tabindex="-1" id="offcanvasDarkNavbar"
       aria-labelledby="offcanvasDarkNavbarLabel">
@@ -14,7 +14,8 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page"
+              href="{{route('frontend.dashboard.index')}}">{{__('common.dashboard')}}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>

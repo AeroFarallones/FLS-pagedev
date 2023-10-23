@@ -20,8 +20,6 @@ class LeaderBoard extends Widget
     public function run()
     {
 
-
-
         $title = $this->config['title'];
         $has_date = $this->config['date'];
 

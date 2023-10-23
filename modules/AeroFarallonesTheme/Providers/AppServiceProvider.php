@@ -62,7 +62,7 @@ class AppServiceProvider extends ServiceProvider
             __DIR__ . '/../Config/config.php' => config_path('aerofarallonestheme.php'),
         ], 'aerofarallonestheme');
 
-        $this->mergeConfigFrom(__DIR__ . '/../Config/config.php', 'aerofarallonestheme');
+        $this->mergeConfigFrom(__DIR__ . '/../Config/config.php', 'Fls');
     }
 
     /**
@@ -77,7 +77,7 @@ class AppServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(array_merge(array_map(function ($path) {
             return $path . '/modules/aerofarallonestheme';
-        }, \Config::get('view.paths')), [$sourcePath]), 'aerofarallonestheme');
+        }, \Config::get('view.paths')), [$sourcePath]), 'Fls');
     }
 
     /**
@@ -90,7 +90,7 @@ class AppServiceProvider extends ServiceProvider
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, 'aerofarallonestheme');
         } else {
-            $this->loadTranslationsFrom(__DIR__ . '/../Resources/lang', 'aerofarallonestheme');
+            $this->loadTranslationsFrom(__DIR__ . '/../Resources/lang', 'Fls');
         }
     }
 }

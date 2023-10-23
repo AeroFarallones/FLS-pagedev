@@ -39,9 +39,10 @@
       </div>
     </div>
     @endforeach
-
+    @widget('Fls::LeaderBoard', ['source' => 'pilot', 'count' => 3, 'type' => 'flights', 'period' => null, 'hub' =>
+    null])
 
   </div>
 </div>
-@widget('Fls::LeaderBoard', ['title' => "Pilotos", 'date' => true])
+
 @endsection

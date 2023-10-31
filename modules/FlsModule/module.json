@@ -1,0 +1,15 @@
+{
+  "name": "FlsModule",
+  "alias": "FlsModule",
+  "description": "phpVMS v7 module for Basic VA features",
+  "keywords": [],
+  "active": 0,
+  "order": 9001,
+  "providers": [
+    "Modules\\FlsModule\\Providers\\Fls_ServiceProvider",
+    "Modules\\FlsModule\\Providers\\Fls_EventProvider"
+  ],
+  "aliases": {},
+  "files": ["fls_helpers.php", "fls_helpers_tech.php"],
+  "requires": []
+}

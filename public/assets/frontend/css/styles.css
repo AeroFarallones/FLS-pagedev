@@ -152,6 +152,10 @@
 *DASHBOARD FLS
 */
 
+.row-dashboard {
+    margin-bottom: 2rem;
+}
+
 .dashboard-card {
     border-radius: 1rem!important;
 }
@@ -160,6 +164,7 @@
     background-color: #00157f;
     border-radius: inherit;
     color: white;
+    padding: 3rem 0 0.5rem 0!important;
 }
 
 .dashboard-icon-margin {

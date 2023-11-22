@@ -17,7 +17,8 @@
     @endif
 
     {{-- TOP BAR WITH BOXES --}}
-    <div class="row gy-3">
+    <div class="row row-dashboard gy-3">
+
       <div class="col-sm-3">
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
@@ -42,14 +43,63 @@
           </div>
         </div>
       </div>
+
       <div class="col-sm-3">
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
-            <div class="icon-background"> {{--110px font-size--}}
-              <i class="fa-solid fa-money-bill fa-2xl dashboard-icon-margin"></i>
+            <div class="icon-background">
+            <i class="fa-solid fa-plane-arrival fa-2xl dashboard-icon-margin"></i>
             </div>
-            <h3 class="header font-montbold dashboard-text-margin">{{ optional($user->journal)->balance ?? 0 }}</h3>
-            <h5 class="description color-white font-montbold dashboard-text-margin">@lang('dashboard.yourbalance')</h5>
+            <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
+              ['user' =>
+              $user->id,
+              'type' => 'avglanding'])</h3>
+            <h5 class="description color-white font-montbold dashboard-text-margin">@lang('dashboard.avglanding')</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card card-primary text-white dashboard-card h-100">
+          <div class="card-body text-center dashboard-card-body">
+            <div class="icon-background">
+            <i class="fa-solid fa-clipboard-list fa-2xl dashboard-icon-margin"></i>
+            </div>
+            <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
+              ['user' =>
+              $user->id,
+              'type' => 'avgscore'])</h3>
+            <h5 class="description color-white font-montbold dashboard-text-margin">@lang('dashboard.avgscore')</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card card-primary text-white dashboard-card h-100">
+          <div class="card-body text-center dashboard-card-body">
+            <div class="icon-background">
+            <i class="fa-solid fa-clock fa-2xl dashboard-icon-margin"></i>
+            </div>
+            <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
+              ['user' =>
+              $user->id,
+              'type' => 'avgtime'])</h3>
+            <h5 class="description color-white font-montbold dashboard-text-margin">@lang('dashboard.avgflighttime')</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card card-primary text-white dashboard-card h-100">
+          <div class="card-body text-center dashboard-card-body">
+            <div class="icon-background">
+            <i class="fa-solid fa-gas-pump fa-2xl dashboard-icon-margin"></i>
+            </div>
+            <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
+              ['user' =>
+              $user->id,
+              'type' => 'avgfuel'])</h3>
+            <h5 class="description color-white font-montbold dashboard-text-margin">@lang('dashboard.avgburntfuel')</h5>
           </div>
         </div>
       </div>
@@ -69,17 +119,15 @@
       <div class="col-sm-3">
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
-            <div class="icon-background">
-              <i class="fa-solid fa-location-pin fa-2xl dashboard-icon-margin"></i>
+            <div class="icon-background"> {{--110px font-size--}}
+              <i class="fa-solid fa-money-bill fa-2xl dashboard-icon-margin"></i>
             </div>
-            <h3 class="header font-montbold dashboard-text-margin">{{ $current_airport }}</h3>
-            <h5 class="description color-white font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
-              ['user' =>
-              $user->id,
-              'type' => 'tottime'])</h5>
+            <h3 class="header font-montbold dashboard-text-margin">{{ optional($user->journal)->balance ?? 0 }}</h3>
+            <h5 class="description color-white font-montbold dashboard-text-margin">@lang('dashboard.yourbalance')</h5>
           </div>
         </div>
       </div>
+      
     </div>
 
     <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">

@@ -23,7 +23,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-              <i class="fa-solid fa-earth-americas fa-2xl dashboard-icon-margin"></i>
+              <i class="fa-solid fa-earth-americas dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">{{ $user->flights }}</h3>
             <h5 class="description color-white font-montbold dashboard-text-margin">
@@ -36,7 +36,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-              <i class="fa-solid fa-hourglass-start fa-2xl dashboard-icon-margin"></i>
+              <i class="fa-solid fa-hourglass-start dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">@minutestotime($user->flight_time)</h3>
             <h5 class="description color-white font-montbold dashboard-text-margin">@lang('dashboard.totalhours')</h5>
@@ -48,7 +48,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-            <i class="fa-solid fa-plane-arrival fa-2xl dashboard-icon-margin"></i>
+            <i class="fa-solid fa-plane-arrival dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
               ['user' =>
@@ -63,7 +63,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-            <i class="fa-solid fa-clipboard-list fa-2xl dashboard-icon-margin"></i>
+            <i class="fa-solid fa-clipboard-list dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
               ['user' =>
@@ -78,7 +78,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-            <i class="fa-solid fa-clock fa-2xl dashboard-icon-margin"></i>
+            <i class="fa-solid fa-clock dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
               ['user' =>
@@ -93,7 +93,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-            <i class="fa-solid fa-gas-pump fa-2xl dashboard-icon-margin"></i>
+            <i class="fa-solid fa-gas-pump dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
               ['user' =>
@@ -108,7 +108,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-              <i class="fa-solid fa-location-pin fa-2xl dashboard-icon-margin"></i>
+              <i class="fa-solid fa-location-pin dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">{{ $current_airport }}</h3>
             <h5 class="description color-white font-montbold dashboard-text-margin">@lang('airports.current')</h5>
@@ -120,7 +120,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background"> {{--110px font-size--}}
-              <i class="fa-solid fa-money-bill fa-2xl dashboard-icon-margin"></i>
+              <i class="fa-solid fa-money-bill dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">{{ optional($user->journal)->balance ?? 0 }}</h3>
             <h5 class="description color-white font-montbold dashboard-text-margin">@lang('dashboard.yourbalance')</h5>

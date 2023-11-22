@@ -168,7 +168,8 @@
 }
 
 .dashboard-icon-margin {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
 }
 
 .dashboard-text-margin {

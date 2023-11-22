@@ -1,6 +1,7 @@
 @extends('app')
 @section('title', __('common.dashboard'))
 
+
 @section('content')
 <div class="row">
   <div class="col-sm-8">
@@ -65,20 +66,6 @@
         </div>
       </div>
 
-      <div class="col-sm-3">
-        <div class="card card-primary text-white dashboard-card h-100">
-          <div class="card-body text-center dashboard-card-body">
-            <div class="icon-background">
-              <i class="fa-solid fa-location-pin fa-2xl dashboard-icon-margin"></i>
-            </div>
-            <h3 class="header font-montbold dashboard-text-margin">{{ $current_airport }}</h3>
-            <h5 class="description color-white font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
-              ['user' =>
-              $user->id,
-              'type' => 'avglanding'])</h5>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">

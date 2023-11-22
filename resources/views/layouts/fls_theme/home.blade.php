@@ -39,6 +39,8 @@
       </div>
     </div>
     @endforeach
+    @widget('FlsModule::LeaderBoard', ['source' => 'pilot', 'count' => 3, 'type' => 'flights', 'period' => null, 'hub'
+    => null])
   </div>
 </div>
 

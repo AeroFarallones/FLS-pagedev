@@ -49,7 +49,7 @@
   <div id="top_anchor" class="clearfix" style="height: 25px;"></div>
   <div class="wrapper">
     <div class="clear"></div>
-    <div class="container-fluid" style="width: 85%!important;">
+    <div class="container-fluid" style="width: 95%!important;">
 
       {{-- These should go where you want your content to show up --}}
       @include('flash.message')

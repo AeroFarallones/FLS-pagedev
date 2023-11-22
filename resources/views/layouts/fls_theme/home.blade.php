@@ -39,9 +39,35 @@
       </div>
     </div>
     @endforeach
-    @widget('FlsModule::LeaderBoard', ['source' => 'pilot', 'count' => 3, 'type' => 'flights', 'period' => null, 'hub'
-    => null])
+
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="col">@widget('FlsModule::LeaderBoard', ['source' => 'pilot', 'count' => 3, 'type' => 'flights',
+        'period'
+        =>
+        null, 'hub'
+        => null])</div>
+    </div>
+    <div class="col">
+      <div class="col">@widget('FlsModule::LeaderBoard', ['source' => 'pilot', 'count' => 3, 'type' => 'distance',
+        'period'
+        =>
+        null, 'hub'
+        => null])</div>
+    </div>
+    <div class="col">
+      <div class="col">@widget('FlsModule::LeaderBoard', ['source' => 'pilot', 'count' => 3, 'type' => 'time',
+        'period'
+        =>
+        null, 'hub'
+        => null])</div>
+    </div>
+  </div>
+
+</div>
+
 
 @endsection

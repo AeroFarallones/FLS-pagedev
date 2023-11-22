@@ -1,4 +1,4 @@
-@if(filled($leader_board))
+{{-- @if(filled($leader_board)) --}}
 <div class="card mb-2">
   <div class="card-header p-1">
     <h5 class="m-1">
@@ -33,4 +33,4 @@
     {{ $footer_note.' '.$footer_type }}
   </div>
 </div>
-@endif
+{{-- @endif --}}

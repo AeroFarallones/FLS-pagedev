@@ -137,3 +137,40 @@
     display: none;
 }
 
+.font-fls
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font-montbold
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/*
+*DASHBOARD FLS
+*/
+
+.dashboard-card {
+    border-radius: 1rem!important;
+}
+
+.dashboard-card-body {
+    background-color: #00157f;
+    border-radius: inherit;
+    color: white;
+}
+
+.dashboard-icon-margin {
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-text-margin {
+    margin-bottom: 0;
+}
+
+.color-white
+{
+    color: white;
+}

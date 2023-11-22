@@ -18,6 +18,7 @@
 
     {{-- TOP BAR WITH BOXES --}}
     @include('dashboard.icons')
+
     <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
       @lang('dashboard.yourlastreport')
     </div>

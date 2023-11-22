@@ -180,3 +180,38 @@
 {
     color: white;
 }
+
+.dashboard-pirep-card {
+    background-color: #00157f!important;
+}
+
+.dashboard-img-pirep-logo {
+    max-width: 125px!important;
+}
+
+.dashboard-row-pirep {
+    align-self: center;
+    min-width: 100%;
+    place-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-primary-text{
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.dashboard-secondary-text{
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.dashboard-icon-size {
+    font-size: 2rem;
+}

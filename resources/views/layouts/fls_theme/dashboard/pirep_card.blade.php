@@ -1,3 +1,13 @@
+<div class="card bg-dark text-white">
+  <img src="..." class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+      This content is a little bit longer.</p>
+    <p class="card-text">Last updated 3 mins ago</p>
+  </div>
+</div>
+
 <div class="card-body" style="min-height: 0px">
   <div class="row">
     <div class="col-sm-10">
@@ -17,19 +27,19 @@
     </div>
     <div class="col-sm-2 float-right">
       <div class="col-sm-2 text-center">
-          @if($pirep->state === PirepState::PENDING)
-            <div class="badge badge-warning">
+        @if($pirep->state === PirepState::PENDING)
+        <div class="badge badge-warning">
           @elseif($pirep->state === PirepState::ACCEPTED)
-              <div class="badge badge-success">
-          @elseif($pirep->state === PirepState::REJECTED)
-              <div class="badge badge-danger">
-          @else
-             <div class="badge badge-info">
-          @endif
-            {{ PirepState::label($pirep->state) }}</div>
-          <a href="{{ route('frontend.pireps.edit', [$pirep->id]) }}"
-            class="btn btn-sm btn-info">@lang('common.edit')</a> 
-      </div>    
-    </div>
-  </div>
-</div>
+          <div class="badge badge-success">
+            @elseif($pirep->state === PirepState::REJECTED)
+            <div class="badge badge-danger">
+              @else
+              <div class="badge badge-info">
+                @endif
+                {{ PirepState::label($pirep->state) }}</div>
+              <a href="{{ route('frontend.pireps.edit', [$pirep->id]) }}"
+                class="btn btn-sm btn-info">@lang('common.edit')</a>
+            </div>
+          </div>
+        </div>
+      </div>

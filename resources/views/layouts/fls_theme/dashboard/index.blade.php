@@ -1,7 +1,6 @@
 @extends('app')
 @section('title', __('common.dashboard'))
 
-
 @section('content')
 <div class="row">
   <div class="col-sm-8">
@@ -48,7 +47,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-            <i class="fa-solid fa-plane-arrival dashboard-icon-margin"></i>
+              <i class="fa-solid fa-plane-arrival dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
               ['user' =>
@@ -63,7 +62,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-            <i class="fa-solid fa-clipboard-list dashboard-icon-margin"></i>
+              <i class="fa-solid fa-clipboard-list dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
               ['user' =>
@@ -78,13 +77,14 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-            <i class="fa-solid fa-clock dashboard-icon-margin"></i>
+              <i class="fa-solid fa-clock dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
               ['user' =>
               $user->id,
               'type' => 'avgtime'])</h3>
-            <h5 class="description color-white font-montbold dashboard-text-margin">@lang('dashboard.avgflighttime')</h5>
+            <h5 class="description color-white font-montbold dashboard-text-margin">@lang('dashboard.avgflighttime')
+            </h5>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
         <div class="card card-primary text-white dashboard-card h-100">
           <div class="card-body text-center dashboard-card-body">
             <div class="icon-background">
-            <i class="fa-solid fa-gas-pump dashboard-icon-margin"></i>
+              <i class="fa-solid fa-gas-pump dashboard-icon-margin"></i>
             </div>
             <h3 class="header font-montbold dashboard-text-margin">@widget('FlsModule::PersonalStats',
               ['user' =>
@@ -127,9 +127,55 @@
           </div>
         </div>
       </div>
-      
-    </div>
 
+    </div>
+    <div class="card dashboard-pirep-card">
+      Hola mundo
+      <div class="row dashboard-row-pirep">
+        <img class="dashboard-img-pirep-logo" src="/assets/frontend/img/MNT FLS W.png" alt="AeroFarallones logo">
+      </div>
+      <div class="row dashboard-row-pirep">
+        <div class="col-sm-1 clearfix">
+
+        </div>
+        <div class="col-sm-4 dashboard-primary-text">
+          SUMU
+        </div>
+        <div class="col-sm-2 dashboard-primary-text">
+          <i class="fa-solid fa-plane"></i>
+        </div>
+        <div class="col-sm-4 dashboard-primary-text">
+          SKBO
+        </div>
+        <div class="col-sm-1 clearfix">
+
+        </div>
+      </div>
+      <div class="row dashboard-row-pirep dashboard-primary-text">
+        FLS001
+      </div>
+      <div class="row dashboard-row-pirep dashboard-secondary-text">
+        <div class="col-sm-2 clearfix">
+
+        </div>
+        <div class="col-sm-4">
+          N563FE (A319)
+        </div>
+        <div class="col-sm-4">
+          -700.05 ft/min
+        </div>
+        <div class="col-sm-2 clearfix">
+
+        </div>
+      </div>
+      <div class="row dashboard-row-pirep">
+        <i class="fa-solid fa-circle text-success text-center dashboard-icon-size" title="Accepted"
+          aria-hidden="true"></i>
+      </div>
+      <div class="row dashboard-row-pirep dashboard-secondary-text">
+        Submitted 2 days ago
+      </div>
+    </div>
     <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
       @lang('dashboard.yourlastreport')
     </div>

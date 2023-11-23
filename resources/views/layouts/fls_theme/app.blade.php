@@ -29,6 +29,7 @@
 
   {{-- FLS-THEME required --}}
   <link href="{{ public_asset('/fls-theme/frontend/css/styles.css') }}" rel="stylesheet" />
+  <link href="{{ public_asset('/fls-theme/frontend/css/custom.css') }}" rel="stylesheet" />
   <link href="{{ public_asset('/fls-theme/frontend/js/app.js') }}" rel="stylesheet" />
   {{-- End FLS-THEME required --}}
 

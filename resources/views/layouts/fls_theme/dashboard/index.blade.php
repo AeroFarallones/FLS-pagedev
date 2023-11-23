@@ -150,48 +150,48 @@
   {{-- Sidebar --}}
   <div class="col-sm-4">
     <div class="card-header dashboard-card ps-2 p-1 mb-3" style="background: #00157f">
-      <a href="https://metar-taf.com/LEMD" id="metartaf-oMS9GaaZ" class="font-montbold"
-        style="font-size:18px; font-weight:500; color:#ffffff; display:block">METAR Adolfo
-        Suárez Madrid-Barajas Airport</a>
-      <script async defer crossorigin="anonymous"
-        src="https://metar-taf.com/embed-js/LEMD?u=16211&bg_color=00157f&layout=landscape&qnh=hPa&rh=dp&target=oMS9GaaZ">
-      </script>
+      <a href="https://metar-taf.com/" id="metartaf-crDVdyuy" class="font-montbold"
+        style="font-size: 0.925rem; display:block; pointer-events: none">METAR {{
+        $current_airport }}</a>
     </div>
-    <div class="card">
-      <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
-        @lang('dashboard.weatherat', ['ICAO' => $current_airport])
-      </div>
-      <div class="card-body">
-        <!-- Tab panes -->
-        <div class="tab-content">
-          {{ Widget::Weather(['icao' => $current_airport]) }}
-        </div>
-      </div>
+    <script async defer crossorigin="anonymous"
+      src="https://metar-taf.com/embed-js/SKRG?bg_color=00157f&layout=landscape&qnh=hPa&rh=rh&target=crDVdyuy"></script>
+  </div>
+  <div class="card">
+    <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
+      @lang('dashboard.weatherat', ['ICAO' => $current_airport])
     </div>
-
-    <div class="card">
-      <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
-        @lang('dashboard.recentreports')
-      </div>
-      <div class="card-body">
-        <!-- Tab panes -->
-        <div class="tab-content">
-          {{ Widget::latestPireps(['count' => 5]) }}
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
-        @lang('common.newestpilots')
-      </div>
-      <div class="card-body">
-        <!-- Tab panes -->
-        <div class="tab-content">
-          {{ Widget::latestPilots(['count' => 5]) }}
-        </div>
+    <div class="card-body">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        {{ Widget::Weather(['icao' => $current_airport]) }}
       </div>
     </div>
   </div>
+
+  <div class="card">
+    <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
+      @lang('dashboard.recentreports')
+    </div>
+    <div class="card-body">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        {{ Widget::latestPireps(['count' => 5]) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
+      @lang('common.newestpilots')
+    </div>
+    <div class="card-body">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        {{ Widget::latestPilots(['count' => 5]) }}
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 @endsection

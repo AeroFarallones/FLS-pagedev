@@ -14,30 +14,14 @@
         <th class="text-end">{{ $column_title }}</th>
       </tr>
       @endif
-      <tr class="">
-        <td>
-          <a href="" class="text-decoration-none">
-            <i class="fa-solid fa-award"></i> Pepito
-          </a>
-        </td>
-        <td class="text-end">5</td>
-      </tr>
+      @foreach($leader_board as $board)
       <tr>
         <td>
-          <a href="" class="text-decoration-none">
-            <i class="fa-solid fa-award"></i> Pepito
-          </a>
+          <a href="{{ route($board['route'], $board['id']) }}" class="text-decoration-none">
         </td>
-        <td class="text-end">5</td>
+        <td class="text-end">{{ $board['totals'] }}</td>
       </tr>
-      <tr>
-        <td>
-          <a href="" class="text-decoration-none">
-            <i class="fa-solid fa-award"></i> Pepito
-          </a>
-        </td>
-        <td class="text-end">5</td>
-      </tr>
+      @endforeach
     </table>
   </div>
   <div class="d-flex justify-content-center">

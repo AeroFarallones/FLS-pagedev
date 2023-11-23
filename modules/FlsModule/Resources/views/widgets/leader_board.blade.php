@@ -14,50 +14,52 @@
         <th class="text-end">{{ $column_title }}</th>
       </tr>
       @endif
-      <tr>
+      <tr class="">
         <td>
-          <a href="">
-            Pepito
+          <a href="" class="text-decoration-none">
+            <i class="fa-solid fa-award"></i> Pepito
           </a>
         </td>
         <td class="text-end">5</td>
       </tr>
       <tr>
         <td>
-          <a href="">
-            Pepito
+          <a href="" class="text-decoration-none">
+            <i class="fa-solid fa-award"></i> Pepito
           </a>
         </td>
         <td class="text-end">5</td>
       </tr>
       <tr>
         <td>
-          <a href="">
-            Pepito
+          <a href="" class="text-decoration-none">
+            <i class="fa-solid fa-award"></i> Pepito
           </a>
         </td>
         <td class="text-end">5</td>
       </tr>
     </table>
   </div>
-  <div class="card-footer p-0 px-1 text-center small fw-bold border rounded-pill" style="border-color: #00157f">
-    {{ $footer_note.' '.$footer_type }}
+  <div class="d-flex justify-content-center">
+    <div class="w-50 p-0 px-1 mb-3 text-center small fw-bold border rounded-pill" style="border-color: #00157f">
+      {{ $footer_note.' '.$footer_type }}
+    </div>
   </div>
 </div>
 {{-- @endif --}}
 
 
 
-      {{-- @foreach($leader_board as $board)
-      <tr>
-        <td>
-          <a href="{{ route($board['route'], $board['id']) }}">
-            @if(Theme::getSetting('roster_ident'))
-            {{ $board['pilot_ident'] }}
-            @endif
-            {{ $board['name_private'] }}
-          </a>
-        </td>
-        <td class="text-end">{{ $board['totals'] }}</td>
-      </tr>
-      @endforeach --}}
+{{-- @foreach($leader_board as $board)
+<tr>
+  <td>
+    <a href="{{ route($board['route'], $board['id']) }}">
+      @if(Theme::getSetting('roster_ident'))
+      {{ $board['pilot_ident'] }}
+      @endif
+      {{ $board['name_private'] }}
+    </a>
+  </td>
+  <td class="text-end">{{ $board['totals'] }}</td>
+</tr>
+@endforeach --}}

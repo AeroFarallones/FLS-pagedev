@@ -129,52 +129,49 @@
       </div>
 
     </div>
-    <div class="card dashboard-pirep-card dashboard-card pt-4">
-      <div class="row dashboard-row-pirep">
-        <img class="dashboard-img-pirep-logo" src="/assets/frontend/img/MNT FLS W.png" alt="AeroFarallones logo">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card dashboard-pirep-card dashboard-card pt-4">
+          <div class="row dashboard-row-pirep">
+            <img class="dashboard-img-pirep-logo" src="/assets/frontend/img/MNT FLS W.png" alt="AeroFarallones logo">
+          </div>
+          <div class="row dashboard-row-pirep">
+            <div class="col-sm-5 dashboard-primary-text">
+              SUMU
+            </div>
+            <div class="col-sm-2 dashboard-primary-text">
+              <i class="fa-solid fa-plane"></i>
+            </div>
+            <div class="col-sm-5 dashboard-primary-text">
+              SKBO
+            </div>
+          </div>
+          <div class="row dashboard-row-pirep dashboard-primary-text">
+            FLS001
+          </div>
+          <div class="row dashboard-row-pirep dashboard-secondary-text">
+            <div class="col-sm-6">
+              N563FE (A319)
+            </div>
+            <div class="col-sm-6">
+              -700.05 ft/min
+            </div>
+          </div>
+          <div class="row dashboard-row-pirep">
+            <i class="fa-solid fa-circle text-success text-center dashboard-icon-size" title="Accepted"
+              aria-hidden="true"></i>
+          </div>
+          <div class="row dashboard-row-pirep dashboard-secondary-text">
+            Submitted 2 days ago
+          </div>
+        </div>
       </div>
-      <div class="row dashboard-row-pirep">
-        <div class="col-sm-1 clearfix">
+      <div class="col-sm-8">
+        {{ Widget::latestNews(['count' => 1]) }}
+      </div>
 
-        </div>
-        <div class="col-sm-4 dashboard-primary-text">
-          SUMU
-        </div>
-        <div class="col-sm-2 dashboard-primary-text">
-          <i class="fa-solid fa-plane"></i>
-        </div>
-        <div class="col-sm-4 dashboard-primary-text">
-          SKBO
-        </div>
-        <div class="col-sm-1 clearfix">
-
-        </div>
-      </div>
-      <div class="row dashboard-row-pirep dashboard-primary-text">
-        FLS001
-      </div>
-      <div class="row dashboard-row-pirep dashboard-secondary-text">
-        <div class="col-sm-2 clearfix">
-
-        </div>
-        <div class="col-sm-4">
-          N563FE (A319)
-        </div>
-        <div class="col-sm-4">
-          -700.05 ft/min
-        </div>
-        <div class="col-sm-2 clearfix">
-
-        </div>
-      </div>
-      <div class="row dashboard-row-pirep">
-        <i class="fa-solid fa-circle text-success text-center dashboard-icon-size" title="Accepted"
-          aria-hidden="true"></i>
-      </div>
-      <div class="row dashboard-row-pirep dashboard-secondary-text">
-        Submitted 2 days ago
-      </div>
     </div>
+
     <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
       @lang('dashboard.yourlastreport')
     </div>
@@ -188,8 +185,6 @@
       @include('dashboard.pirep_card', ['pirep' => $last_pirep])
       @endif
     </div>
-
-    {{ Widget::latestNews(['count' => 1]) }}
 
   </div>
 

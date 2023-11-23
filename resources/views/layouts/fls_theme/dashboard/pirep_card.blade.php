@@ -1,45 +1,46 @@
-<div class="card bg-dark text-white">
-  <img src="..." class="card-img" alt="...">
-  <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-      This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
+<div class="card dashboard-pirep-card dashboard-card pt-4 h-100">
+  <div class="row dashboard-row-pirep">
+    <img class="dashboard-img-pirep-logo" src="/assets/frontend/img/MNT FLS W.png" alt="AeroFarallones logo">
   </div>
-</div>
-
-<div class="card-body" style="min-height: 0px">
-  <div class="row">
-    <div class="col-sm-10">
-      <p>
-        <a href="{{ route('frontend.pireps.show', [$pirep->id]) }}">{{ $pirep->ident }}</a>
-        -
-        {{ $pirep->dpt_airport->name }}
-        (<a href="{{route('frontend.airports.show', [
+  <div class="row dashboard-row-pirep">
+    <div class="col-sm-5 dashboard-primary-text">
+      {{ $pirep->dpt_airport->name }}
+      (<a href="{{route('frontend.airports.show', [
                           'id' => $pirep->dpt_airport->icao
                           ])}}">{{$pirep->dpt_airport->icao}}</a>)
-        <span class="description">to</span>
-        {{ $pirep->arr_airport->name }}
-        (<a href="{{route('frontend.airports.show', [
+    </div>
+    <div class="col-sm-2 dashboard-primary-text">
+      <i class="fa-solid fa-plane"></i>
+    </div>
+    <div class="col-sm-5 dashboard-primary-text">
+      {{ $pirep->arr_airport->name }}
+      (<a href="{{route('frontend.airports.show', [
                           'id' => $pirep->arr_airport->icao
                           ])}}">{{$pirep->arr_airport->icao}}</a>)
-      </p>
     </div>
-    <div class="col-sm-2 float-right">
-      <div class="col-sm-2 text-center">
-        @if($pirep->state === PirepState::PENDING)
-        <div class="badge badge-warning">
-          @elseif($pirep->state === PirepState::ACCEPTED)
-          <div class="badge badge-success">
-            @elseif($pirep->state === PirepState::REJECTED)
-            <div class="badge badge-danger">
-              @else
-              <div class="badge badge-info">
-                @endif
-                {{ PirepState::label($pirep->state) }}</div>
-              <a href="{{ route('frontend.pireps.edit', [$pirep->id]) }}"
-                class="btn btn-sm btn-info">@lang('common.edit')</a>
-            </div>
-          </div>
-        </div>
-      </div>
+  </div>
+  <div class="row dashboard-row-pirep dashboard-primary-text">
+    <a href="{{ route('frontend.pireps.show', [$pirep->id]) }}">{{ $pirep->ident }}</a>
+  </div>
+  <div class="row dashboard-row-pirep dashboard-secondary-text">
+    <div class="col-sm-6">
+      <a href="{{ route('frontend.pireps.show', [$pirep->id]) }}">{{ ($pirep->aircraft)->ident }}</a>
+    </div>
+    <div class="col-sm-6">
+      @if(filled($pirep->landing_rate))
+      {{ $pirep->landing_rate.' ft/min' }}
+      @endif
+    </div>
+  </div>
+  <div class="row dashboard-row-pirep">
+    @if($pirep->state === PirepState::PENDING)
+    <i class="fa-solid fa-circle text-warning text-center dashboard-icon-size" title="Accepted" aria-hidden="true"></i>
+    @elseif($pirep->state === PirepState::ACCEPTED)
+    <i class="fa-solid fa-circle text-success text-center dashboard-icon-size" title="Accepted" aria-hidden="true"></i>
+    @elseif($pirep->state === PirepState::REJECTED)
+    <i class="fa-solid fa-circle text-danger text-center dashboard-icon-size" title="Accepted" aria-hidden="true"></i>
+  </div>
+  <div class="row dashboard-row-pirep dashboard-secondary-text">
+    Submitted {{ $pirep->submitted_at->diffForHumans() }}
+  </div>
+</div>

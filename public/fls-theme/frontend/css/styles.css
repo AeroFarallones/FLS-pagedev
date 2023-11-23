@@ -82,3 +82,13 @@ dirigase a custom.css */
 .dashboard-icon-size {
     font-size: 2rem;
 }
+
+.color-fls {
+    color: #00157f!important;
+}
+
+.news-card {
+    border-color: #00157f!important;
+    border-width: 3px!important;
+    border-radius: 1rem!important;
+}

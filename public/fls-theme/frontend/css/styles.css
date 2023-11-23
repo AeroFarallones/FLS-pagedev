@@ -102,3 +102,7 @@ dirigase a custom.css */
     border: 1px solid #aaa;
     border-radius: 15px;
 }
+
+.text-orange {
+    -webkit-text-stroke: 0.02rem #fd7e14
+}

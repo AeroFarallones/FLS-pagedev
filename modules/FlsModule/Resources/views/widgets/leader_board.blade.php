@@ -1,7 +1,7 @@
 {{-- @if(filled($leader_board)) --}}
 <div class="card mb-2">
   <div class="card-header p-1" style="background-color: #00157f">
-    <h5 class="m-1 text-white">
+    <h5 class="m-1 text-white text-orange">
       {{ $header_title }}
       <i class="fas {{ $header_icon }} float-end"></i>
     </h5>

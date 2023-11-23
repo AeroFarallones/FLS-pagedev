@@ -3,7 +3,7 @@
 @if(empty($fixed_dest))
 <div class="card mb-2 rounded-4">
   <div class="card-header p-1" style="background-color: #00157f">
-    <h5 class="m-1 text-white">
+    <h5 class="m-1 text-white text-orange">
       @lang('FlsModule::widgets.js_travel')
       <i class="fas fa-ticket-alt float-end"></i>
     </h5>

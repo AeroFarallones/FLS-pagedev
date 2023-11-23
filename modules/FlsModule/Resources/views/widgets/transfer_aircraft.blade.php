@@ -3,7 +3,7 @@
 {{-- @if(empty($fixed_ac) && filled($ts_aircraft)) --}}
 <div class="card mb-2 rounded-4">
   <div class="card-header p-1" style="background-color: #00157f">
-    <h5 class="m-1 text-white">
+    <h5 class="m-1 text-white text-orange">
       @lang('FlsModule::widgets.ta_title')
       <i class="fas fa-plane float-end"></i>
     </h5>

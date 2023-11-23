@@ -10,6 +10,7 @@ body{
     box-sizing: border-box;
 }
 
+
 .font-fls
 {
     font-family: 'Open Sans', sans-serif;
@@ -19,6 +20,17 @@ body{
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+}
+
+
+/* Landing Page */
+
+.intro{
+    height: 100vh; 
+    background: url('https://media.discordapp.net/attachments/1140087321039999024/1177333587633262652/Captura_de_pantalla_2023-11-18_135512.png?ex=65722059&is=655fab59&hm=2305dd09b72c02d4fbed55e5adf04ca97163e506662082f57b0da78f9fb2eb8d&=&format=webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% center;
 }
 
 /*

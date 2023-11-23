@@ -151,7 +151,52 @@
             <div class="col-sm-8">
                 {{ Widget::latestNews(['count' => 1]) }}
             </div>
-
+        </div>
+        <div class="row gy-3 row-dashboard">
+            <div class="col-sm-4">
+                @widget('FlsModule::LeaderBoard', ['source' => 'pilot', 'count' => 3, 'type' => 'flights',
+                'period'
+                =>
+                null, 'hub'
+                => null])
+            </div>
+            <div class="col-sm-4">
+                @widget('FlsModule::LeaderBoard', ['source' => 'dep', 'count' => 3, 'type' => 'distance',
+                'period'
+                =>
+                null, 'hub'
+                => null])
+            </div>
+            <div class="col-sm-4">
+                @widget('FlsModule::LeaderBoard', ['source' => 'arr', 'count' => 3, 'type' => 'time',
+                'period'
+                =>
+                null, 'hub'
+                => null])
+            </div>
+        </div>
+        <div class="row gy-3 row-dashboard">
+            <div class="col-sm-4">
+                @widget('FlsModule::LeaderBoard', ['source' => 'pilot', 'count' => 3, 'type' => 'flights',
+                'period'
+                =>
+                null, 'hub'
+                => null])
+            </div>
+            <div class="col-sm-4">
+                @widget('FlsModule::LeaderBoard', ['source' => 'dep', 'count' => 3, 'type' => 'distance',
+                'period'
+                =>
+                null, 'hub'
+                => null])
+            </div>
+            <div class="col-sm-4">
+                @widget('FlsModule::LeaderBoard', ['source' => 'arr', 'count' => 3, 'type' => 'time',
+                'period'
+                =>
+                null, 'hub'
+                => null])
+            </div>
         </div>
     </div>
 
@@ -175,28 +220,17 @@
         <div class="col">
             @widget('FlsModule::JumpSeat', ['base' => 0.25, 'price' => 'free', 'hubs' => true])
         </div>
-
-    </div>
-    <div class="card">
-        <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
-            @lang('dashboard.recentreports')
-        </div>
-        <div class="card-body">
-            <!-- Tab panes -->
-            <div class="tab-content">
-                {{ Widget::latestPireps(['count' => 5]) }}
+        <div class="card dashboard-card">
+            <div class="card-header p-1 dashboard-card" style="background-color: #00157f;">
+                <h4 class="m-1 text-white">
+                    @lang('dashboard.recentreports')
+                </h4>
             </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="nav nav-tabs" role="tablist" style="background: #067ec1; color: #FFF;">
-            @lang('common.newestpilots')
-        </div>
-        <div class="card-body">
-            <!-- Tab panes -->
-            <div class="tab-content">
-                {{ Widget::latestPilots(['count' => 5]) }}
+            <div class="card-body">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    {{ Widget::latestPireps(['count' => 5]) }}
+                </div>
             </div>
         </div>
     </div>

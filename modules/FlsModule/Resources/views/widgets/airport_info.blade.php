@@ -1,8 +1,8 @@
 @if($is_visible)
 {{ Form::open() }}
-<div class="card mb-2">
-  <div class="card-header p-1">
-    <h5 class="m-1">
+<div class="card mb-2 rounded-4">
+  <div class="card-header p-1" style="background-color: #00157f"> 
+    <h5 class="m-1 text-white">
       @lang('FlsModule::widgets.airport_info')
       <i class="fas fa-info-circle float-end"></i>
     </h5>

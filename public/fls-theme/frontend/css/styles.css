@@ -92,3 +92,13 @@ dirigase a custom.css */
     border-width: 3px!important;
     border-radius: 1rem!important;
 }
+
+
+
+/* Jumpseat card */
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+}

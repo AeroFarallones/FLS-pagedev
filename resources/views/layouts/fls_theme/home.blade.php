@@ -65,6 +65,17 @@
         null, 'hub'
         => null])</div>
     </div>
+    <div class="row">
+      <div class="col">
+        @widget('FlsModule::JumpSeat', ['base' => 0.25, 'price' => 'free', 'hubs' => true])
+      </div>
+    </div>
+    <div class="row">
+      @widget('FlsModule::TransferAircraft', ['price' => 'free', 'landing' => 1])
+    </div>
+    <div class="row">
+      @widget('FlsModule::AirportInfo', ['type' => 'all'])
+    </div>
   </div>
 </div>
 

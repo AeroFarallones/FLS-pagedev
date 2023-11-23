@@ -129,8 +129,7 @@
       </div>
 
     </div>
-    <div class="card dashboard-pirep-card">
-      Hola mundo
+    <div class="card dashboard-pirep-card dashboard-card pt-4">
       <div class="row dashboard-row-pirep">
         <img class="dashboard-img-pirep-logo" src="/assets/frontend/img/MNT FLS W.png" alt="AeroFarallones logo">
       </div>

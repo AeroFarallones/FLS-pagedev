@@ -27,6 +27,11 @@ dirigase a custom.css */
     border-radius: 1rem!important;
 }
 
+.dashboard-card-footer
+{
+    margin-top:0!important;
+}
+
 .dashboard-card-body {
     background-color: #00157f;
     border-radius: inherit;
@@ -93,7 +98,18 @@ dirigase a custom.css */
     border-radius: 1rem!important;
 }
 
+.button-blue-fls {
+    background: #00157f!important;
+    color: white!important;
+    font-weight: 700!important;
+    padding: 0.12rem 0.25rem 0.12rem 0.25rem!important;
+    border-radius: 1rem!important;
+}
 
+.button-blue-fls:hover
+{
+    background: #fd7e14!important;
+}
 
 /* Jumpseat card */
 

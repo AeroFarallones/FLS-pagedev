@@ -2,82 +2,12 @@
 @section('title', __('home.welcome.title'))
 
 @section('content')
-<div class="row">
-  <div class="col-sm-12">
+
+<div class="container-fluid intro p-0"
+  style="height: 100vh; background: url('https://www.aerofarallones.com/image/new/Home.png')">
+  <div class="row-home w-100 h-100 m-0" style="background: rgba(0, 10, 82, 0.5)">
+    {{--- INICIO TRABAJO --}}
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-12">
-    <h2 class="description">Bienvenido a la rama dev y al theme <b>AeroFarallones</b></h2>
-    @foreach($users as $user)
-    <div class="card card-signup blue-bg">
-      <div class="header header-primary text-center blue-bg">
-        <h3 class="title title-up text-white">
-          <a href="{{ route('frontend.profile.show', [$user->id]) }}" class="text-white">{{ $user->name_private }}</a>
-        </h3>
-        <div class="photo-container">
-          @if ($user->avatar == null)
-          <img class="rounded-circle" src="{{ $user->gravatar(123) }}">
-          @else
-          <img src="{{ $user->avatar->url }}" style="width: 123px;">
-          @endif
-        </div>
-      </div>
-      <div class="content content-center">
-        <div class="social-description text-center text-white">
-          <h2 class="description text-white">
-            @if(filled($user->home_airport))
-            {{ $user->home_airport->icao }}
-            @endif
-          </h2>
-        </div>
-      </div>
-
-      <div class="footer text-center">
-        <a href="{{ route('frontend.profile.show', [$user->id]) }}"
-          class="btn btn-neutral btn-sm">@lang('common.profile')</a>
-      </div>
-    </div>
-    @endforeach
-
-  </div>
-</div>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col">
-      <div class="col">@widget('FlsModule::LeaderBoard', ['source' => 'pilot', 'count' => 3, 'type' => 'flights',
-        'period'
-        =>
-        null, 'hub'
-        => null])</div>
-    </div>
-    <div class="col">
-      <div class="col">@widget('FlsModule::LeaderBoard', ['source' => 'dep', 'count' => 3, 'type' => 'distance',
-        'period'
-        =>
-        null, 'hub'
-        => null])</div>
-    </div>
-    <div class="col">
-      <div class="col">@widget('FlsModule::LeaderBoard', ['source' => 'arr', 'count' => 3, 'type' => 'time',
-        'period'
-        =>
-        null, 'hub'
-        => null])</div>
-    </div>
-    <div class="row">
-      <div class="col">
-        @widget('FlsModule::JumpSeat', ['base' => 0.25, 'price' => 'free', 'hubs' => true])
-      </div>
-    </div>
-    <div class="row">
-      @widget('FlsModule::TransferAircraft', ['price' => 'free', 'landing' => 1])
-    </div>
-    <div class="row">
-      @widget('FlsModule::AirportInfo', ['type' => 'all'])
-    </div>
-  </div>
-</div>
-
 
 @endsection

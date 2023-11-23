@@ -48,30 +48,30 @@
 
 <body>
   <!-- Navbar -->
+  @if (!Route::is('frontend.home'))
   @include('nav')
+  @endif
+
   <!-- End Navbar -->
 
-  <div id="top_anchor" class="clearfix" style="height: 25px;"></div>
-  <div class="wrapper">
-    <div class="clear"></div>
-    <div class="container-fluid" style="width: 95%!important;">
+  <div class="container-fluid p-0" style="width: 100%!important;">
 
-      {{-- These should go where you want your content to show up --}}
-      @include('flash.message')
-      @yield('content')
-      {{-- End the above block--}}
+    {{-- These should go where you want your content to show up --}}
+    @include('flash.message')
+    @yield('content')
+    {{-- End the above block--}}
 
-    </div>
-    <div class="clearfix" style="height: 200px;"></div>
-
-    {{-- <footer class="footer footer-default">
-      <div class="container">
-        <div class="copyright">
-          powered by <a href="http://www.phpvms.net" target="_blank">phpvms</a>
-        </div>
-      </div>
-    </footer> --}}
   </div>
+  <div class="clearfix" style="height: 200px;"></div>
+
+
+  {{-- <footer class="footer footer-default">
+    <div class="container">
+      <div class="copyright">
+        powered by <a href="http://www.phpvms.net" target="_blank">phpvms</a>
+      </div>
+    </div>
+  </footer> --}}
 
   <script src="https://kit.fontawesome.com/03b0ac721b.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

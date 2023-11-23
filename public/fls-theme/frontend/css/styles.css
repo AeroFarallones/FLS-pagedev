@@ -4,6 +4,12 @@ los estilos principales, es decir al cambiar una sola,
 cambiaran todas... Si quiere agregar una nueva clase
 dirigase a custom.css */
 
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .font-fls
 {
     font-family: 'Open Sans', sans-serif;

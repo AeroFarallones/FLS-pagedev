@@ -10,7 +10,9 @@
       <a href="https://github.com/FatihKoz/FlsModule#readme" target="_blank" title="Online Readme">Online Readme</a>
     </p>
     <hr>
-    <p><a href="https://github.com/FatihKoz" target="_blank">&copy; B.Fatih KOZ</a></p>
+    <p class="d-inline"><a href="https://github.com/FatihKoz" target="_blank">&copy; B.Fatih KOZ</a></p>
+    <p class="d-inline">Edited and Custom by: <a href="https://github.com/CoMMArka" target="_blank">&copy; CoMMarka
+        Studios</a></p>
   </div>
 </div>
 
@@ -20,6 +22,14 @@
     <div class="col-sm-3">
       <div class="card border-blue-bottom" style="padding:10px;">
         <a href="{{ route('FlsModule.specs') }}">Manage ICAO Type, Subfleet or Aircraft Specs</a>
+        <br><br>
+        Specs will be used for detailed SimBrief Flight planning, also they will be shown at Aircraft and Subfleet
+        listing pages.
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card border-blue-bottom" style="padding:10px;">
+        <a href="{{ route('FlsModule.admin.blog') }}">Manage the Blog of airline</a>
         <br><br>
         Specs will be used for detailed SimBrief Flight planning, also they will be shown at Aircraft and Subfleet
         listing pages.

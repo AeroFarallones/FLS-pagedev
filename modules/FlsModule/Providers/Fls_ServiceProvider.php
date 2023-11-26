@@ -5,6 +5,7 @@ namespace Modules\FlsModule\Providers;
 use App\Services\ModuleService;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use Modules\FlsModule\Http\Controllers\Fls_CustomPagesController;
 
 class Fls_ServiceProvider extends ServiceProvider
 {
@@ -47,6 +48,8 @@ class Fls_ServiceProvider extends ServiceProvider
             'namespace'  => 'Modules\FlsModule\Http\Controllers',
             'prefix'     => '',
         ], function () {
+            // Custom pages
+            Route::get('fls-aircraft/{icao}', 'Fls_CustomPagesController@index')->name('custom.aircraft');
             // Airlines
             Route::get('dairlines', 'Fls_AirlineController@index')->name('airlines');
             Route::get('dairlines/{icao}', 'Fls_AirlineController@show')->name('airline');
@@ -114,6 +117,9 @@ class Fls_ServiceProvider extends ServiceProvider
             'namespace'  => 'Modules\FlsModule\Http\Controllers',
             'prefix'     => 'admin',
         ], function () {
+            // Custom
+            Route::get('FlsModule/blog', 'Fls_CustomPagesController@index')->name('admin.blog');
+            //Default
             Route::get('FlsModule', 'Fls_AdminController@index')->name('admin')->middleware('ability:admin,addons,modules');
             Route::get('dcheck', 'Fls_AdminController@health_check')->name('health_check')->middleware('ability:admin,addons,modules');
             Route::match(['get', 'post'], 'dsettings_update', 'Fls_AdminController@settings_update')->name('settings_update')->middleware('ability:admin,addons,modules');

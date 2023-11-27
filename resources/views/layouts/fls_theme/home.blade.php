@@ -106,7 +106,11 @@
   </div>
 
   {{--CARDS FLEET--}}
-  <div class="container-fluid d-flex justify-content-center align-items-center w-100 h-100 p-5">
+  <div class="fleet_container container-fluid d-grid w-100 h-100 p-5">
+    <div class="container mb-3">
+      <h2 class="fleet__title font-fls">Our fleet</h2>
+      <h4 class="fleet__subtitle">Our current aircrafts in service</h4>
+    </div>
     <div class="w-75 h-75">
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
@@ -116,7 +120,7 @@
               <div class="card-body">
                 <h5 class="card-title">Airbus A320</h5>
                 <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-                <p class="w-100 d-flex justify-content-between text-fls">
+                <p class="w-100 d-flex justify-content-between text-fls align-items-center">
                   Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
               </div>
             </div>
@@ -129,7 +133,7 @@
               <div class="card-body">
                 <h5 class="card-title">Airbus A320</h5>
                 <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-                <p class="w-100 d-flex justify-content-between text-fls">
+                <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
                   Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
               </div>
             </div>
@@ -142,7 +146,7 @@
               <div class="card-body">
                 <h5 class="card-title">Airbus A320</h5>
                 <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-                <p class="w-100 d-flex justify-content-between text-fls">
+                <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
                   Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
               </div>
             </div>
@@ -155,7 +159,7 @@
               <div class="card-body">
                 <h5 class="card-title">Airbus A320</h5>
                 <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-                <p class="w-100 d-flex justify-content-between text-fls">
+                <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
                   Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
               </div>
             </div>
@@ -168,7 +172,7 @@
               <div class="card-body">
                 <h5 class="card-title">Airbus A320</h5>
                 <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-                <p class="w-100 d-flex justify-content-between text-fls">
+                <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
                   Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
               </div>
             </div>
@@ -181,7 +185,7 @@
               <div class="card-body">
                 <h5 class="card-title">Airbus A320</h5>
                 <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-                <p class="w-100 d-flex justify-content-between text-fls">
+                <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
                   Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
               </div>
             </div>

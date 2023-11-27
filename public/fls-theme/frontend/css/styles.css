@@ -10,10 +10,14 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .font-fls {
   font-family: "Open Sans", sans-serif;
 }
-.text-fls{
+.text-fls {
   color: #00157f;
 }
 .font-montbold {
@@ -105,14 +109,24 @@ body {
   }
 }
 
-.card{
+.card {
   border-radius: 30px !important;
 }
 
-.card-img-top{
+.card-img-top {
   border-top-left-radius: 30px !important;
   border-top-right-radius: 30px !important;
 }
+
+.fleet_container {
+  justify-items: center;
+}
+
+.fleet__title {
+  color: #00157f;
+  font-weight: 900;
+}
+
 /*
 *DASHBOARD FLS
 */

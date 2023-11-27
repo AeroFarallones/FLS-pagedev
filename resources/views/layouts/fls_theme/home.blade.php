@@ -17,6 +17,9 @@
           <h2>Being here means everything.</h2>
         </div>
         <div class="bar_orange rounded-pill" style="background: #fd7e14; width: 100%; height: 10px"></div>
+        <div class="mt-3 button_register">
+          <button onclick="register()">REGISTER</button>
+        </div>
       </div>
     </div>
     <div class="col"></div>
@@ -196,3 +199,5 @@
   </div>
   @endsection
 </div>
+
+

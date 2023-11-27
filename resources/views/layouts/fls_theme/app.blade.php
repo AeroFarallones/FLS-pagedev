@@ -112,6 +112,11 @@
   });
   </script>
 
+<script>
+  function register(){
+    location.replace("{{route('register')}}");
+  }
+  </script>
   {{--
   Google Analytics tracking code. Only active if an ID has been entered
   You can modify to any tracking code and re-use that settings field, or

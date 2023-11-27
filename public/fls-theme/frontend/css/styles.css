@@ -44,6 +44,22 @@ a {
   font-weight: 800;
 }
 
+.button_register > button {
+  color: #fd7e14;
+  border: #fd7e14 4px solid;
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: 800;
+  width: 30%;
+  padding: 15px 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.button_register > button:hover {
+  background: #fd7e14;
+  color: #fff;
+}
+
 .staff__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;

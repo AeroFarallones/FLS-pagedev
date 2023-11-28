@@ -31,6 +31,12 @@
   <link href="{{ public_asset('/fls-theme/frontend/css/styles.css') }}" rel="stylesheet" />
   <link href="{{ public_asset('/fls-theme/frontend/css/custom.css') }}" rel="stylesheet" />
   <link href="{{ public_asset('/fls-theme/frontend/js/app.js') }}" rel="stylesheet" />
+  {{-- LIBRARIES --}}
+  {{-- JQUERY --}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  {{-- AOS --}}
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   {{-- End FLS-THEME required --}}
 
 
@@ -55,7 +61,7 @@
 
   <!-- End Navbar -->
 
-  <div class="container-fluid p-0" style="width: 100%!important;">
+  <div class="container-fluid p-0" style="width: 100%!important; padding-left: 0rem; padding-right: 0rem;">
 
     {{-- These should go where you want your content to show up --}}
     @include('flash.message')
@@ -74,6 +80,7 @@
     </div>
   </footer> --}}
 
+
   <script src="https://kit.fontawesome.com/03b0ac721b.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
@@ -83,6 +90,11 @@
   <script src="{{ public_mix('/assets/frontend/js/vendor.js') }}"></script>
   <script src="{{ public_mix('/assets/frontend/js/app.js') }}"></script>
   @yield('scripts')
+
+  {{-- FLS-THEME required --}}
+
+  {{-- End FLS-THEME required --}}
+
 
   {{--
   It's probably safe to keep this to ensure you're in compliance
@@ -112,8 +124,8 @@
   });
   </script>
 
-<script>
-  function register(){
+  <script>
+    function register(){
     location.replace("{{route('register')}}");
   }
   </script>
@@ -138,6 +150,23 @@
   @endif
   <script src="https://kit.fontawesome.com/03b0ac721b.js" crossorigin="anonymous"></script>
   {{-- End of the Google Analytics code --}}
+
+  {{-- CHANGE BACKGROUND COLOR NAV HOME--}}
+  <script>
+    var one = "#10e88a";
+  
+  $(window).on("scroll touchmove", function() {
+      if ($(document).scrollTop() >= $("#staff_card").position().top - 5) {
+          $('#nav-home').css('background', $("#nav-home").attr("data-color"));
+          $('#nav-home').addClass("py-3");
+          $('#nav-home').removeClass("pt-5");
+      }else{
+        $('#nav-home').css('background', 'transparent');
+        $('#nav-home').addClass("pt-5");
+        $('#nav-home').removeClass("py-3");
+      };
+  });
+  </script>
 
 </body>
 

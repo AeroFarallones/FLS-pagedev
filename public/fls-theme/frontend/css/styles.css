@@ -25,6 +25,10 @@ a {
   font-weight: 600;
 }
 
+#nav-home {
+  transition: all 450ms;
+}
+
 /* Landing Page */
 
 .intro {
@@ -60,7 +64,45 @@ a {
   color: #fff;
 }
 
-.staff__title {
+@media screen and (max-width: 800px) {
+  .home_container {
+    align-content: center;
+  }
+
+  .title_container > h1 {
+    font-size: 2rem;
+  }
+
+  .home_container > div:first-child {
+    width: 100% !important;
+  }
+  .button_register > button {
+    width: 100%;
+  }
+}
+
+.statsCards__container {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .statsCards__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .statsCards__container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+.staff__title,
+.statistics__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 2.5rem;

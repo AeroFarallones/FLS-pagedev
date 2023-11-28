@@ -39,6 +39,7 @@
     <i class="fa-solid fa-circle text-success text-center dashboard-icon-size" title="Accepted" aria-hidden="true"></i>
     @elseif($pirep->state === PirepState::REJECTED)
     <i class="fa-solid fa-circle text-danger text-center dashboard-icon-size" title="Accepted" aria-hidden="true"></i>
+    @endif
   </div>
   <div class="row dashboard-row-pirep dashboard-secondary-text">
     Submitted {{ $pirep->submitted_at->diffForHumans() }}

@@ -145,7 +145,7 @@
                         href="{{ route('frontend.pireps.create') }}">@lang('dashboard.fileonenow')</a>
                 </div>
                 @else
-                @include('dashboard.pirep_card', ['pirep' => $last_pirep])
+                <!-- @include('dashboard.pirep_card', ['pirep' => $last_pirep]) -->
                 @endif
             </div>
             <div class="col-sm-8">

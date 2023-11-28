@@ -231,6 +231,8 @@
   @widget('live_map', ['width' => '100%', 'table' => true])
 </div>
 <script>
-  AOS.init();
+  AOS.init({
+    startEvent: 'DOMContentLoaded'
+  });
 </script>
 @endsection

@@ -55,7 +55,7 @@
 
 <body>
   @if (Route::is('frontend.home'))
-
+  {{-- LANDING PAGE NAV --}}
   <!-- Navbar -->
   @include('home_nav')
   <!-- End Navbar -->
@@ -64,13 +64,15 @@
 
     {{-- These should go where you want your content to show up --}}
     @include('flash.message')
-    @yield('content')
+    @yield('content_dash')
     {{-- End the above block--}}
   </div>
 
   <div class="clearfix" style="height: 200px;"></div>
 
   @else
+  {{-- Others page incluide --}}
+  @include('nav')
   <div class="container-fluid p-0" style="width: 85%!important; padding-left: 0rem; padding-right: 0rem;">
 
     {{-- These should go where you want your content to show up --}}

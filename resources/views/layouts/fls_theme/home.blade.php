@@ -1,7 +1,7 @@
 @extends('app')
 @section('title', __('home.welcome.title'))
 
-@section('content')
+@section('content_dash')
 
 
 @include('home_nav')

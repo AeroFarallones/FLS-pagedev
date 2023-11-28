@@ -73,7 +73,7 @@
   @else
   {{-- Others page incluide --}}
   @include('nav')
-  <div class="container-fluid p-0" style="width: 85%!important; padding-left: 0rem; padding-right: 0rem;">
+  <div class="container-fluid p-0" style="width: 95%!important; padding-left: 0rem; padding-right: 0rem;">
 
     {{-- These should go where you want your content to show up --}}
     @include('flash.message')

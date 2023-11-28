@@ -54,11 +54,10 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  @if (!Route::is('frontend.home'))
-  @include('nav')
-  @endif
+  @if (Route::is('frontend.home'))
 
+  <!-- Navbar -->
+  @include('home_nav')
   <!-- End Navbar -->
 
   <div class="container-fluid p-0" style="width: 100%!important; padding-left: 0rem; padding-right: 0rem;">
@@ -67,9 +66,23 @@
     @include('flash.message')
     @yield('content')
     {{-- End the above block--}}
+  </div>
 
+  <div class="clearfix" style="height: 200px;"></div>
+
+  @else
+  <div class="container-fluid p-0" style="width: 85%!important; padding-left: 0rem; padding-right: 0rem;">
+
+    {{-- These should go where you want your content to show up --}}
+    @include('flash.message')
+    @yield('content')
+    {{-- End the above block--}}
   </div>
   <div class="clearfix" style="height: 200px;"></div>
+  @endif
+
+
+
 
 
   {{-- <footer class="footer footer-default">

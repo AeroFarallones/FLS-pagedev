@@ -57,7 +57,7 @@
   @if (Route::is('frontend.home'))
   {{-- LANDING PAGE NAV --}}
   <!-- Navbar -->
-  @include('home_nav')
+  {{-- @include('home_nav') --}}
   <!-- End Navbar -->
 
   <div class="container-fluid p-0" style="width: 100%!important; padding-left: 0rem; padding-right: 0rem;">

@@ -30,7 +30,7 @@
 
 
 {{-- STATS CARDS--}}
-<div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5">
+<div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5" id="stats_card">
   <div class="container" data-aos="fade-right">
     <h2 class="statistics__title">Latest statistics...</h2>
   </div>
@@ -53,7 +53,7 @@
 </div>
 
 {{-- STAFF --}}
-<div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5" id="staff_card">
+<div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5">
   <div class="container" data-aos="fade-right">
     <h2 class="staff__title">STAFF</h2>
   </div>

@@ -156,7 +156,7 @@
     var one = "#10e88a";
   
   $(window).on("scroll touchmove", function() {
-      if ($(document).scrollTop() >= $("#staff_card").position().top - 5) {
+      if ($(document).scrollTop() >= $("#stats_card").position().top - 5) {
           $('#nav-home').css('background', $("#nav-home").attr("data-color"));
           $('#nav-home').addClass("py-3");
           $('#nav-home').removeClass("pt-5");

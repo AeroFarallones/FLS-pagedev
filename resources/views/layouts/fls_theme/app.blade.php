@@ -15,11 +15,10 @@
   <meta name="csrf-token" content="{!! csrf_token() !!}">
   {{-- End the required lines block --}}
 
-  <link rel="shortcut icon" type="image/png" href="{{ public_asset('/assets/img/favicon.png') }}" />
+
+
+  <link rel="shortcut icon" type="image/png" href="{{ public_asset('fls-theme/frontend/img/favicon.png') }}" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-  <link href="{{ public_mix('/assets/frontend/css/now-ui-kit.css') }}" rel="stylesheet" />
-  <link href="{{ public_asset('/assets/frontend/css/styles.css') }}" rel="stylesheet" />
-  <link href="{{ public_asset('/assets/frontend/css/custom.css') }}" rel="stylesheet" />
 
   {{-- Start of the required files in the head block --}}
   <link href="{{ public_mix('/assets/global/css/vendor.css') }}" rel="stylesheet" />
@@ -27,14 +26,13 @@
   @yield('scripts_head')
   {{-- End of the required stuff in the head block --}}
 
-  {{-- FLS-THEME required --}}
-  <link href="{{ public_asset('/fls-theme/frontend/css/styles.css') }}" rel="stylesheet" />
-  <link href="{{ public_asset('/fls-theme/frontend/css/custom.css') }}" rel="stylesheet" />
-  <link href="{{ public_asset('/fls-theme/frontend/js/app.js') }}" rel="stylesheet" />
-  {{-- LIBRARIES --}}
-  {{-- JQUERY --}}
+  {{-- FLS-THEME required --}}<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+
+  <link href="{{ public_mix('fls-theme/frontend/css/fls_compiled.css')}}" rel="stylesheet">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  {{-- AOS --}}
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   {{-- End FLS-THEME required --}}
@@ -44,8 +42,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@500&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
@@ -97,9 +93,6 @@
 
 
   <script src="https://kit.fontawesome.com/03b0ac721b.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-  </script>
   {{-- Start of the required tags block. Don't remove these or things will break!! --}}
   <script src="{{ public_mix('/assets/global/js/vendor.js') }}"></script>
   <script src="{{ public_mix('/assets/frontend/js/vendor.js') }}"></script>
@@ -171,7 +164,7 @@
     var one = "#10e88a";
   
   $(window).on("scroll touchmove", function() {
-      if ($(document).scrollTop() >= $("#stats_card").position().top - 5) {
+      if ($(document).scrollTop() >= $("#airline_card").position().top - 80) {
           $('#nav-home').css('background', $("#nav-home").attr("data-color"));
           $('#nav-home').addClass("py-3");
           $('#nav-home').removeClass("pt-5");

@@ -1,4 +1,4 @@
-{{-- @if(filled($leader_board)) --}}
+@if(filled($leader_board))
 <div class="card mb-2 rounded-4">
   <div class="card-header p-1 dashboard-card" style="background-color: #00157f">
     <h5 class="m-1 text-white text-orange">
@@ -17,7 +17,12 @@
       @foreach($leader_board as $board)
       <tr>
         <td>
-          <a href="{{ route($board['route'], $board['id']) }}" class="text-decoration-none">
+          <a href="{{ route($board['route'], $board['id']) }}">
+            @if(Theme::getSetting('roster_ident'))
+            {{ $board['pilot_ident'] }}
+            @endif
+            {{ $board['name_private'] }}
+          </a>
         </td>
         <td class="text-end">{{ $board['totals'] }}</td>
       </tr>
@@ -30,20 +35,4 @@
     </div>
   </div>
 </div>
-{{-- @endif --}}
-
-
-
-{{-- @foreach($leader_board as $board)
-<tr>
-  <td>
-    <a href="{{ route($board['route'], $board['id']) }}">
-      @if(Theme::getSetting('roster_ident'))
-      {{ $board['pilot_ident'] }}
-      @endif
-      {{ $board['name_private'] }}
-    </a>
-  </td>
-  <td class="text-end">{{ $board['totals'] }}</td>
-</tr>
-@endforeach --}}
+@endif

@@ -202,8 +202,8 @@
 
   {{-- Sidebar --}}
   <div class="col-sm-4">
-    <div class="card-header dashboard-card ps-2 p-1 mb-3" style="background: #00157f">
-      <a href="https://metar-taf.com/" id="metartaf-crDVdyuy" class="font-montbold"
+    <div class="card-header dashboard-card ps-2 p-1 mb-3 text-white" style="background: #00157f">
+      <a href="https://metar-taf.com/" id="metartaf-crDVdyuy" class="text-white font-montbold"
         style="font-size: 0.925rem; display:block; pointer-events: none">METAR {{
         $current_airport }}</a>
     </div>

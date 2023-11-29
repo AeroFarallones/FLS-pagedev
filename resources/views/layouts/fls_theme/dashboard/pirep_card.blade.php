@@ -4,27 +4,25 @@
   </div>
   <div class="row dashboard-row-pirep">
     <div class="col-sm-5 dashboard-primary-text">
-      {{ $pirep->dpt_airport->name }}
-      (<a href="{{route('frontend.airports.show', [
+      <a class="text-white a-fls" title ="{{ $pirep->dpt_airport->name }}" href="{{route('frontend.airports.show', [
                           'id' => $pirep->dpt_airport->icao
-                          ])}}">{{$pirep->dpt_airport->icao}}</a>)
+                          ])}}">{{$pirep->dpt_airport->icao}}</a>
     </div>
     <div class="col-sm-2 dashboard-primary-text">
       <i class="fa-solid fa-plane"></i>
     </div>
     <div class="col-sm-5 dashboard-primary-text">
-      {{ $pirep->arr_airport->name }}
-      (<a href="{{route('frontend.airports.show', [
+      <a class="text-white a-fls" title="{{ $pirep->arr_airport->name }}" href="{{route('frontend.airports.show', [
                           'id' => $pirep->arr_airport->icao
-                          ])}}">{{$pirep->arr_airport->icao}}</a>)
+                          ])}}">{{$pirep->arr_airport->icao}}</a>
     </div>
   </div>
   <div class="row dashboard-row-pirep dashboard-primary-text">
-    <a href="{{ route('frontend.pireps.show', [$pirep->id]) }}">{{ $pirep->ident }}</a>
+    <a class="text-white a-fls" href="{{ route('frontend.pireps.show', [$pirep->id]) }}">{{ $pirep->ident }}</a>
   </div>
   <div class="row dashboard-row-pirep dashboard-secondary-text">
     <div class="col-sm-6">
-      <a href="{{ route('frontend.pireps.show', [$pirep->id]) }}">{{ ($pirep->aircraft)->ident }}</a>
+      <a class="text-white a-fls" href="{{ route('frontend.pireps.show', [$pirep->id]) }}">{{ ($pirep->aircraft)->ident }}</a>
     </div>
     <div class="col-sm-6">
       @if(filled($pirep->landing_rate))

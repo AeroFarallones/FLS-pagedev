@@ -28,6 +28,38 @@
   </div>
 </div>
 
+{{--IVAO PARTNERSHIP CARDS--}}
+<div class="container-fluid d-grip w-50 h-100 p-5 gap-3">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card" style="background-color: #00157f">
+          <img src="{{asset('fls-theme/frontend/img/Logos/LogoBlancoMont.png')}}" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text text-white">Welcome to AeroFarallones! A virtual airline where we want our pilots to take flight simulation to another level.</p>
+            </div>
+        </div>
+      </div>
+    <div class="col">
+      <div class="card" style="background-color: #00157f">
+        <img src="{{asset('fls-theme/frontend/img/Logos/community.png')}}" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text text-white">Since our establishment in 2017, the AeroFarallones community has been provided with the best and most advanced flight simulation tools.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="background-color: #00157f">
+        <img src="https://www.aerofarallones.com/image/new/IVAO_Partner.svg" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text text-white">We are officially registered in IVAO, a virtual network that provides the best flight and simulation experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {{-- STATS CARDS--}}
 <div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5" id="stats_card">

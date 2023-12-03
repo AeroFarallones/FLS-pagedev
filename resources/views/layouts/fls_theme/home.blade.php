@@ -29,36 +29,32 @@
 </div>
 
 {{--IVAO PARTNERSHIP CARDS--}}
-<div class="container-fluid w-75 p-5 gap-5" id="airline_card" style="justify-items: center">
-  <div class="row row-cols-3">
+<div class="container-fluid d-grid w-100 h-100 p-5 gap-5" id="airline_card">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
-      <div class="card w-100 h-100 d-flex align-items-center p-2 text-center" style="background-color: #00157f">
-        <img src="{{asset('fls-theme/frontend/img/Logos/LogoBlancoMont.png')}}" class="card-img-top w-50" alt="...">
-        <div class="card-body mt-2">
-          <h5 class="card-title"></h5>
-          <p class="card-text text-white">Welcome to AeroFarallones! A virtual airline where we want our pilots to
-            take
-            flight simulation to another level.</p>
+      <div class="card" style="background: #fd7e14">
+        <div class="card-body">
+          <img src="{{asset('fls-theme/frontend/img/Logos/community.png')}}" width="30%" alt="">
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card w-100 h-100 d-flex align-items-center p-2 text-center" style="background-color: #00157f">
-        <img src="{{asset('fls-theme/frontend/img/Logos/community.png')}}" class="card-img-top w-50" alt="...">
-        <div class="card-body mt-2">
-          <h5 class="card-title"></h5>
-          <p class="card-text text-white">Since our establishment in 2017, the AeroFarallones community has been
-            provided with the best and most advanced flight simulation tools.</p>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card w-100 h-100 d-flex align-items-center p-2 text-center" style="background-color: #00157f">
-        <img src="https://www.aerofarallones.com/image/new/IVAO_Partner.svg" class="card-img-top w-100 p-4" alt="...">
-        <div class="card-body mt-2">
-          <h5 class="card-title"></h5>
-          <p class="card-text text-white">We are officially registered in IVAO, a virtual network that provides the
-            best flight and simulation experience.</p>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content.</p>
         </div>
       </div>
     </div>

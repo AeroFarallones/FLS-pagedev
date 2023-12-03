@@ -301,3 +301,9 @@ a:hover {
 .card-footer-fls {
   background-color: white!important;
 }
+
+.button-flights {
+  border-color: white;
+  border-radius: 1rem;
+  background-color: transparent!important;
+}

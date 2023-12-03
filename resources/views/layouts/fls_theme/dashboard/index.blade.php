@@ -2,7 +2,7 @@
 @section('title', __('common.dashboard'))
 
 @section('content')
-<div class="row">
+<div class="row pt-3">
   <div class="col-sm-8">
 
     @if(Auth::user()->state === \App\Models\Enums\UserState::ON_LEAVE)
@@ -198,12 +198,15 @@
         => null])
       </div>
     </div>
+   
+				@widget('FlsModule::AirportAssets', ['type' => 'aircraft', 'location' => $current_airport ?? '--' ])
+
   </div>
 
   {{-- Sidebar --}}
   <div class="col-sm-4">
     <div class="card-header dashboard-card ps-2 p-1 mb-3 text-white" style="background: #00157f">
-      <a href="https://metar-taf.com/" id="metartaf-crDVdyuy" class="text-white font-montbold"
+      <a href="https://metar-taf.com/" id="metartaf-crDVdyuy" class="text-white  font-montbold"
         style="font-size: 0.925rem; display:block; pointer-events: none">METAR {{
         $current_airport }}</a>
     </div>

@@ -12,7 +12,8 @@
       @foreach ($elements as $element)
       <!-- "Three Dots" Separator -->
       @if (is_string($element))
-      <li class="page-item disabled"><span style="background-color: #00157f" class="page-link">{{ $element }}</span>
+      <li class="page-item disabled font-montbold"><span style="background-color: #00157f" class="page-link">{{ $element
+          }}</span>
       </li>
       @endif
 
@@ -20,10 +21,11 @@
       @if (is_array($element))
       @foreach ($element as $page => $url)
       @if ($page == $paginator->currentPage())
-      <li class="page-item active"><span class="page-link" style="background-color: #00157f; border: #00157f">{{ $page
+      <li class="page-item active font-montbold"><span class="page-link"
+          style="background-color: #00157f; border: #00157f">{{ $page
           }}</span></li>
       @else
-      <li class="page-item"><a class="page-link" href="{{ $url }}">{{ $page }}</a>
+      <li class="page-item font-montbold"><a class="page-link" href="{{ $url }}">{{ $page }}</a>
       </li>
       @endif
       @endforeach

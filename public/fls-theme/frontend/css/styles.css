@@ -303,7 +303,19 @@ a:hover {
 }
 
 .button-flights {
-  border-color: white;
-  border-radius: 1rem;
+  border-color: white!important;
+  border-radius: 1rem!important;
   background-color: transparent !important;
+  width: fit-content!important;
+  font-weight: 600!important;
+  font-size: 1.4rem!important;
+}
+.button-flights:hover {
+ background-color: #fd7e14!important;
+}
+.button-flights::selection {
+  background-color:#00157f!important ;
+}
+.row-flights-card {
+  align-items: center;
 }

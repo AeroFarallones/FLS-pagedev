@@ -51,35 +51,35 @@ class Fls_ServiceProvider extends ServiceProvider
             // Custom pages
             Route::get('fls-aircraft/{icao}', 'Fls_CustomPagesController@index')->name('custom.aircraft');
             // Airlines
-            Route::get('dairlines', 'Fls_AirlineController@index')->name('airlines');
-            Route::get('dairlines/{icao}', 'Fls_AirlineController@show')->name('airline');
-            Route::get('dairline/{id}', 'Fls_AirlineController@myairline')->name('myairline');
+            Route::get('fairlines', 'Fls_AirlineController@index')->name('airlines');
+            Route::get('fairlines/{icao}', 'Fls_AirlineController@show')->name('airline');
+            Route::get('fairline/{id}', 'Fls_AirlineController@myairline')->name('myairline');
             // Awards
-            Route::get('dawards', 'Fls_AwardController@index')->name('awards');
+            Route::get('fawards', 'Fls_AwardController@index')->name('awards');
             // Fleet
-            Route::get('dfleet', 'Fls_FleetController@index')->name('fleet');
-            Route::get('dfleet/{subfleet_type}', 'Fls_FleetController@subfleet')->name('subfleet');
-            Route::get('daircraft/{ac_reg}', 'Fls_FleetController@aircraft')->name('aircraft');
+            Route::get('ffleet', 'Fls_FleetController@index')->name('fleet');
+            Route::get('ffleet/{subfleet_type}', 'Fls_FleetController@subfleet')->name('subfleet');
+            Route::get('faircraft/{ac_reg}', 'Fls_FleetController@aircraft')->name('aircraft');
             // Hubs
-            Route::get('dhubs', 'Fls_HubController@index')->name('hubs');
-            Route::get('dhubs/{icao}', 'Fls_HubController@show')->name('hub');
+            Route::get('fhubs', 'Fls_HubController@index')->name('hubs');
+            Route::get('fhubs/{icao}', 'Fls_HubController@show')->name('hub');
             // News
-            Route::get('dnews', 'Fls_NewsController@index')->name('news');
+            Route::get('fnews', 'Fls_NewsController@index')->name('news');
             // Ranks
-            Route::get('dranks', 'Fls_RankController@index')->name('ranks');
+            Route::get('franks', 'Fls_RankController@index')->name('ranks');
             // Roster
-            Route::get('droster', 'Fls_RosterController@index')->name('roster');
+            Route::get('froster', 'Fls_RosterController@index')->name('roster');
             // Pages
-            Route::get('dlivewx', 'Fls_PageController@livewx')->name('livewx');
+            Route::get('flivewx', 'Fls_PageController@livewx')->name('livewx');
             // Pireps
-            Route::get('dpireps', 'Fls_PirepController@index')->name('pireps');
+            Route::get('fpireps', 'Fls_PirepController@index')->name('pireps');
             // Stable Approach
-            Route::get('dstable', 'Fls_StableApproachController@index')->name('stable');
+            Route::get('fstable', 'Fls_StableApproachController@index')->name('stable');
             // Statistics
-            Route::get('dstats', 'Fls_StatisticController@index')->name('stats');
+            Route::get('fstats', 'Fls_StatisticController@index')->name('stats');
             // Widgets
-            Route::match(['get', 'post'], 'djumpseat', 'Fls_WidgetController@jumpseat')->name('jumpseat');
-            Route::match(['get', 'post'], 'dtransferac', 'Fls_WidgetController@transferac')->name('transferac');
+            Route::match(['get', 'post'], 'fjumpseat', 'Fls_WidgetController@jumpseat')->name('jumpseat');
+            Route::match(['get', 'post'], 'ftransferac', 'Fls_WidgetController@transferac')->name('transferac');
         });
 
         // Frontend Public
@@ -90,13 +90,13 @@ class Fls_ServiceProvider extends ServiceProvider
             'prefix'     => '',
         ], function () {
             // Public Pages (for IVAO/VATSIM Audits)
-            Route::get('dreports', 'Fls_PirepController@index')->name('reports');
-            Route::get('dstatistics', 'Fls_StatisticController@index')->name('statistics');
+            Route::get('freports', 'Fls_PirepController@index')->name('reports');
+            Route::get('fstatistics', 'Fls_StatisticController@index')->name('statistics');
             // Plain Pages
-            Route::get('dp_roster', 'Fls_WebController@roster')->name('dp_roster');
-            Route::get('dp_stats', 'Fls_WebController@stats')->name('dp_stats');
-            Route::get('dp_page', 'Fls_WebController@page')->name('dp_page');
-            Route::get('dp_pireps', 'Fls_WebController@pireps')->name('dp_pireps');
+            Route::get('fls_roster', 'Fls_WebController@roster')->name('dp_roster');
+            Route::get('fls_stats', 'Fls_WebController@stats')->name('dp_stats');
+            Route::get('fls_page', 'Fls_WebController@page')->name('dp_page');
+            Route::get('fls_pireps', 'Fls_WebController@pireps')->name('dp_pireps');
         });
 
         // API Public
@@ -121,18 +121,18 @@ class Fls_ServiceProvider extends ServiceProvider
             Route::get('FlsModule/blog', 'Fls_CustomPagesController@index')->name('admin.blog');
             //Default
             Route::get('FlsModule', 'Fls_AdminController@index')->name('admin')->middleware('ability:admin,addons,modules');
-            Route::get('dcheck', 'Fls_AdminController@health_check')->name('health_check')->middleware('ability:admin,addons,modules');
-            Route::match(['get', 'post'], 'dsettings_update', 'Fls_AdminController@settings_update')->name('settings_update')->middleware('ability:admin,addons,modules');
-            Route::match(['get', 'post'], 'dpark_aircraft', 'Fls_AdminController@park_aircraft')->name('park_aircraft')->middleware('ability:admin,addons,modules');
-            Route::match(['get', 'post'], 'dspecs', 'Fls_SpecController@index')->name('specs')->middleware('ability:admin,addons,modules');
-            Route::match(['get', 'post'], 'dspecs_store', 'Fls_SpecController@store')->name('specs_store')->middleware('ability:admin,addons,modules');
-            Route::match(['get', 'post'], 'dtech', 'Fls_TechController@index')->name('tech')->middleware('ability:admin,addons,modules');
-            Route::match(['get', 'post'], 'dtech_store', 'Fls_TechController@store')->name('tech_store')->middleware('ability:admin,addons,modules');
-            Route::match(['get', 'post'], 'drunway', 'Fls_RunwayController@index')->name('runway')->middleware('ability:admin,addons,modules');
-            Route::match(['get', 'post'], 'drunway_store', 'Fls_RunwayController@store')->name('runway_store')->middleware('ability:admin,addons,modules');
-            Route::post('dstable/update', 'Fls_StableApproachController@update')->name('stable_update')->middleware('ability:admin,addons,modules');
-            Route::post('dmanual_award', 'Fls_AdminController@manual_award')->name('manual_award')->middleware('ability:admin,addons,modules');
-            Route::post('dmanual_payment', 'Fls_AdminController@manual_payment')->name('manual_payment')->middleware('ability:admin,addons,modules');
+            Route::get('fcheck', 'Fls_AdminController@health_check')->name('health_check')->middleware('ability:admin,addons,modules');
+            Route::match(['get', 'post'], 'fsettings_update', 'Fls_AdminController@settings_update')->name('settings_update')->middleware('ability:admin,addons,modules');
+            Route::match(['get', 'post'], 'fpark_aircraft', 'Fls_AdminController@park_aircraft')->name('park_aircraft')->middleware('ability:admin,addons,modules');
+            Route::match(['get', 'post'], 'fspecs', 'Fls_SpecController@index')->name('specs')->middleware('ability:admin,addons,modules');
+            Route::match(['get', 'post'], 'fspecs_store', 'Fls_SpecController@store')->name('specs_store')->middleware('ability:admin,addons,modules');
+            Route::match(['get', 'post'], 'ftech', 'Fls_TechController@index')->name('tech')->middleware('ability:admin,addons,modules');
+            Route::match(['get', 'post'], 'ftech_store', 'Fls_TechController@store')->name('tech_store')->middleware('ability:admin,addons,modules');
+            Route::match(['get', 'post'], 'frunway', 'Fls_RunwayController@index')->name('runway')->middleware('ability:admin,addons,modules');
+            Route::match(['get', 'post'], 'frunway_store', 'Fls_RunwayController@store')->name('runway_store')->middleware('ability:admin,addons,modules');
+            Route::post('fstable/update', 'Fls_StableApproachController@update')->name('stable_update')->middleware('ability:admin,addons,modules');
+            Route::post('fmanual_award', 'Fls_AdminController@manual_award')->name('manual_award')->middleware('ability:admin,addons,modules');
+            Route::post('fmanual_payment', 'Fls_AdminController@manual_payment')->name('manual_payment')->middleware('ability:admin,addons,modules');
         });
     }
 

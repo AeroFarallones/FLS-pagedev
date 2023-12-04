@@ -2,10 +2,14 @@
   <div class=" container-fluid">
     <a class="navbar-brand" href="#"><img width="250px"
         src="https://www.aerofarallones.com/image/new/Logo_FLS_CO_TXT_S.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-      aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
+
+
+    <button class="fs-4 bg-transparent rounded" style="border: none" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <i class="fa fa-bars text-white" aria-hidden="true"></i>
     </button>
+
+
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title fs-3 font-montbold" id="offcanvasNavbarLabel" style="color: #000a54">

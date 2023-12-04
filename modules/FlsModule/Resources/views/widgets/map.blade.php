@@ -3,7 +3,7 @@ count($mapHubs) > 0)
 {{-- Map Modal Button --}}
 <div class="row">
   <div class="col d-grid">
-    <button type="button" class="btn btn-sm btn-danger p-0 px-1" data-toggle="modal"
+    <button type="button" class="btn button-blue-fls font-montbold mb-2" data-toggle="modal"
       data-target="{{ '#modal'.$mapsource }}" onclick="{{ $mapsource }}ExpandMap()">
       @if($mapsource === 'user')
       @lang('FlsModule::widgets.personal_map')

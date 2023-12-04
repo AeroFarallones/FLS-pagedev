@@ -319,3 +319,18 @@ a:hover {
 .row-flights-card {
   align-items: center;
 }
+.a-flights {
+  background: #00157f !important;
+  color: white !important;
+  font-weight: 700 !important;
+  padding: 0.12rem 0.25rem 0.12rem 0.25rem !important;
+  border-radius: 1rem !important;
+}
+.a-flights:hover  {
+  background-color: #fd7e14!important;
+  color: white!important;
+}
+
+.align-items-center {
+  align-items: center;
+}

@@ -1,4 +1,4 @@
-<div class="row" style="place-content: center; offset-distance: inherit;">
+<div class="row pb-3" style="place-content: center; offset-distance: inherit;">
     @foreach($flights as $flight)
     <div class="col-md-4 pt-4">
         <div class="card dashboard-pirep-card dashboard-card pt-4 h-100">

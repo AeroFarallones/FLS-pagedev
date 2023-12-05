@@ -10,15 +10,9 @@
     </div>
     <div class="col-md-3">
       @include('flights.nav')
-      @widget('FlsModule::Map', ['source' => 'aerodromes'])
+      @widget('FlsModule::Map', ['source' => 'fleet'])
       @include('flights.search')
     </div>
-  </div>
-  <div class="col-md-3">
-    @include('flights.nav')
-    @widget('FlsModule::Map', ['source' => 'fleet'])
-    @widget('FlsModule::Map')
-    @include('flights.search')
   </div>
 </div>
 <div class="row">
@@ -30,5 +24,4 @@
 @include('flights.bids_aircraft')
 @endif
 @endsection
-
 @include('flights.scripts')

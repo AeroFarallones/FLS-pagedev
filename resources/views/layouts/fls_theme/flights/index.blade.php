@@ -10,8 +10,7 @@
     </div>
     <div class="col-md-3">
       @include('flights.nav')
-      @widget('FlsModule::Map')
-      @widget('FlsModule::Map', ['source' => 'fleet'])
+      @widget('FlsModule::Map', ['source' => 'aerodromes'])
       @include('flights.search')
     </div>
   </div>

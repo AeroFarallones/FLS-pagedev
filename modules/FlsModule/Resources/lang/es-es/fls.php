@@ -77,4 +77,66 @@ return [
     'menu_pireps'   => 'Informes',
     'menu_market'   => 'Tienda Piloto',
     'menu_mymarket' => 'Adquisiciones',
+    'aircraft' => [
+        'B789' => [
+            'title' => 'Boeing 787-900',
+            'description' => 'La aeronave más grande de nuestra flota.',
+            'spcMtow' => "227,900 kg",
+            'spcZfw' => "161,900 kg",
+            'spcCeiling' => "43,100 ft",
+            'spcMaxPayload' => "41,100 kg",
+            'spcSpeed' => "0.85 Mach",
+            'range' => 'FOF',
+        ],
+        'A320' => [
+            'title' => 'Airbus A320',
+            'description' => 'La aeronave más exitosa de nuestra flota.',
+            'spcMtow' => "79,000 kg",
+            'spcZfw' => "62,800 kg",
+            'spcCeiling' => "39,800 ft",
+            'spcMaxPayload' => "20,000 kg",
+            'spcSpeed' => "0.78 Mach",
+            'range' => 'FOF'
+        ],
+        'AT46' => [
+            'title' => 'ATR 42-600',
+            'description' => 'La turbohélice más popular del mundo.',
+            'spcMtow' => "18,600 kg",
+            'spcZfw' => "17,000 kg",
+            'spcCeiling' => "25,000 ft",
+            'spcMaxPayload' => "5,250 kg",
+            'spcSpeed' => "289 knots",
+            'range' => 'FOF'
+        ],
+        'B190' => [
+            'title' => 'Beechcraft 1900D',
+            'description' => 'La aeronave más útil de todas.',
+            'spcMtow' => "7,764 kg",
+            'spcZfw' => "4,932 kg",
+            'spcCeiling' => "25,000 ft",
+            'spcMaxPayload' => "1,985 kg",
+            'spcSpeed' => "280 knots",
+            'range' => 'FOF'
+        ],
+        'B738' => [
+            'title' => 'Boeing 737-800',
+            'description' => 'La aeronave más versátil que poseemos.',
+            'spcMtow' => "79,016 kg",
+            'spcZfw' => "61,690 kg",
+            'spcCeiling' => "41,000 ft",
+            'spcMaxPayload' => "23,904 kg",
+            'spcSpeed' => "0.789 Mach",
+            'range' => 'FOF'
+        ],
+        'C172' => [
+            'title' => 'Cessna 172',
+            'description' => 'El comienzo de todo.',
+            'spcMtow' => "1,111 kg",
+            'spcZfw' => "767 kg",
+            'spcCeiling' => "13,500 ft",
+            'spcMaxPayload' => "395 kg",
+            'spcSpeed' => "122 knots",
+            'range' => 'FOF'
+        ],
+    ],
 ];

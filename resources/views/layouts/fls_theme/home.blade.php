@@ -259,9 +259,9 @@
   @widget('FlsModule::FleetInfo', ['aircraft' => "A320"])
   @widget('FlsModule::FleetInfo', ['aircraft' => "B789"])
   @widget('FlsModule::FleetInfo', ['aircraft' => "C172"])
-  {{-- @widget('FlsModule::FleetInfo', ['aircraft' => ""])
-  @widget('FlsModule::FleetInfo', ['aircraft' => "A320"])
-  @widget('FlsModule::FleetInfo', ['aircraft' => "A320"]) --}}
+  @widget('FlsModule::FleetInfo', ['aircraft' => "AT46"])
+  @widget('FlsModule::FleetInfo', ['aircraft' => "B190"])
+  @widget('FlsModule::FleetInfo', ['aircraft' => "B738"])
 
 </div>
 

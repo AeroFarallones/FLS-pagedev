@@ -28,6 +28,11 @@ a:hover {
   transition: all 450ms;
 }
 
+button {
+  border: none;
+  background: transparent
+}
+
 /* Landing Page */
 
 .intro {

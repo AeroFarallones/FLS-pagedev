@@ -86,7 +86,7 @@ return [
             'spcCeiling' => "43,100 ft",
             'spcMaxPayload' => "41,100 kg",
             'spcSpeed' => "0.85 Mach",
-            'range' => 'FOF',
+            'range' => 'SCP',
         ],
         'A320' => [
             'title' => 'Airbus A320',
@@ -96,7 +96,7 @@ return [
             'spcCeiling' => "39,800 ft",
             'spcMaxPayload' => "20,000 kg",
             'spcSpeed' => "0.78 Mach",
-            'range' => 'FOF'
+            'range' => 'CPT'
         ],
         'AT46' => [
             'title' => 'ATR 42-600',
@@ -106,7 +106,7 @@ return [
             'spcCeiling' => "25,000 ft",
             'spcMaxPayload' => "5,250 kg",
             'spcSpeed' => "289 knots",
-            'range' => 'FOF'
+            'range' => 'AST'
         ],
         'B190' => [
             'title' => 'Beechcraft 1900D',
@@ -116,7 +116,7 @@ return [
             'spcCeiling' => "25,000 ft",
             'spcMaxPayload' => "1,985 kg",
             'spcSpeed' => "280 knots",
-            'range' => 'FOF'
+            'range' => 'AST'
         ],
         'B738' => [
             'title' => 'Boeing 737-800',
@@ -126,7 +126,7 @@ return [
             'spcCeiling' => "41,000 ft",
             'spcMaxPayload' => "23,904 kg",
             'spcSpeed' => "0.789 Mach",
-            'range' => 'FOF'
+            'range' => 'CPT'
         ],
         'C172' => [
             'title' => 'Cessna 172',
@@ -136,7 +136,7 @@ return [
             'spcCeiling' => "13,500 ft",
             'spcMaxPayload' => "395 kg",
             'spcSpeed' => "122 knots",
-            'range' => 'FOF'
+            'range' => 'STU'
         ],
     ],
 ];

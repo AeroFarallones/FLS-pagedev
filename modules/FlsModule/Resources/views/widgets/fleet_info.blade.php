@@ -14,7 +14,8 @@
             <p>{{$description}}</p>
           </div>
           <div class="h-50">
-            <img src="{{asset('fls-theme/frontend/img/Airplanes/B788/B788.png')}}" width="100%" alt="{{$title}}">
+            <img src="{{ asset('fls-theme/frontend/img/Airplanes/'. $aircraft .'/'. $aircraft .'.png')}} " width="100%"
+              alt="{{$title}}">
           </div>
           <div class="row row-rows-2 gap-5">
             <div class="col font-fls">
@@ -35,9 +36,12 @@
           </div>
         </div>
         <div class="col d-flex flex-column">
-          <img src="{{asset('fls-theme/frontend/img/Airplanes/B788/B788.png')}}" width="100%" alt="">
-          <img src="{{asset('fls-theme/frontend/img/Airplanes/B788/B788.png')}}" width="100%" alt="">
-          <img src="{{asset('fls-theme/frontend/img/Airplanes/B788/B788.png')}}" width="100%" alt="">
+          <img src="{{ asset('fls-theme/frontend/img/Airplanes/'. $aircraft .'/'. $aircraft .'.png')}}" width="100%"
+            alt="">
+          <img src="{{ asset('fls-theme/frontend/img/Airplanes/'. $aircraft .'/'. $aircraft .'.png')}}" width="100%"
+            alt="">
+          <img src="{{ asset('fls-theme/frontend/img/Airplanes/'. $aircraft .'/'. $aircraft .'.png')}}" width="100%"
+            alt="">
         </div>
       </div>
     </div>

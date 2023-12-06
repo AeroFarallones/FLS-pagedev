@@ -176,6 +176,45 @@
   <div class="w-75 h-75" data-aos="fade-up">
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
+        <button data-bs-toggle="modal" data-bs-target="#C172Modal">
+          <div class="card">
+            <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cessna 172</h5>
+              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
+                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="col">
+        <button data-bs-toggle="modal" data-bs-target="#B190Modal">
+          <div class="card">
+            <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Beechcraft 1900D</h5>
+              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
+                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="col">
+        <button data-bs-toggle="modal" data-bs-target="#AT46Modal">
+          <div class="card">
+            <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ATR 42-600</h5>
+              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
+                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="col">
         <button data-bs-toggle="modal" data-bs-target="#A320Modal">
           <div class="card">
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
@@ -189,11 +228,11 @@
         </button>
       </div>
       <div class="col">
-        <button data-bs-toggle="modal" data-bs-target="#B789Modal">
+        <button data-bs-toggle="modal" data-bs-target="#B738Modal">
           <div class="card">
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Airbus A320</h5>
+              <h5 class="card-title">Boeing 737-800</h5>
               <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
               <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
                 Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
@@ -202,46 +241,7 @@
         </button>
       </div>
       <div class="col">
-        <button data-bs-toggle="modal" data-bs-target="#C172Modal">
-          <div class="card">
-            <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Airbus A320</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-              <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="col">
-        <button data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <div class="card">
-            <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Airbus A320</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-              <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="col">
-        <button data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <div class="card">
-            <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Airbus A320</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-              <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="col">
-        <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-aicraft="B787">
+        <button data-bs-toggle="modal" data-bs-target="#B789Modal" data-aicraft="B787">
           <div class="card">
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
             <div class="card-body">

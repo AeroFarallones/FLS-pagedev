@@ -167,12 +167,12 @@ a:hover {
 }
 
 .card {
-  border-radius: 30px !important;
+  border-radius: 1rem !important;
 }
 
 .card-img-top {
-  border-top-left-radius: 30px !important;
-  border-top-right-radius: 30px !important;
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
 }
 
 .fleet_container {
@@ -275,6 +275,11 @@ a:hover {
 
 .button-blue-fls:hover {
   background: #fd7e14 !important;
+  color: white!important;
+}
+.button-blue-fls::selection {
+  background: #fd7e14 !important;
+  color: white!important;
 }
 
 /* Jumpseat card */
@@ -299,7 +304,7 @@ a:hover {
 }
 
 .card-footer-fls {
-  background-color: white !important;
+  background-color: transparent !important;
 }
 
 .button-flights {
@@ -333,4 +338,15 @@ a:hover {
 
 .align-items-center {
   align-items: center;
+}
+
+.airports-card-body {
+  background-color: #00157f!important;
+  border-radius: inherit!important;
+  color: white!important;
+  padding: 3rem 0 0.5rem 0 !important;
+}
+
+.background-transparent {
+  background-color: transparent!important;
 }

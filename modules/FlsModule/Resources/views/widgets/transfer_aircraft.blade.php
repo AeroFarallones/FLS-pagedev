@@ -1,8 +1,8 @@
 {{-- @if($is_visible) --}}
 {{ Form::open(array('route' => $form_route, 'method' => 'post')) }}
 {{-- @if(empty($fixed_ac) && filled($ts_aircraft)) --}}
-<div class="card mb-2 rounded-4">
-    <div class="card-header p-1 dashboard-card" style="background-color: #00157f">
+<div class="card mb-2">
+    <div class="card-header p-1 airports-card-body" style="background-color: #00157f">
         <h4 class="m-1 text-white">
             @lang('FlsModule::widgets.ta_title')
         </h4>

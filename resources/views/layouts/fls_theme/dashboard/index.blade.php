@@ -223,8 +223,8 @@
     <div class="col">
       @widget('FlsModule::JumpSeat', ['base' => 0.25, 'price' => 'free', 'hubs' => true])
     </div>
-    <div class="card dashboard-card">
-      <div class="card-header p-1 dashboard-card" style="background-color: #00157f;">
+    <div class="card">
+      <div class="card-header p-1 airports-card-body">
         <h4 class="m-1 text-white">
           @lang('dashboard.recentreports')
         </h4>

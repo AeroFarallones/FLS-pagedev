@@ -77,4 +77,46 @@ return [
     'menu_pireps'   => 'Reports',
     'menu_market'   => 'Pilot Shop',
     'menu_mymarket' => 'Bought Items',
+    'aircraft' => [
+        'B789' => [
+            'title' => 'Boeing 787-900',
+            'description' => 'The largest aircraft in our fleet',
+            'spcMtow' => "227,900 kg",
+            'spcZfw' => "161,900 kg",
+            'spcCeiling' => "43,100 ft",
+            'spcMaxPayload' => "41,100 kg",
+            'spcSpeed' => "0.85 Mach",
+            'range' => 'FOF',
+        ],
+        'A320' => [
+            'title' => 'Airbus 320',
+            'description' => 'The largest aircraft in our fleet',
+            'spcMtow' => "227,900 kg",
+            'spcZfw' => "161,900 kg",
+            'spcCeiling' => "43,100 ft",
+            'spcMaxPayload' => "41,100 kg",
+            'spcSpeed' => "0.85 Mach",
+            'range' => 'FOF'
+        ],
+        'B738' => [
+            'title' => 'Boeing 737-800',
+            'description' => 'The largest aircraft in our fleet',
+            'spcMtow' => "227,900 kg",
+            'spcZfw' => "161,900 kg",
+            'spcCeiling' => "43,100 ft",
+            'spcMaxPayload' => "41,100 kg",
+            'spcSpeed' => "0.85 Mach",
+            'range' => 'FOF'
+        ],
+        'C172' => [
+            'title' => 'Boeing 787',
+            'description' => 'The largest aircraft in our fleet',
+            'spcMtow' => "227,900 kg",
+            'spcZfw' => "161,900 kg",
+            'spcCeiling' => "43,100 ft",
+            'spcMaxPayload' => "41,100 kg",
+            'spcSpeed' => "0.85 Mach",
+            'range' => 'FOF'
+        ],
+    ],
 ];

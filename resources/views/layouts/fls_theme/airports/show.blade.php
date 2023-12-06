@@ -61,47 +61,31 @@
             @widget('FlsModule::Map', ['source' => $airport->id])
         </div>
         {{-- Show Pills For Map/WX/Downloads--}}
-        <ul class="nav nav-pills nav-justified mb-2" id="pills-tab" role="tablist">
-            <li class="nav-item mx-1" role="presentation">
-                <a class="nav-link active pt-1 pb-1 button-blue-fls font-montbold" id="pills-map-tab" data-toggle="pill"
-                    href="#pills-map" role="tab" aria-controls="pills-map" aria-selected="true">
-                    @lang('FlsModule::fls.map')
-                </a>
-            </li>
-            <li class="nav-item mx-1" role="presentation">
-                <a class="nav-link pt-1 pb-1 button-blue-fls font-montbold" id="pills-wxmap-tab" data-toggle="pill"
-                    href="#pills-wxmap" role="tab" aria-controls="pills-wxmap" aria-selected="true">
-                    WX @lang('FlsModule::fls.map')
-                </a>
-            </li>
-            <li class="nav-item mx-1" role="presentation">
-                <a class="nav-link pt-1 pb-1 button-blue-fls font-montbold" id="pills-weather-tab" data-toggle="pill"
-                    href="#pills-weather" role="tab" aria-controls="pills-weather" aria-selected="false">
-                    @lang('FlsModule::fls.weather')
-                </a>
-            </li>
-            @if(count($airport->files) > 0 && Auth::check())
-            <li class="nav-item mx-1" role="presentation">
-                <a class="nav-link pt-1 pb-1 button-blue-fls font-montbold" id="pills-files-tab" data-toggle="pill"
-                    href="#pills-files" role="tab" aria-controls="pills-files" aria-selected="false">
-                    {{ trans_choice('common.download', 2) }}
-                </a>
-            </li>
-            @endif
-            @if(filled($airport->notes) && Auth::check())
-            <li class="nav-item mx-1" role="presentation">
-                <a class="nav-link pt-1 pb-1" id="pills-notes-tab" data-toggle="pill" href="#pills-notes" role="tab"
-                    aria-controls="pills-notes" aria-selected="false">
-                    @lang('FlsModule::fls.notes')
-                </a>
-            </li>
-            @endif
-        </ul>
+        <div class="row">
+            <div class="d-flex nav-pills" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+                <div class="col-sm-4 d-grid">
+                    <button class="nav-link active button-blue-fls" id="v-pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                        aria-selected="true">@lang('FlsModule::fls.map')</button>
+                </div>
+                <div class="col-sm-4 d-grid">
+                    <button class="nav-link button-blue-fls" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">WX @lang('FlsModule::fls.map')</button>
+                </div>
+                <div class="col-sm-4 d-grid">
+                    <button class="nav-link button-blue-fls" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                        aria-selected="false">@lang('FlsModule::fls.weather')</button>
+                </div>
+            </div>
+        </div>
     </div>
     {{-- Show the airspace map in the other column --}}
     <div class="col-sm-8">
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+                tabindex="0">
                 <div class="card mb-2">
                     <div class="card-header p-1 airports-card-body">
                         <h4 class="m-1 font-fls">
@@ -109,7 +93,8 @@
                         </h4>
                     </div>
                     <div class="card-body p-0">
-                        @widget('AirspaceMap', ['width' => '100%', 'height' => '500px', 'lat' => $airport->lat, 'lon' =>
+                        @widget('AirspaceMap', ['width' => '100%', 'height' => '500px', 'lat' => $airport->lat,
+                        'lon' =>
                         $airport->lon])
                     </div>
                     <div class="card-footer card-footer-fls p-0 px-3 small text-end">
@@ -117,18 +102,17 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-weather" role="tabpanel" aria-labelledby="pills-weather-tab">
-                @widget('Weather', ['icao' => $airport->icao])
-            </div>
-            <div class="tab-pane fade" id="pills-wxmap" role="tabpanel" aria-labelledby="pills-wxmap-tab">
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+                tabindex="0">
                 <div class="card mb-2">
-                    <div class="card-header p-1">
+                    <div class="card-header p-1 airports-card-body">
                         <h4 class="m-1">
                             {{ $airport->full_name }}
                         </h4>
                     </div>
                     <div class="card-body p-0">
-                        @include('FlsModule::pages.livewx_map' , ['lat' => $airport->lat, 'lon' => $airport->lon, 'zoom'
+                        @include('FlsModule::pages.livewx_map' , ['lat' => $airport->lat, 'lon' => $airport->lon,
+                        'zoom'
                         =>
                         8, 'height' => '500px', 'marker' => true])
                     </div>
@@ -137,36 +121,10 @@
                     </div>
                 </div>
             </div>
-            @if(count($airport->files) > 0 && Auth::check())
-            <div class="tab-pane fade" id="pills-files" role="tabpanel" aria-labelledby="pills-files-tab">
-                <div class="card mb-2">
-                    <div class="card-header p-1">
-                        <h5 class="m-1">
-                            {{ trans_choice('common.download', 2) }}
-                            <i class="fas fa-download float-end"></i>
-                        </h5>
-                    </div>
-                    <div class="card-body p-0">
-                        @include('downloads.table', ['files' => $airport->files])
-                    </div>
-                </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+                tabindex="0">
+                @widget('Weather', ['icao' => $airport->icao])
             </div>
-            @endif
-            @if(filled($airport->notes) && Auth::check())
-            <div class="tab-pane fade" id="pills-notes" role="tabpanel" aria-labelledby="pills-notes-tab">
-                <div class="card mb-2">
-                    <div class="card-header p-1">
-                        <h5 class="m-1">
-                            @lang('FlsModule::fls.notes')
-                            <i class="fas fa-info-circle float-end"></i>
-                        </h5>
-                    </div>
-                    <div class="card-body p-1">
-                        {!! $airport->notes !!}
-                    </div>
-                </div>
-            </div>
-            @endif
         </div>
     </div>
 </div>

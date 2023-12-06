@@ -319,7 +319,10 @@ a:hover {
  background-color: #fd7e14!important;
 }
 .button-flights::selection {
-  background-color:#00157f!important ;
+  background-color:#fd7e14!important ;
+}
+.button-flights:active {
+  background-color:#fd7e14!important ;
 }
 .row-flights-card {
   align-items: center;

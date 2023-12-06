@@ -8,14 +8,14 @@
             </div>
             <div class="row row-flights-card dashboard-row-pirep">
                 <div class="col-sm-5 dashboard-primary-text">
-                    <a class="text-white a-fls"
+                    <a class="text-white a-fls font-montbold dashboard-primary-text"
                         href="{{route('frontend.airports.show', ['id' => $flight->dpt_airport_id])}}">{{$flight->dpt_airport_id}}</a>
                 </div>
                 <div class="col-sm-2 dashboard-primary-text">
                     <i class="fa-solid fa-plane"></i>
                 </div>
                 <div class="col-sm-5 dashboard-primary-text">
-                    <a class="text-white a-fls"
+                    <a class="text-white a-fls font-montbold dashboard-primary-text"
                         href="{{route('frontend.airports.show', ['id' => $flight->arr_airport_id])}}">{{$flight->arr_airport_id}}</a>
                 </div>
             </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="row row-flights-card dashboard-row-pirep">
                 <div class="col-sm-12 dashboard-primary-text">
-                    <a class="text-white a-fls" href="{{ route('frontend.flights.show', [$flight->id]) }}">
+                    <a class="text-white a-fls font-montbold dashboard-primary-text" href="{{ route('frontend.flights.show', [$flight->id]) }}">
                         {{ optional($flight->airline)->code.''.$flight->flight_number }}
                     </a>
                 </div>

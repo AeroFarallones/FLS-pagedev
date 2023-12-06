@@ -3,7 +3,7 @@ manejan todas las clases del tema "fls-theme" y son
 los estilos principales, es decir al cambiar una sola, 
 cambiaran todas... Si quiere agregar una nueva clase
 dirigase a custom.css */
-
+*{font-family: "Open Sans", sans-serif;}
 a {
   text-decoration: none !important;
   color: #00157f !important;
@@ -244,8 +244,8 @@ button {
   color: white;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 2rem;
+  font-weight: 800!important;
+  font-size: 2rem!important;
 }
 
 .dashboard-secondary-text {

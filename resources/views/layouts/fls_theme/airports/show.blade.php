@@ -64,17 +64,17 @@
         <div class="row">
             <div class="d-flex nav-pills" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
                 <div class="col-sm-4 d-grid">
-                    <button class="nav-link active button-blue-fls" id="v-pills-home-tab" data-bs-toggle="pill"
+                    <button class="nav-link active button-blue-fls font-montbold" id="v-pills-home-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
                         aria-selected="true">@lang('FlsModule::fls.map')</button>
                 </div>
                 <div class="col-sm-4 d-grid">
-                    <button class="nav-link button-blue-fls" id="v-pills-profile-tab" data-bs-toggle="pill"
+                    <button class="nav-link button-blue-fls font-montbold" id="v-pills-profile-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
                         aria-selected="false">WX @lang('FlsModule::fls.map')</button>
                 </div>
                 <div class="col-sm-4 d-grid">
-                    <button class="nav-link button-blue-fls" id="v-pills-messages-tab" data-bs-toggle="pill"
+                    <button class="nav-link button-blue-fls font-montbold" id="v-pills-messages-tab" data-bs-toggle="pill"
                         data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
                         aria-selected="false">@lang('FlsModule::fls.weather')</button>
                 </div>

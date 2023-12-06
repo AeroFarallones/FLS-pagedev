@@ -27,6 +27,7 @@ class FleetInfo extends Widget
         $spcSpeed = "";
         $range = "";
 
+
         if (Lang::has('FlsModule::fls.aircraft.' . $aircraft)) {
             $title = __('FlsModule::fls.aircraft.' . $aircraft . '.title');
             $aircraftDescription = __('FlsModule::fls.aircraft.' . $aircraft . '.description');
@@ -35,22 +36,13 @@ class FleetInfo extends Widget
             $spcCeiling = __('FlsModule::fls.aircraft.' . $aircraft . '.spcCeiling');
             $spcMaxPayload = __('FlsModule::fls.aircraft.' . $aircraft . '.spcMaxPayload');
             $spcSpeed = __('FlsModule::fls.aircraft.' . $aircraft . '.spcSpeed');
+            $range = __('FlsModule::fls.aircraft.' . $aircraft . '.range');
         } else {
             $is_visible = false;
         }
 
-        switch ($aircraft) {
-            case 'B789':
-                $range = __('FlsModule::fls.aircraft.' . $aircraft . '.range');
-                break;
-
-            default:
-                # code...
-                break;
-        }
-
-
         return view('FlsModule::widgets.fleet_info', [
+            'aircraft' => $aircraft,
             'title' => $title,
             'description' => $aircraftDescription,
             'mtow' => $spcMtow,

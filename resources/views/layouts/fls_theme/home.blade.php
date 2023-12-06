@@ -176,7 +176,33 @@
   <div class="w-75 h-75" data-aos="fade-up">
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
-        <button data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button data-bs-toggle="modal" data-bs-target="#A320Modal">
+          <div class="card">
+            <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Airbus A320</h5>
+              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
+                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="col">
+        <button data-bs-toggle="modal" data-bs-target="#B789Modal">
+          <div class="card">
+            <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Airbus A320</h5>
+              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
+                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="col">
+        <button data-bs-toggle="modal" data-bs-target="#C172Modal">
           <div class="card">
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -215,33 +241,7 @@
         </button>
       </div>
       <div class="col">
-        <button data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <div class="card">
-            <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Airbus A320</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-              <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="col">
-        <button data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <div class="card">
-            <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Airbus A320</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
-              <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div class="col">
-        <button data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-aicraft="B787">
           <div class="card">
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -256,7 +256,12 @@
     </div>
   </div>
 
-  @widget('FlsModule::FleetInfo', ['aircraft' => "B738"])
+  @widget('FlsModule::FleetInfo', ['aircraft' => "A320"])
+  @widget('FlsModule::FleetInfo', ['aircraft' => "B789"])
+  @widget('FlsModule::FleetInfo', ['aircraft' => "C172"])
+  {{-- @widget('FlsModule::FleetInfo', ['aircraft' => ""])
+  @widget('FlsModule::FleetInfo', ['aircraft' => "A320"])
+  @widget('FlsModule::FleetInfo', ['aircraft' => "A320"]) --}}
 
 </div>
 
@@ -265,6 +270,7 @@
 <div class="liveFlights__container container-fluid h-screen p-5 d-">
   @widget('live_map', ['width' => '100%', 'table' => true])
 </div>
+
 <script>
   AOS.init({
     startEvent: 'DOMContentLoaded'

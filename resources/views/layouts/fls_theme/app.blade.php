@@ -52,6 +52,9 @@
 </head>
 
 <body>
+
+  @include('layouts.fls_theme.theme_helpers')
+
   @if (Route::is('frontend.home'))
   {{-- LANDING PAGE NAV --}}
   <!-- Navbar -->

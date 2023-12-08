@@ -1,9 +1,6 @@
-/* Programador del futuro! este es el archivo donde se
-manejan todas las clases del tema "fls-theme" y son
-los estilos principales, es decir al cambiar una sola, 
-cambiaran todas... Si quiere agregar una nueva clase
-dirigase a custom.css */
-*{font-family: "Open Sans", sans-serif;}
+* {
+  font-family: "Open Sans", sans-serif;
+}
 a {
   text-decoration: none !important;
   color: #00157f !important;
@@ -30,7 +27,7 @@ a:hover {
 
 button {
   border: none;
-  background: transparent
+  background: transparent;
 }
 
 /* Landing Page */
@@ -244,8 +241,8 @@ button {
   color: white;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800!important;
-  font-size: 2rem!important;
+  font-weight: 800 !important;
+  font-size: 2rem !important;
 }
 
 .dashboard-secondary-text {
@@ -280,11 +277,11 @@ button {
 
 .button-blue-fls:hover {
   background: #fd7e14 !important;
-  color: white!important;
+  color: white !important;
 }
 .button-blue-fls::selection {
   background: #fd7e14 !important;
-  color: white!important;
+  color: white !important;
 }
 
 /* Jumpseat card */
@@ -313,21 +310,21 @@ button {
 }
 
 .button-flights {
-  border-color: white!important;
-  border-radius: 1rem!important;
+  border-color: white !important;
+  border-radius: 1rem !important;
   background-color: transparent !important;
-  width: fit-content!important;
-  font-weight: 600!important;
-  font-size: 1.4rem!important;
+  width: fit-content !important;
+  font-weight: 600 !important;
+  font-size: 1.4rem !important;
 }
 .button-flights:hover {
- background-color: #fd7e14!important;
+  background-color: #fd7e14 !important;
 }
 .button-flights::selection {
-  background-color:#fd7e14!important ;
+  background-color: #fd7e14 !important ;
 }
 .button-flights:active {
-  background-color:#fd7e14!important ;
+  background-color: #fd7e14 !important ;
 }
 .row-flights-card {
   align-items: center;
@@ -339,9 +336,9 @@ button {
   padding: 0.12rem 0.25rem 0.12rem 0.25rem !important;
   border-radius: 1rem !important;
 }
-.a-flights:hover  {
-  background-color: #fd7e14!important;
-  color: white!important;
+.a-flights:hover {
+  background-color: #fd7e14 !important;
+  color: white !important;
 }
 
 .align-items-center {
@@ -349,12 +346,12 @@ button {
 }
 
 .airports-card-body {
-  background-color: #00157f!important;
-  border-radius: inherit!important;
-  color: white!important;
+  background-color: #00157f !important;
+  border-radius: inherit !important;
+  color: white !important;
   padding: 3rem 0 0.5rem 0 !important;
 }
 
 .background-transparent {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }

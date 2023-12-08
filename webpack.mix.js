@@ -45,6 +45,13 @@ function buildFrontendAssets() {
   mix
     .sass(
       "resources/fls-theme/vendor/app.scss",
+      "public/fls-theme/frontend/css/bootstrap.min.css"
+    )
+    .styles(
+      [
+        "public/fls-theme/frontend/css/styles.css",
+        "public/fls-theme/frontend/css/custom.css",
+      ],
       "public/fls-theme/frontend/css/fls_compiled.css"
     )
     .sourceMaps();

@@ -11,38 +11,30 @@
     name='viewport' />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-  <link href="{{ public_asset('/assets/frontend/css/bootstrap.min.css') }}" rel="stylesheet" />
-  <link href="{{ public_mix('/assets/frontend/css/now-ui-kit.css') }}" rel="stylesheet" />
-  <link href="{{ public_asset('/assets/frontend/css/styles.css') }}" rel="stylesheet" />
+
+  {{-- FLS-THEME required --}}
+  {{-- REMEMBER EXECUTE "npm run prod" --}}
+  <link rel="stylesheet" href="{{asset('fls-theme/frontend/css/styles.css')}}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+
+  <link href="{{ public_mix('fls-theme/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  {{-- End FLS-THEME required --}}
+
   @yield('css')
 </head>
 
-<body class="login-page" style="background: #067ec1;">
-  <!-- Navbar -->
-
-  <!-- End Navbar -->
+<body class="login-page">
   <div class="page-header">
-
     <div class="container">
       @yield('content')
     </div>
-    <footer class="footer">
-      <div class="container">
-        <div class="copyright">
-          &copy;
-          <script>
-            document.write(new Date().getFullYear())
-          </script>
-          , powered by
-          <a href="http://www.phpvms.net" target="_blank">phpvms</a>. Now-UI by
-          <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
-        </div>
-      </div>
-    </footer>
   </div>
 </body>
-
-<script src="{{ public_asset('/assets/global/js/jquery.js') }}" type="text/javascript"></script>
 
 @yield('scripts')
 

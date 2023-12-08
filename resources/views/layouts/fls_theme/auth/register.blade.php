@@ -3,9 +3,10 @@
 
 @section('content')
 <div class="register_intro m-0">
-  <div class="row w-100">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6 bg-white rounded px-3 py-2">
+  <div class="row w-100 h-100 justify-content align-items-center">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-3 bg-white rounded h-75 p-5">
       {{ Form::open(['url' => '/register', 'class' => 'form-signin']) }}
 
       <div class="panel periodic-login">
@@ -166,7 +167,6 @@
       </div>
       {{ Form::close() }}
     </div>
-    <div class="col-sm-4"></div>
   </div>
   @endsection
 

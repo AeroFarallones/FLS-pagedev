@@ -81,7 +81,7 @@
     @yield('content')
     {{-- End the above block--}}
   </div>
-  <div class="clearfix" style="height: 200px;"></div>
+  {{-- <div class="clearfix" style="height: 200px;"></div> --}}
   @endif
 
 

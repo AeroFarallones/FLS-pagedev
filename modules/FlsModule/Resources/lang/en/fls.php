@@ -1,5 +1,8 @@
 <?php
 return [
+    // Custom
+    'previousPage' => "Previous Step",
+    'nextPage'     => "Next Step",
     // Common
     'actions'     => 'Actions',
     'airport'     => 'Airport',

@@ -9,62 +9,87 @@
 
 @section('content')
 <div class="register_intro m-0">
-  <div class="row w-100 h-100 justify-content align-items-center">
+  <div class="row w-100 h-100 justify-content align-items-center p-5">
     <div class="col-sm-4"></div>
     <div class="col-sm-3"></div>
-    <div class="col-sm-4 bg-white rounded h-75 py-4 px-5">
-      {{ Form::open(['url' => '/register', 'class' => 'form-signin']) }}
+    <div class="col-sm-4 bg-white rounded h-100 py-4 px-5 d-grid">
+      <div class="" style="color: #000a54;">
+        <h2 class="font-montbold m-0 fs-1">@lang('common.register')</h2>
+        <span class="font-montbold" id="subtitle_form">Personal info</span>
+      </div>
+      {{ Form::open(['url' => '/register', 'class' => 'form-signin h-100']) }}
 
-      <div class="panel periodic-login ">
-        <div class="panel-body">
-          <div class="mb-3 w-100" style="color: #000a54">
-            <h2 class="font-montbold m-0 fs-1">@lang('common.register')</h2>
-            <span class="font-montbold" id="subtitle_form">Personal info</span>
-          </div>
+      <div class="panel periodic-login h-100">
+        <div class="panel-body h-100">
+
           {{-- Datos personales :) --}}
-          <div class="personalInfo_container d-flex flex-column gap-2 align-items-center">
+          <div class="personalInfo_container d-flex flex-column align-items-center h-100 justify-content-between">
 
-            <label for="name" class="control-label"></label>
-            <div class="input-group form-group-no-border {{ $errors->has('name') ? 'has-danger' : '' }}">
-              {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => __('auth.fullname')]) }}
+            <div class="w-100">
+              <label for="name" class="control-label"></label>
+              <div class="input-group form-group-no-border {{ $errors->has('name') ? 'has-danger' : '' }}">
+                {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => __('auth.fullname')]) }}
+              </div>
+              @if ($errors->has('name'))
+              <p class="text-danger">{{ $errors->first('name') }}</p>
+              @endif
             </div>
-            @if ($errors->has('name'))
-            <p class="text-danger fs-6">{{ $errors->first('name') }}</p>
-            @endif
 
-            <label for="email" class="control-label"></label>
-            <div class="input-group form-group-no-border {{ $errors->has('email') ? 'has-danger' : '' }}">
-              {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => __('auth.emailaddress')]) }}
+            <div class="w-100">
+              <label for="email" class="control-label"></label>
+              <div class="input-group form-group-no-border {{ $errors->has('email') ? 'has-danger' : '' }}">
+                {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => __('auth.emailaddress')]) }}
+              </div>
+              @if ($errors->has('email'))
+              <p class="text-danger">{{ $errors->first('email') }}</p>
+              @endif
             </div>
-            @if ($errors->has('email'))
-            <p class="text-danger">{{ $errors->first('email') }}</p>
-            @endif
 
-            <label for="password" class="control-label"></label>
-            <div class="input-group form-group-no-border {{ $errors->has('password') ? 'has-danger' : '' }}">
-              {{ Form::password('password', ['class' => 'form-control', 'placeholder' => __('auth.password')]) }}
+            <div class="w-100">
+              <label for="password" class="control-label"></label>
+              <div class="input-group form-group-no-border {{ $errors->has('password') ? 'has-danger' : '' }}">
+                {{ Form::password('password', ['class' => 'form-control', 'placeholder' => __('auth.password')]) }}
+              </div>
+              @if ($errors->has('password'))
+              <p class="text-danger">{{ $errors->first('password') }}</p>
+              @endif
             </div>
-            @if ($errors->has('password'))
-            <p class="text-danger">{{ $errors->first('password') }}</p>
-            @endif
 
-            <label for="password_confirmation" class="control-label"></label>
-            <div
-              class="input-group form-group-no-border {{ $errors->has('password_confirmation') ? 'has-danger' : '' }}">
-              {{ Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' =>
-              __('passwords.confirm')]) }}
+            <div class="w-100">
+              <label for="password_confirmation" class="control-label"></label>
+              <div
+                class="input-group form-group-no-border {{ $errors->has('password_confirmation') ? 'has-danger' : '' }}">
+                {{ Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' =>
+                __('passwords.confirm')]) }}
+              </div>
+              @if ($errors->has('password_confirmation'))
+              <p class="text-danger">{{ $errors->first('password_confirmation') }}</p>
+              @endif
             </div>
-            @if ($errors->has('password_confirmation'))
-            <p class="text-danger">{{ $errors->first('password_confirmation') }}</p>
-            @endif
-
-            <label for="country" class="control-label"></label>
-            <div class="input-group form-group-no-border {{ $errors->has('country') ? 'has-danger' : '' }}">
-              {{ Form::select('country', $countries, 'co', ['class' => 'form-control select2' ]) }}
+            <div class="w-100">
+              <label for="country" class="control-label"></label>
+              <div class="input-group form-group-no-border {{ $errors->has('country') ? 'has-danger' : '' }}">
+                {{ Form::select('country', $countries, 'co', ['class' => 'form-control select2' ]) }}
+              </div>
+              @if ($errors->has('country'))
+              <p class="text-danger">{{ $errors->first('country') }}</p>
+              @endif
             </div>
-            @if ($errors->has('country'))
-            <p class="text-danger">{{ $errors->first('country') }}</p>
-            @endif
+            <div class="w-100">
+              @if($userFields)
+              @foreach($userFields as $field)
+              <label for="field_{{ $field->slug }}" class="control-label"></label>
+              <div
+                class="input-group form-group-no-border {{ $errors->has('field_'.$field->slug) ? 'has-danger' : '' }}">
+                {{ Form::text('field_'.$field->slug, null, ['class' => 'form-control', 'placeholder' => $field->name])
+                }}
+              </div>
+              @if ($errors->has('field_'.$field->slug))
+              <p class="text-danger">{{ $errors->first('field_'.$field->slug) }}</p>
+              @endif
+              @endforeach
+              @endif
+            </div>
             <div class="width: 100%; text-align: right; padding-top: 20px;">
               <button class="btn" id="home_page" type="button" title="{{__('FlsModule::fls.nextPage')}}"><i
                   class="fas fa fa-home fs-1" style="color: #00157F" aria-hidden="true"></i></button>
@@ -114,17 +139,7 @@
 
 
 
-            @if($userFields)
-            @foreach($userFields as $field)
-            <label for="field_{{ $field->slug }}" class="control-label"></label>
-            <div class="input-group form-group-no-border {{ $errors->has('field_'.$field->slug) ? 'has-danger' : '' }}">
-              {{ Form::text('field_'.$field->slug, null, ['class' => 'form-control', 'placeholder' => $field->name]) }}
-            </div>
-            @if ($errors->has('field_'.$field->slug))
-            <p class="text-danger">{{ $errors->first('field_'.$field->slug) }}</p>
-            @endif
-            @endforeach
-            @endif
+
 
             @if($captcha['enabled'] === true)
             <label for="h-captcha" class="control-label">@lang('auth.fillcaptcha')</label>
@@ -196,7 +211,9 @@
 
         </div>
       </div>
+
       {{ Form::close() }}
+      <div class="h-25"></div>
     </div>
   </div>
   @endsection

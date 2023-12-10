@@ -1,8 +1,7 @@
 @extends('app')
 @include('theme_helpers')
 @php
-  $AuthCheck = Auth::check();
-  $units = isset($units) ? $units : DT_GetUnits();
+
 @endphp
 @section('title', trans_choice('common.pirep', 1).' '.$pirep->ident)
 

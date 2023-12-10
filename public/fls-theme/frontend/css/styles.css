@@ -203,9 +203,9 @@ button {
 }
 
 .dashboard-card-body {
-  background-color: #00157f;
-  border-radius: inherit;
-  color: white;
+  background-color: #00157f!important;
+  border-radius: inherit!important;
+  color: white!important;
   padding: 3rem 0 0.5rem 0 !important;
 }
 
@@ -354,6 +354,11 @@ button {
 
 .background-transparent {
   background-color: transparent !important;
+}
+
+.progress-bar-fls {
+  background-color: #00157f!important;
+  color: white!important;
 }
 
 /* Register */

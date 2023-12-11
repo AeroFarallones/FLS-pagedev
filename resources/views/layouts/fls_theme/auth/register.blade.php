@@ -10,6 +10,10 @@
   .decorationCard {
     background: rgba(255, 255, 255, 0.65)
   }
+
+  .loginCard {
+    background: rgba(255, 255, 255, 0.4)
+  }
 </style>
 
 @extends('auth.register_layout')
@@ -17,8 +21,17 @@
 
 @section('content')
 <div class="register_intro m-0">
-  <div class="row w-100 h-100 justify-content align-items-center p-5">
-    <div class="col-sm-7"></div>
+  <div class="row w-100 h-100 align-items-center p-5">
+    <div class="col-sm-7 d-flex justify-content-center">
+      <div
+        class="loginCard w-50 h-50 d-flex flex-column gap-4 p-5 justify-content-between text-center text-white rounded">
+        <div class="OneOfUs">
+          <h4 class="fs-2 text-blue fw-bold">Already one of us?</h4>
+        </div>
+        <p class="fs-2 text-blue fw-bold">Login here</p>
+        <button type="button" class="btn text-white fw-bold" style="background-color: #00157f">Login</button>
+      </div>
+    </div>
     <div class="col-sm-5 h-100 m-0 d-flex flex-column position-relative p-0 align-items-center justify-content-center">
       <div class="decorationCard h-75 position-absolute rounded" style="z-index: 50; width: 85%;"></div>
       <div class="decorationCard h-50 w-100 position-absolute rounded" style="z-index: 25"></div>

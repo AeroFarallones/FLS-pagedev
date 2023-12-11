@@ -1,4 +1,4 @@
-* {
+body {
   font-family: "Open Sans", sans-serif;
 }
 a {
@@ -366,4 +366,8 @@ button {
 .register_intro {
   height: 100vh;
   padding: 0;
+}
+
+.text-blue {
+  -webkit-text-stroke: 0.06rem #00157f;
 }

@@ -2,6 +2,9 @@
   .form-control {
     border-radius: 15px !important;
   }
+  .loginCard{
+    background: rgba(255, 255, 255, 0.4)
+  }
 </style>
 
 @extends('auth.register_layout')
@@ -9,8 +12,15 @@
 
 @section('content')
 <div class="register_intro m-0">
-  <div class="row w-100 h-100 justify-content align-items-center p-5">
-    <div class="col-sm-8"></div>
+  <div class="row w-100 h-100 align-items-center p-5">
+    <div class="col-sm-8 d-flex justify-content-center">
+      <div class="loginCard w-50 h-50 d-flex flex-column gap-4 p-5 justify-content-between text-center text-white rounded">
+        <div class="OneOfUs"><h4 class="fs-2 text-blue fw-bold">Already one of us?</h4>
+        </div>
+        <p class="fs-2 text-blue fw-bold">Login here</p>
+        <button type="button" class="btn text-white fw-bold" style="background-color: #00157f">Login</button>
+      </div>
+    </div>
     <div class="col-sm-4 bg-white rounded h-100 py-4 px-5 d-grid">
       <div class="" style="color: #000a54;">
         <h2 class="font-montbold m-0 fs-1">@lang('common.register')</h2>
@@ -202,12 +212,7 @@
               ]) }}
             </div>
           </div>
-          {{-- END MGO --}}
-
-
-
-
-
+          {{-- END MGO --}}          
         </div>
       </div>
 

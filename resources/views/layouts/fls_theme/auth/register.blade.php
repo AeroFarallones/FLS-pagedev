@@ -10,8 +10,7 @@
 @section('content')
 <div class="register_intro m-0">
   <div class="row w-100 h-100 justify-content align-items-center p-5">
-    <div class="col-sm-4"></div>
-    <div class="col-sm-3"></div>
+    <div class="col-sm-8"></div>
     <div class="col-sm-4 bg-white rounded h-100 py-4 px-5 d-grid">
       <div class="" style="color: #000a54;">
         <h2 class="font-montbold m-0 fs-1">@lang('common.register')</h2>

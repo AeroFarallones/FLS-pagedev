@@ -29,7 +29,8 @@
           <h4 class="fs-2 text-blue fw-bold">Already one of us?</h4>
         </div>
         <p class="fs-2 text-blue fw-bold">Login here</p>
-        <button type="button" class="btn text-white fw-bold" style="background-color: #00157f">Login</button>
+        <button type="button" class="btn text-white fw-bold" onclick="login()"
+          style="background-color: #00157f">Login</button>
       </div>
     </div>
     <div class="col-sm-5 h-100 m-0 d-flex flex-column position-relative p-0 align-items-center justify-content-center">
@@ -291,4 +292,10 @@
 
   @include('scripts.airport_search')
 </div>
+
+<script>
+  function login(){
+  location.replace("{{route('login')}}");
+}
+</script>
 @endsection

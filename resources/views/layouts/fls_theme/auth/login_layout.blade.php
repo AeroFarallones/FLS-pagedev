@@ -28,9 +28,10 @@
   @yield('css')
 </head>
 
-<body class="login-page">
+<body class="login-page" style="background: url({{asset('fls-theme/frontend/img/Backgrounds/register.jpg' )}}); background-size: cover;
+background-repeat: no-repeat; background-position: 50% center">
   <div class="page-header">
-    <div class="container">
+    <div class="container-fluid p-0">
       @yield('content')
     </div>
   </div>

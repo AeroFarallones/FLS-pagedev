@@ -69,8 +69,6 @@
     {{-- End the above block--}}
   </div>
 
-  <div class="clearfix" style="height: 200px;"></div>
-
   @else
   {{-- Others page incluide --}}
   @include('nav')
@@ -83,6 +81,55 @@
   </div>
   {{-- <div class="clearfix" style="height: 200px;"></div> --}}
   @endif
+
+  {{-- All Pages --}}
+  <div class="clearfix" style="height: 200px;"></div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footeri" style="margin-left: -1rem;">
+
+    <div class="footeri-top" style="margin-bottom: -4rem;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-3" style="align-self: center; margin-bottom: 1rem; max-width: 350px">
+            <img src="{{ public_asset('fls-theme/frontend/img/Logos/IVAO_Partner.svg') }}" alt="" />
+          </div>
+          <div class="col-lg-1 clearfix" style="align-self: center; margin-bottom: 1rem;">
+          </div>
+          <div class="col-lg-4" style="align-self: center; margin-bottom: 1rem;">
+            <img src="{{ public_asset('fls-theme/frontend/img/Logos/Footer/Logo_FLS_CO_TXT_S.png') }}"
+              style="max-width: -webkit-fill-available;" alt="" />
+          </div>
+          <div class="col-lg-1 clearfix" style="align-self: center; margin-bottom: 1rem;">
+          </div>
+          <div class="col-lg-3" style="align-self: center; margin-bottom: 1rem; max-width: 350px">
+            <img src="{{ public_asset('fls-theme/frontend/img/Logos/Footer/Logo_IVAO_CO.svg') }}" alt="" />
+          </div>
+          <div class="col-lg-3" style="align-self: center; margin-bottom: 1rem; max-width: 350px">
+            <a href="https://commarka.app/" target="_blank"><img
+                src="{{ public_asset('fls-theme/frontend/img/CoMMArka/2_NoBg.png') }}" width="100%" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footeri-bottom clearfix">
+      <div class="copyrighty db-font-montbold">
+        &copy; Copyright <strong><span>Farallones Holdings</span></strong> {{Carbon::now()->year}}. All Rights Reserved.
+        <br> <a href="https://www.ivao.aero/ContactGDPR.asp" class="ml-5">GDPR Policy
+          Reglamento General de Protección de Datos - AQUI -</a>
+      </div>
+
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/knight-free-bootstrap-theme/ -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer -->
 
 
 

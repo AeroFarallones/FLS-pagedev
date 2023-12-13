@@ -1,5 +1,5 @@
 <div class="table-responsive">
-  <table class="table table-hover table-striped">
+  <table class="table table-hover">
     <thead>
     <tr>
       <th>@sortablelink('flight_number', trans_choice('common.flight', 1))</th>
@@ -58,7 +58,7 @@
         <td>
           @if(!$pirep->read_only)
             <a href="{{ route('frontend.pireps.edit', [$pirep->id]) }}"
-               class="btn btn-outline-info btn-sm"
+               class="btn button-blue-fls mw-4"
                style="z-index: 9999"
                title="@lang('common.edit')">
               @lang('common.edit')

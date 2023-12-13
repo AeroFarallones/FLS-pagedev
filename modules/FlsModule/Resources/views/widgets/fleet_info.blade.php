@@ -37,11 +37,11 @@
         </div>
         <div class="col d-flex flex-column">
           <img src="{{ asset('fls-theme/frontend/img/Airplanes/'. $aircraft .'/'. $aircraft .'.png')}}" width="100%"
-            alt="">
+            alt="{{$title}}" title="{{$title}}">
           <img src="{{ asset('fls-theme/frontend/img/Airplanes/'. $aircraft .'/'. $aircraft .'.png')}}" width="100%"
-            alt="">
+            alt="{{$title}}" title="{{$title}}">
           <img src="{{ asset('fls-theme/frontend/img/Airplanes/'. $aircraft .'/'. $aircraft .'.png')}}" width="100%"
-            alt="">
+            alt="{{$title}}" title="{{$title}}">
         </div>
       </div>
     </div>

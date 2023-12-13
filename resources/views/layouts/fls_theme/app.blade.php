@@ -7,7 +7,16 @@
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
 
+
   <title>@yield('title') - {{ config('app.name') }}</title>
+  <meta name="description"
+    content="A virtual airline where we want our pilots to take flight simulation to another level, we are officially registered in IVAO, a virtual network" />
+  <meta name="robots" content="index, follow">
+
+  <meta name="author" content="CoMMArka Studios" />
+  <meta name="copyright" content="info@commarka.app" />
+  <meta name="robots" content="index" />
+  <meta name="keywords" content="aerofarallones, ivao, virtual airline" />
 
   {{-- Start of required lines block. DON'T REMOVE THESE LINES! They're required or might break things --}}
   <meta name="base-url" content="{!! url('') !!}">
@@ -56,11 +65,6 @@
   @include('layouts.fls_theme.theme_helpers')
 
   @if (Route::is('frontend.home'))
-  {{-- LANDING PAGE NAV --}}
-  <!-- Navbar -->
-  {{-- @include('home_nav') --}}
-  <!-- End Navbar -->
-
   <div class="container-fluid p-0" style="width: 100%!important; padding-left: 0rem; padding-right: 0rem;">
 
     {{-- These should go where you want your content to show up --}}

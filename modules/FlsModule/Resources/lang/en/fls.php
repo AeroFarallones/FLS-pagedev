@@ -1,8 +1,27 @@
 <?php
 return [
     // Custom
-    'previousPage' => "Previous Step",
-    'nextPage'     => "Next Step",
+    'previousPage'  => "Previous Step",
+    'nextPage'      => "Next Step",
+    'lenguage'      => "lenguage",
+    "spanish"       => "spanish",
+    "english"       => "English",
+    // Landing Page
+
+    'title' => "WE WANT YOU TO FLY WITH US!",
+    'subtitle' => "Being here means everything.",
+
+    "AirlineCards" => [
+        "AeroFarallones" => "Welcome to AeroFarallones! A virtual airline where we want our pilots to take flight simulation to another level.",
+        "SinceCard" => "Since our establishment in 2017, the AeroFarallones community has been provided with the best and most advanced flight simulation tools.",
+        "IvaoPartner" => "We are officially registered in IVAO, a virtual network that provides the best flight and simulation experience.",
+    ],
+
+    "statisticsTitle" => "Latest statistics",
+    "staffTitle" => "STAFF",
+    "fleetTitle" => "Our fleet",
+    "fleetSubtitle" => "Our current aircrafts in service",
+
     // Common
     'actions'     => 'Actions',
     'airport'     => 'Airport',

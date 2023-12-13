@@ -6,20 +6,23 @@
 
 @include('home_nav')
 <div class="container-fluid intro p-0" style="">
+
+
+
   {{-- HOME --}}
   <div class="container-fluid row-home home_container w-100 h-100 m-0 p-5 row text-white align-items-center"
     style="background: rgb(0, 21, 128,0.6)">
     <div class="col-8 w-50">
       <div class="d-flex flex-column ">
         <div class="title_container text-center">
-          <h1>WE WANT YOU TO FLY WITH US!</h1>
+          <h1>{{__('FlsModule::fls.title')}}</h1>
         </div>
         <div class="subtitle_container fw-bold" data-aos="fade-down">
-          <h2>Being here means everything.</h2>
+          <h2>{{__('FlsModule::fls.subtitle')}}</h2>
         </div>
         <div class="bar_orange rounded-pill" style="background: #fd7e14; width: 100%; height: 10px"></div>
         <div class="mt-3 button_register">
-          <button onclick="register()">REGISTER</button>
+          <button onclick="register()">{{__('auth.register')}}</button>
         </div>
       </div>
     </div>
@@ -35,8 +38,7 @@
       <div class="card" style="background: #00157f">
         <div class="card-body d-flex flex-column align-items-center">
           <img src="{{asset('fls-theme/frontend/img/Logos/LogoBlancoMont.png')}}" width="30%" alt="">
-          <p class="card-text text-center text-white mt-3">Welcome to AeroFarallones! A virtual airline where we want
-            our pilots to take flight simulation to another level.</p>
+          <p class="card-text text-center text-white mt-3">{{__('FlsModule::fls.AirlineCards.AeroFarallones')}}</p>
         </div>
       </div>
     </div>
@@ -44,8 +46,7 @@
       <div class="card" style="background: #00157f">
         <div class="card-body d-flex flex-column align-items-center">
           <img src="{{asset('fls-theme/frontend/img/Logos/community.png')}}" width="30%" alt="">
-          <p class="card-text text-center text-white mt-3">Since our establishment in 2017, the AeroFarallones community
-            has been provided with the best and most advanced flight simulation tools.</p>
+          <p class="card-text text-center text-white mt-3">{{__('FlsModule::fls.AirlineCards.SinceCard')}}</p>
         </div>
       </div>
     </div>
@@ -53,8 +54,7 @@
       <div class="card" style="background: #00157f">
         <div class="card-body d-flex flex-column align-items-center">
           <img src="{{asset('fls-theme/frontend/img/Logos/IVAO_Partner.svg')}}" width="80%" alt="">
-          <p class="card-text text-center text-white mt-3">We are officially registered in IVAO, a virtual network that
-            provides the best flight and simulation experience.</p>
+          <p class="card-text text-center text-white mt-3">{{__('FlsModule::fls.AirlineCards.IvaoPartner')}}</p>
         </div>
       </div>
     </div>
@@ -64,7 +64,7 @@
 {{-- STATS CARDS--}}
 <div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5" id="stats_card">
   <div class="container" data-aos="fade-right">
-    <h2 class="statistics__title">Latest statistics...</h2>
+    <h2 class="statistics__title">{{__('FlsModule::fls.statisticsTitle')}}...</h2>
   </div>
   <div class="w-100 d-flex justify-content-center" data-aos="fade-up">
     <div class="statsCards__container w-100 h-100">
@@ -87,13 +87,14 @@
 {{-- STAFF --}}
 <div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5">
   <div class="container" data-aos="fade-right">
-    <h2 class="staff__title">STAFF</h2>
+    <h2 class="staff__title">{{__('FlsModule::fls.staffTitle')}}</h2>
   </div>
   <div class="container text-center h-100 px-5 d-flex justify-content-center" data-aos="fade-up">
     <div class="staffCard__container h-100 w-100">
       <div class="staffCard__item">
         <div class="staffCard__image">
-          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/marlon.jpg')}}" alt="staff_photo">
+          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/staff/SantiagoCastellanos.png')}}"
+            alt="staff_photo">
         </div>
         <div class="staffCard">
           <div class="staffCard__name"><span>Santiago Castellanos</span></div>
@@ -170,8 +171,8 @@
 {{--CARDS FLEET--}}
 <div class="fleet_container container-fluid d-grid w-100 h-100 p-5 gap-5">
   <div class="container" data-aos="fade-left">
-    <h2 class="fleet__title font-fls">Our fleet</h2>
-    <h4 class="fleet__subtitle">Our current aircrafts in service</h4>
+    <h2 class="fleet__title font-montbold">{{__('flsmodule::fls.fleetTitle')}}</h2>
+    <h3 class="fleet__subtitle">{{__('FlsModule::fls.fleetSubtitle')}}</h3>
   </div>
   <div class="w-75 h-75" data-aos="fade-up">
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -276,4 +277,6 @@
     startEvent: 'DOMContentLoaded'
   });
 </script>
+
+
 @endsection

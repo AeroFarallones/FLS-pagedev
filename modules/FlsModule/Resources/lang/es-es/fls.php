@@ -1,5 +1,25 @@
 <?php
 return [
+    // Custom
+    'previousPage' => "PasoAnterior",
+    'nextPage'     => "Siguiente Paso",
+
+    // Landing Page
+
+    'title' => "¡QUEREMOS QUE VUELES CON NOSOTROS!",
+    'subtitle' => "Estar aquí lo significa todo.",
+
+    "AirlineCards" => [
+        "AeroFarallones" => "¡Bienvenidos a AeroFarallones! Una aerolínea virtual donde queremos que nuestros pilotos lleven la simulación de vuelo a otro nivel.",
+        "SinceCard" => "Desde nuestra creacion en 2017, la comunidad AeroFarallones ha contado con las mejores y más avanzadas herramientas de simulación de vuelo.",
+        "IvaoPartner" => "Estamos oficialmente registrados en IVAO, una red virtual que brinda la mejor experiencia de vuelo y simulación.",
+    ],
+
+    "statisticsTitle" => "Últimas estadísticas",
+    "staffTitle" => "STAFF",
+    "fleetTitle" => "Nuestra flota",
+    "fleetSubtitle" => "Nuestros aviones actuales en servicio",
+
     // Common
     'actions'     => 'Acciones',
     'airport'     => 'Aeropuerto',

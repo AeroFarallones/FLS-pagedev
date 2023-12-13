@@ -11,7 +11,7 @@
     name='viewport' />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-
+  <link rel="shortcut icon" type="image/png" href="{{ public_asset('fls-theme/frontend/img/favicon.png') }}" />
   {{-- FLS-THEME required --}}
   {{-- REMEMBER EXECUTE "npm run prod" --}}
   <link rel="stylesheet" href="{{asset('fls-theme/frontend/css/styles.css')}}">

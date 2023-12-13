@@ -9,7 +9,7 @@ $user = Auth::user();
 
 
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="{{route('frontend.dashboard.index')}}"><i
+      <a class="nav-link" aria-current="page" href="{{route('frontend.dashboard.index')}}"><i
           class="fas fa-laptop-house"></i> {{__('common.dashboard')}}</a>
     </li>
 
@@ -217,5 +217,29 @@ $user = Auth::user();
       </a>
     </li>
     @endif
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <i class="fa-solid fa-language"></i>
+        @lang('FlsModule::fls.lenguage')
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+        <li>
+          <a class="dropdown-item" href="{{ route('frontend.lang.switch', [
+            'en' ]) }}">
+            <i class="fa-solid fa-globe"></i>
+            {{__('FlsModule::fls.english')}}
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="{{ route('frontend.lang.switch', [
+            'es-es' ]) }}">
+            <i class="fa-solid fa-globe"></i>
+            {{__('FlsModule::fls.spanish')}}
+          </a>
+        </li>
+      </ul>
+    </li>
+
   </ul>
 </div>

@@ -322,7 +322,7 @@ if (!function_exists('Fls_PirepState')) {
         } elseif ($type === 'row') {
             $result = 'class="table-' . $color . '"';
         } else {
-            $result = '<span class="badge bg-' . $color . ' text-black">' . PirepState::label($state) . '</span>';
+            $result = '<span class="badge bg-' . $color . ' text-white">' . PirepState::label($state) . '</span>';
         }
 
         return $result;

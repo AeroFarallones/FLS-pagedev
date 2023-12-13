@@ -285,6 +285,16 @@ background: #fd7e14 !important;
 color: white !important;
 }
 
+.button-blue-fls.active {
+  background: #fd7e14 !important;
+  color: white !important;
+  }
+
+.button-blue-fls:focus {
+  background: #fd7e14 !important;
+  color: white !important;
+  }
+
 .mw-4 {
 min-width: 4rem!important;
 }
@@ -308,6 +318,26 @@ border-radius: 1rem!important;
 .badge-info {
 background-color: #00157f;
 border-radius: 1rem!important;
+}
+
+.badge {
+  border-radius: 1rem!important;
+}
+
+.bg-info {
+  background-color: #00157f!important;
+}
+
+.bg-secondary {
+  background-color: #00157f!important;
+}
+
+.bg-success {
+  background-color: green!important;
+}
+
+.bg-danger {
+  background-color: red!important;
 }
 
 .m1 {

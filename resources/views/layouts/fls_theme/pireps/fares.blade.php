@@ -1,9 +1,9 @@
 @if($aircraft)
   <div class="form-container">
-    <h6><i class="fas fa-ellipsis-h"></i>
+    <h6 class="font-montbold color-blue-fls pt-3"><i class="fas fa-ellipsis-h"></i>
       &nbsp;{{ trans_choice('pireps.fare', 2) }}
     </h6>
-    <div class="form-container-body">
+    <div class="form-container-body p-3 container-fls">
       @foreach($aircraft->subfleet->fares as $fare)
         <div class="row">
           <div class="col">

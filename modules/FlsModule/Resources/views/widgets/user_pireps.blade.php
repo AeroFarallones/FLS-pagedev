@@ -1,5 +1,5 @@
 @if($is_visible)
-<div class="card mb-2">
+<div class="card mb-2 pt-3">
   <div class="card-header p-1">
     <h5 class="m-1">
       @lang('FlsModule::common.reports')
@@ -7,7 +7,7 @@
     </h5>
   </div>
   <div class="card-body p-0 overflow-auto table-responsive">
-    <table class="table table-sm table-borderless table-striped text-center text-nowrap align-middle mb-0">
+    <table class="table table-sm table-borderless text-center text-nowrap align-middle mb-0">
       <thead>
         <tr>
           <th class="text-start">@lang('FlsModule::common.flightno')</th>

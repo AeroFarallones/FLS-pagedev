@@ -18,12 +18,12 @@ flight reports that have been filed. You've been warned!
   </div>
 @endif
 <div class="row">
-  <div class="col-8">
+  <div class="col-sm-8">
     <div class="form-container">
-      <h6><i class="fas fa-info-circle"></i>
+      <h6 class="font-montbold color-blue-fls pt-3"><i class="fas fa-info-circle"></i>
         &nbsp;@lang('pireps.flightinformations')
       </h6>
-      <div class="form-container-body">
+      <div class="form-container-body p-3 container-fls">
         <div class="row">
           <div class="col-sm-4">
             {{ Form::label('airline_id', __('common.airline')) }}
@@ -146,10 +146,10 @@ flight reports that have been filed. You've been warned!
 
 
     <div class="form-container">
-      <h6><i class="fas fa-globe"></i>
+      <h6 class="font-montbold color-blue-fls pt-3"><i class="fas fa-globe"></i>
         &nbsp;@lang('pireps.deparrinformations')
       </h6>
-      <div class="form-container-body">
+      <div class="form-container-body p-3 container-fls">
         <div class="row">
           <div class="col-6">
             {{ Form::label('dpt_airport_id', __('airports.departure')) }}
@@ -195,10 +195,10 @@ flight reports that have been filed. You've been warned!
     </div>
 
     <div class="form-container">
-      <h6><i class="fab fa-avianex"></i>
+      <h6 class="font-montbold color-blue-fls pt-3"><i class="fab fa-avianex"></i>
         &nbsp;@lang('pireps.aircraftinformations')
       </h6>
-      <div class="form-container-body">
+      <div class="form-container-body p-3 container-fls">
         <div class="row">
           <div class="col-4">
             {{ Form::label('aircraft_id', __('common.aircraft')) }}
@@ -258,10 +258,10 @@ flight reports that have been filed. You've been warned!
     </div>
 
     <div class="form-container">
-      <h6><i class="far fa-comments"></i>
+      <h6 class="font-montbold color-blue-fls pt-3"><i class="far fa-comments"></i>
         &nbsp;@lang('flights.route')
       </h6>
-      <div class="form-container-body">
+      <div class="form-container-body p-3 container-fls">
         <div class="row">
           <div class="col">
             <div class="input-group input-group-sm form-group">
@@ -278,10 +278,10 @@ flight reports that have been filed. You've been warned!
     </div>
 
     <div class="form-container">
-      <h6><i class="far fa-comments"></i>
+      <h6 class="font-montbold color-blue-fls pt-3"><i class="far fa-comments"></i>
         &nbsp;{{ trans_choice('common.remark', 2) }}
       </h6>
-      <div class="form-container-body">
+      <div class="form-container-body p-3 container-fls">
         <div class="row">
           <div class="col">
             <div class="input-group input-group-sm form-group">
@@ -297,13 +297,13 @@ flight reports that have been filed. You've been warned!
   {{--
       Write out the custom fields, and label if they're required
   --}}
-  <div class="col-4">
+  <div class="col-sm-4">
     <div class="form-container">
-      <h6><i class="fab fa-wpforms"></i>
+      <h6 class="font-montbold color-blue-fls pt-3"><i class="fab fa-wpforms"></i>
         &nbsp;{{ trans_choice('common.field', 2) }}
       </h6>
-      <div class="form-container-body">
-        <table class="table table-striped">
+      <div class="form-container-body p-3 container-fls">
+        <table class="table">
           @if(isset($pirep) && $pirep->fields)
             @each('pireps.custom_fields', $pirep->fields, 'field')
           @else
@@ -314,7 +314,7 @@ flight reports that have been filed. You've been warned!
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row py-3">
   <div class="col-sm-12">
     <div class="float-right">
       <div class="form-group">
@@ -326,7 +326,7 @@ flight reports that have been filed. You've been warned!
           {{ Form::button(__('pireps.deletepirep'), [
               'name' => 'submit',
               'value' => 'Delete',
-              'class' => 'btn btn-warning',
+              'class' => 'btn button-blue-fls font-montbold',
               'type' => 'submit',
               'onclick' => "return confirm('Are you sure you want to delete this PIREP?')"])
               }}
@@ -335,7 +335,7 @@ flight reports that have been filed. You've been warned!
         {{ Form::button(__('pireps.savepirep'), [
                 'name' => 'submit',
                 'value' => 'Save',
-                'class' => 'btn btn-info',
+                'class' => 'btn button-blue-fls font-montbold',
                 'type' => 'submit'])
             }}
 
@@ -343,7 +343,7 @@ flight reports that have been filed. You've been warned!
           {{ Form::button(__('pireps.submitpirep'), [
               'name' => 'submit',
               'value' => 'Submit',
-              'class' => 'btn btn-success',
+              'class' => 'btn button-blue-fls font-montbold',
               'type' => 'submit'])
           }}
         @endif

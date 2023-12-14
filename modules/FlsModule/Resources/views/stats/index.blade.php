@@ -1,13 +1,20 @@
+<style>
+  .nav-link.active {
+    background-color: #000a54 !important;
+  }
+</style>
+
+
 @extends('app')
 @section('title', __('FlsModule::common.stats'))
 
 @section('content')
-<div class="row row-cols-lg-3">
+<div class="row row-cols-lg-3 pt-3">
   {{-- LEFT --}}
   <div class="col-lg-4">
     <div class="card mb-2">
-      <div class="card-header p-1">
-        <h5 class="m-1">
+      <div class="card-header p-1" style="background: #00157f; border-radius: 1rem">
+        <h5 class="m-1 text-white">
           @lang('FlsModule::widgets.stats_gen')
           <i class="fas fa-sitemap float-end"></i>
         </h5>
@@ -113,8 +120,8 @@
   <div class="col-lg-3">
     @if($stats_pirep)
     <div class="card mb-2">
-      <div class="card-header p-1">
-        <h5 class="m-1">
+      <div class="card-header p-1" style="background: #00157f; border-radius: 1rem">
+        <h5 class="m-1 text-white">
           @lang('FlsModule::widgets.stats_rep')
           <i class="fas fa-file-upload float-end"></i>
         </h5>

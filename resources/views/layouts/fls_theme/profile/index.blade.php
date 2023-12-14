@@ -30,9 +30,9 @@ $AdminCheck = false;
             style="text-align-last: center;">
             <div class="col-md-4" style="align-self: center;">
               @if($user->avatar == null)
-              <img class="img-mh125 border" style="border-radius: 50%;" src="{{ $user->gravatar(512) }}">
+              <img class="img-mh125 border profile-border-radius" src="{{ $user->gravatar(512) }}">
               @else
-              <img class="img-mh125 border" style="border-radius: 50%;" src="{{ $user->avatar->url }}">
+              <img class="img-mh125 border profile-border-radius" src="{{ $user->avatar->url }}">
               @endif
             </div>
             <div class="col-md-8">
@@ -43,25 +43,21 @@ $AdminCheck = false;
                       {{ optional($user->airline)->name.' / '.optional($user->rank)->name }}</th>
                   </tr>
                   <tr>
-                    <td class="text-center">
+                    <td class="px-3">
                       <a href='https://www.ivao.aero/Member.aspx?ID={{ $user->VID }}' target='_blank'>{{ $ivao_id }}
                         <img src="https://status.ivao.aero/{{ $user->VID }}.png">
                       </a>
                     </td>
-                    <td class="text-center">
-                      <a href='https://stats.vatsim.net/search_id.php?id={{ $vatsim_id }}'
-                        title="{{ Theme::getSetting('gen_vatsim_field') }}" target='_blank'>{{ $vatsim_id }}</a>
-                    </td>
                   </tr>
                   @if($user->id === $Auth_ID)
                   <tr>
-                    <td colspan="2">
+                    <td colspan="2" class="px-3 text-left">
                       <span id="email_show" style="display: none">
-                        <i class="fas fa-eye-slash mx-1 blue-fls" onclick="emailHide()"></i>
+                        <i class="fas fa-eye-slash mx-1 color-blue-fls" onclick="emailHide()"></i>
                         {{ $user->email }}
                       </span>
                       <span id="email_hide">
-                        <i class="fas fa-eye mx-1 blue-fls" onclick="emailShow()"></i>
+                        <i class="fas fa-eye mx-1 color-blue-fls" onclick="emailShow()"></i>
                         E-mail
                       </span>
                     </td>
@@ -69,11 +65,11 @@ $AdminCheck = false;
                   <tr>
                     <td colspan="2" title="@lang('profile.dontshare')">
                       <span id="apiKey_show" style="display: none">
-                        <i class="fas fa-eye-slash mx-1 blue-fls" onclick="apiKeyHide()"></i>
+                        <i class="fas fa-eye-slash mx-1 color-blue-fls" onclick="apiKeyHide()"></i>
                         {{ $user->api_key }}
                       </span>
                       <span id="apiKey_hide">
-                        <i class="fas fa-eye mx-1 blue-fls" onclick="apiKeyShow()"></i>
+                        <i class="fas fa-eye mx-1 color-blue-fls" onclick="apiKeyShow()"></i>
                         @lang('profile.apikey')
                       </span>
                     </td>

@@ -352,6 +352,10 @@ button {
   border-radius: 1rem !important;
 }
 
+.profile-border-radius {
+  border-radius: 50%!important;
+}
+
 #footeri {
   background: url("../img/Footer.png") center center no-repeat;
   color: #fff;

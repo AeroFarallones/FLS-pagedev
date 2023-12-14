@@ -13,9 +13,9 @@
         <h5 class="m-1">
           <a href="{{ route('FlsModule.hub', [$hub->id]) }}">{{ $hub->name }}</a>
           <img class="img-h20 me-1 float-end"
-            src="{{ public_asset('/image/flags_new/'.strtolower($hub->country).'.png') }}" alt="">
-          {{-- <span class="float-end flag-icon flag-icon-{{ strtolower($hub->country) }}"
-            style="font-size: 1.1rem;"></span> --}}
+            src="{{ public_asset('public\fls-theme\frontend\img\flags_new/'.strtolower($hub->country).'.png') }}"
+            alt="{{strtolower($hub->country)}}">
+          <span class="float-end flag-icon flag-icon-{{ strtolower($hub->country) }}" style="font-size: 1.1rem;"></span>
         </h5>
       </div>
       <div class="card-body p-0 table-responsive">

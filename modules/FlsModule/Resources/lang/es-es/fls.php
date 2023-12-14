@@ -1,8 +1,12 @@
 <?php
 return [
     // Custom
-    'previousPage' => "PasoAnterior",
-    'nextPage'     => "Siguiente Paso",
+    'previousPage'  => "Página anterior",
+    'nextPage'      => "Página siguiente",
+    'Language'      => "Idioma",
+    "spanish"       => "Español",
+    "english"       => "Inglés",
+    "MoreInfo"      => "Más información",
 
     // Landing Page
 
@@ -11,7 +15,7 @@ return [
 
     "AirlineCards" => [
         "AeroFarallones" => "¡Bienvenidos a AeroFarallones! Una aerolínea virtual donde queremos que nuestros pilotos lleven la simulación de vuelo a otro nivel.",
-        "SinceCard" => "Desde nuestra creacion en 2017, la comunidad AeroFarallones ha contado con las mejores y más avanzadas herramientas de simulación de vuelo.",
+        "SinceCard" => "Desde nuestra creación en 2017, la comunidad AeroFarallones ha contado con las mejores y más avanzadas herramientas de simulación de vuelo.",
         "IvaoPartner" => "Estamos oficialmente registrados en IVAO, una red virtual que brinda la mejor experiencia de vuelo y simulación.",
     ],
 
@@ -25,7 +29,7 @@ return [
     'airport'     => 'Aeropuerto',
     'all'         => 'Ver todo',
     'altn'        => 'Altn',
-    'alternate'   => 'Alternativo',
+    'alternate'   => 'Alterno',
     'close'       => 'Cerrar',
     'darkmode'    => 'Modo oscuro',
     'dest'        => 'Dest',
@@ -71,7 +75,7 @@ return [
     'avg_score'     => 'Puntuación media',
     'user_on_leave' => '¡Estás en excedencia! Presenta un PIREP para establecer tu situación como activo.',
     // Menu Items
-    'menu_roster'   => 'Plantilla',
+    'menu_roster'   => 'Pilotos',
     'menu_airlines' => 'Aerolíneas',
     'menu_ranks'    => 'Rangos',
     'menu_awards'   => 'Galardones',

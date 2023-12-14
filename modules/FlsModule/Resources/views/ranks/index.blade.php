@@ -3,11 +3,12 @@
 
 @section('content')
 {{-- Ranks Table --}}
-<div class="card mb-2">
-  <div class="card-header p-1">
+<div class="pt-3">
+  <div class="card mb-2">
+  <div class="card-header p-1 dashboard-card-body">
     <h5 class="m-1">
       {{ config('app.name') }} | @lang('FlsModule::common.ranks')
-      <i class="fas fa-tags float-end"></i>
+      {{-- <i class="fas fa-tags float-end"></i> --}}
     </h5>
   </div>
   <div class="card-body p-0 table-responsive">
@@ -45,6 +46,7 @@
       </tr>
       @endforeach
     </table>
+  </div>
   </div>
 </div>
 

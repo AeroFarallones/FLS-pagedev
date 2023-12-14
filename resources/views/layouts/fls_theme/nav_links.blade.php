@@ -221,7 +221,7 @@ $user = Auth::user();
       <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown"
         aria-expanded="false">
         <i class="fa-solid fa-language"></i>
-        @lang('FlsModule::fls.lenguage')
+        @lang('FlsModule::fls.Language')
       </a>
       <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
         <li>

@@ -182,9 +182,9 @@
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Cessna 172</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="card-text">{{__("FlsModule::fls.aircraft.C172.description")}}</p>
               <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+                {{__("FlsModule::fls.MoreInfo")}} <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
             </div>
           </div>
         </button>
@@ -195,9 +195,9 @@
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Beechcraft 1900D</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="card-text">{{__("FlsModule::fls.aircraft.B190.description")}}</p>
               <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+                {{__("FlsModule::fls.MoreInfo")}} <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
             </div>
           </div>
         </button>
@@ -208,9 +208,9 @@
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">ATR 42-600</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="card-text">{{__("FlsModule::fls.aircraft.AT46.description")}}</p>
               <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+                {{__("FlsModule::fls.MoreInfo")}} <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
             </div>
           </div>
         </button>
@@ -221,9 +221,9 @@
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Airbus A320</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="card-text">{{__("FlsModule::fls.aircraft.A320.description")}}</p>
               <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+                {{__("FlsModule::fls.MoreInfo")}} <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
             </div>
           </div>
         </button>
@@ -234,9 +234,9 @@
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Boeing 737-800</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="card-text">{{__("FlsModule::fls.aircraft.B738.description")}}</p>
               <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+                {{__("FlsModule::fls.MoreInfo")}} <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
             </div>
           </div>
         </button>
@@ -247,9 +247,9 @@
             <img src="{{asset('fls-theme/frontend/img/Airplanes/A320.png')}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Boeing 787</h5>
-              <p class="card-text">Mamarlon y el Capisite en Taiwan check.</p>
+              <p class="card-text">{{__("FlsModule::fls.aircraft.B789.description")}}</p>
               <p class="w-100 d-flex justify-content-between text-fls align-items-cente">
-                Mas informacion <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
+                {{__("FlsModule::fls.MoreInfo")}} <i class="fs-4 fa-solid fa-circle-chevron-right"></i></p>
             </div>
           </div>
         </button>

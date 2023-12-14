@@ -5,17 +5,18 @@
 @if(!$hubs->count())
 <div class="alert alert-info mb-1 p-1 px-2 fw-bold">No Hubs!</div>
 @else
-<div class="row row-cols-md-2 row-cols-lg-3 row-cols-xxl-4">
+<div class="row row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 pt-3">
   @foreach($hubs as $hub)
   <div class="col-md">
     <div class="card mb-2">
-      <div class="card-header p-1">
+      <div class="card-header p-1" style="background: #000a54;">
         <h5 class="m-1">
-          <a href="{{ route('FlsModule.hub', [$hub->id]) }}">{{ $hub->name }}</a>
+          <a class="text-white" href="{{ route('FlsModule.hub', [$hub->id]) }}">{{ $hub->name }}</a>
           <img class="img-h20 me-1 float-end"
             src="{{ public_asset('public\fls-theme\frontend\img\flags_new/'.strtolower($hub->country).'.png') }}"
             alt="{{strtolower($hub->country)}}">
-          <span class="float-end flag-icon flag-icon-{{ strtolower($hub->country) }}" style="font-size: 1.1rem;"></span>
+          {{-- <span class="float-end flag-icon flag-icon-{{ strtolower($hub->country) }}"
+            style="font-size: 1.1rem;"></span> --}}
         </h5>
       </div>
       <div class="card-body p-0 table-responsive">

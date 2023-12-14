@@ -3,9 +3,10 @@ return [
     // Custom
     'previousPage'  => "Previous Step",
     'nextPage'      => "Next Step",
-    'lenguage'      => "lenguage",
-    "spanish"       => "spanish",
+    'Language'      => "Language",
+    "spanish"       => "Spanish",
     "english"       => "English",
+    "MoreInfo"      => "More Info",
     // Landing Page
 
     'title' => "WE WANT YOU TO FLY WITH US!",

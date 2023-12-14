@@ -1,11 +1,11 @@
-<div class="card mb-2" style="border-color: #00157f;">
-  <div class="card-header p-1" style="background-color: #00157f; border-color: #00157f">
+<div class="card mb-2">
+  <div class="card-header p-1 dashboard-card-body">
     <h5 class="m-1 db-font-montbold text-white">
       {{ optional($pirep->airline)->code.' '.$pirep->flight_number }}
       {{ ' | '.optional($pirep->dpt_airport)->location.' > '.optional($pirep->arr_airport)->location }}
     </h5>
   </div>
-  <div class="card-body p-1" style="border-color: #00157f;">
+  <div class="card-body p-1">
     <div class="row">
       <div class="col-md-5 text-start">
           <i class="fas fa-plane-departure float-start m-1 blue-fls" title="Departure Airport"></i>
@@ -47,7 +47,7 @@
       </div>
     </div>
   </div>
-  <div class="card-footer bg-transparent p-1" style="border-color: #00157f;">
+  <div class="card-footer bg-transparent p-1">
     <div class="progress" style="height: 20px;">
       <div
         class="progress-bar-fls @if(blank($pirep->block_on_time)) progress-bar-striped progress-bar-animated @endif text-white db-font-montbold text-center"
@@ -57,16 +57,16 @@
       </div>
     </div>
   </div>
-  <div class="card-footer bg-transparent p-1" style="border-color: #00157f;">
+  <div class="card-footer bg-transparent p-1">
     <div class="row">
-      <div class="col text-start db-font-montbold text-black">
+      <div class="col text-start font-montbold">
         {!! DT_FlightType($pirep->flight_type, 'button') !!}
       </div>
-      <div class="col text-end db-font-montbold">
+      <div class="col text-end font-montbold">
         {!! DT_RouteCode($pirep->route_code, 'button') !!} {!! DT_RouteLeg($pirep->route_leg, 'button') !!}
       </div>
       @if(!$pirep->read_only && $user && $pirep->user_id === $user->id)
-        <div class="col-2 text-end db-font-montbold">
+        <div class="col-2 text-end font-montbold">
           <form method="post" action="{{ route('frontend.pireps.submit', $pirep->id) }}">
             @csrf
             <button class="btn btn-sm button-blue-fls text-white m-0 mx-1 p-0 px-1 float-end">@lang('common.submit')</button>

@@ -9,25 +9,25 @@ $AuthCheck = Auth::check();
 
 
 @section('content')
-<div class="row">
+<div class="row pt-3">
   {{-- LEFT --}}
   <div class="col-lg-8">
     @include('pireps.show_card')
 
-    <div class="card mb-2" style="border-color: #00157f;">
-      <div class="card-header p-1" style="background-color: #00157f;">
+    <div class="card mb-2">
+      <div class="card-header p-1 dashboard-card-body">
         {{-- Inner Navigation --}}
         <h5 class="m-1">
           <ul class="nav nav-tabs m-0 p-0 border-0" id="PirepTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active border-0 m-0 mx-1 p-0 px-1" id="map-tab" data-bs-toggle="tab"
+              <button class="active m-0 mx-1 p-1 button-blue-fls" id="map-tab" data-bs-toggle="tab"
                 data-bs-target="#map" type="button" role="tab" aria-controls="map" aria-selected="true">
                 Route Map
               </button>
             </li>
             @if($AuthCheck && $pirep->fields && $pirep->fields->count() > 0)
             <li class="nav-item" role="presentation">
-              <button class="nav-link border-0 m-0 mx-1 p-0 px-1" id="fields-tab" data-bs-toggle="tab"
+              <button class="m-0 mx-1 p-1 px-1 button-blue-fls" id="fields-tab" data-bs-toggle="tab"
                 data-bs-target="#fields" type="button" role="tab" aria-controls="details" aria-selected="false">
                 {{ trans_choice('common.pirep', 1).' '.trans_choice('common.field', 2) }}
               </button>
@@ -35,7 +35,7 @@ $AuthCheck = Auth::check();
             @endif
             @if($AuthCheck && $pirep->acars_logs && $pirep->acars_logs->count() > 0)
             <li class="nav-item" role="presentation">
-              <button class="nav-link border-0 m-0 mx-1 p-0 px-1" id="log-tab" data-bs-toggle="tab"
+              <button class="m-0 mx-1 p-1 px-1 button-blue-fls" id="log-tab" data-bs-toggle="tab"
                 data-bs-target="#log" type="button" role="tab" aria-controls="log" aria-selected="false">
                 @lang('pireps.flightlog')
               </button>
@@ -43,7 +43,7 @@ $AuthCheck = Auth::check();
             @endif
             @if($AuthCheck && $pirep->comments && $pirep->comments->count() > 0)
             <li class="nav-item" role="presentation">
-              <button class="nav-link border-0 m-0 mx-1 p-0 px-1" id="comments-tab" data-bs-toggle="tab"
+              <button class="m-0 mx-1 p-1 px-1 button-blue-fls" id="comments-tab" data-bs-toggle="tab"
                 data-bs-target="#comments" type="button" role="tab" aria-controls="comments" aria-selected="false">
                 Comments
               </button>
@@ -62,7 +62,7 @@ $AuthCheck = Auth::check();
           @if($AuthCheck && $pirep->fields && $pirep->fields->count() > 0 && $pirep->fields->count() <= 150) <div
             class="tab-pane fade overflow-auto" style="max-height: {{ $tab_height }};" id="fields" role="tabpanel"
             aria-labelledby="fields-tab">
-            <table class="table table-sm table-borderless table-striped text-nowrap align-middle mb-0">
+            <table class="table table-sm table-borderless text-nowrap align-middle mb-0">
               @foreach($pirep->fields as $field)
               <tr>
                 <td class="col-md-3">{{ $field->name }}</td>
@@ -75,7 +75,7 @@ $AuthCheck = Auth::check();
         @if($AuthCheck && $pirep->acars_logs && $pirep->acars_logs->count() > 0 && $pirep->acars_logs->count() <= 250)
           <div class="tab-pane fade overflow-auto" style="max-height: {{ $tab_height }};" id="log" role="tabpanel"
           aria-labelledby="logs-tab">
-          <table class="table table-sm table-borderless table-striped text-nowrap align-middle mb-0">
+          <table class="table table-sm table-borderless text-nowrap align-middle mb-0">
             @foreach($pirep->acars_logs->sortBy('created_at') as $log)
             <tr>
               <td class="col-md-3">{{ $log->created_at->format('d.M.Y H:i') }}</td>
@@ -87,7 +87,7 @@ $AuthCheck = Auth::check();
       @endif
       @if($AuthCheck && $pirep->comments->count() > 0)
       <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
-        <table class="table table-sm table-borderless table-striped text-nowrap align-middle mb-0">
+        <table class="table table-sm table-borderless text-nowrap align-middle mb-0">
           @foreach($pirep->comments as $comment)
           <tr>
             <td class="col-3">{{ $comment->created_at->format('d.M.Y H:i') }}</td>
@@ -99,7 +99,7 @@ $AuthCheck = Auth::check();
       @endif
     </div>
   </div>
-  <div class="card-footer p-1" style="background-color: transparent; border-color: #00157f;">
+  <div class="card-footer p-1 bg-transparent">
     @if(filled($pirep->route))
     {{ $pirep->dpt_airport_id.' '.$pirep->route }}
     @endif

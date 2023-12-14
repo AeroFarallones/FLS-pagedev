@@ -1,6 +1,6 @@
-<div class="card mb-2" style="border-color: #00157f;">
-  <div class="card-header p-1" style="background-color: #00157f;">
-    <h5 class="m-1 text-white">
+<div class="card mb-2">
+  <div class="card-header p-1 dashboard-card-body">
+    <h5 class="m-1">
       PIREP Details
     </h5>
   </div>
@@ -37,7 +37,7 @@
         </td>
       </tr>
     </table>
-    <hr class="my-1" style="height: 1px; border-color: #00157f;">
+    <hr class="my-1">
     <table class="table table-sm table-borderless align-middle mb-0">
       @if($AuthCheck)
       <tr>
@@ -104,7 +104,7 @@
       @endif
     </table>
   </div>
-  <div class="card-footer p-1 text-center" style="background-color: transparent; border-color: #00157f;">
+  <div class="card-footer p-1 text-center bg-transparent">
     <div class="float-start">
       {!! DT_PirepStatus($pirep) !!}
       {!! DT_PirepState($pirep) !!}
@@ -112,16 +112,16 @@
       @widget('FlsModule::StableApproach', ['pirep' => $pirep])
       @endif
       @if($pirep->comments->count() > 0)
-      <span class="badge bg-info text-black">Check Comments</span>
+      <span class="badge bg-info text-white">Check Comments</span>
       @endif
     </div>
     @if(!empty($pirep->simbrief))
     <div class="float-end">
-      <a class="badge bg-secondary text-black" href="{{ route('frontend.simbrief.briefing', $pirep->simbrief->id) }}"
+      <a class="badge bg-secondary text-white" href="{{ route('frontend.simbrief.briefing', $pirep->simbrief->id) }}"
         target="_blank">
         SimBrief Briefing
       </a>
-      <span type="button" class="badge bg-primary text-black" data-bs-toggle="modal" data-bs-target="#OFP_Modal">
+      <span type="button" class="badge bg-primary text-white" data-bs-toggle="modal" data-bs-target="#OFP_Modal">
         SimBrief OFP
       </span>
     </div>

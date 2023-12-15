@@ -1,6 +1,6 @@
 @extends('app')
 @section('title', __('common.dashboard'))
-
+@include('theme_helpers')
 @section('content')
 <div class="row pt-3">
   <div class="col-sm-8">
@@ -235,6 +235,7 @@
         </div>
       </div>
     </div>
+    @widget('FlsModule::FlightBoard')
   </div>
 </div>
 </div>

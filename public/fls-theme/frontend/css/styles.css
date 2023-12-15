@@ -258,6 +258,17 @@ button {
   margin-bottom: 1.5rem;
 }
 
+.align-self-center{
+  align-self: center!important;
+}
+
+.flight-row-pirep {
+  align-self: center;
+  min-width: 100%;
+  place-content: center;
+  margin-bottom: 0.25rem;
+}
+
 .dashboard-primary-text {
   color: white;
   text-align: center;

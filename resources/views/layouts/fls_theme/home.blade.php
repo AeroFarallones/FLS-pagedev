@@ -34,7 +34,7 @@
 {{--IVAO PARTNERSHIP CARDS--}}
 <div class="container-fluid d-grid w-100 h-100 p-5 gap-5" id="airline_card">
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
+    <div class="col" data-aos="zoom-in">
       <div class="card" style="background: #00157f">
         <div class="card-body h-100 d-flex flex-column align-items-center">
           <img src="{{asset('fls-theme/frontend/img/Logos/LogoBlancoMont.png')}}" width="30%" alt="">
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col" data-aos="zoom-in">
       <div class="card" style="background: #00157f">
         <div class="card-body h-100 d-flex flex-column align-items-center">
           <img src="{{asset('fls-theme/frontend/img/Logos/community.png')}}" width="30%" alt="">
@@ -50,7 +50,7 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col" data-aos="zoom-in">
       <div class="card" style="background: #00157f">
         <div class="card-body h-100 d-flex flex-column align-items-center">
           <img src="{{asset('fls-theme/frontend/img/Logos/IVAO_Partner.svg')}}" width="80%" alt="">
@@ -61,8 +61,10 @@
   </div>
 </div>
 
-{{-- STATS CARDS--}}
-<div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5" id="stats_card">
+
+<div style="height: 100px"></div>
+
+{{-- STATS CARDS--}} <div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5" id="stats_card">
   <div class="container" data-aos="fade-right">
     <h2 class="statistics__title">{{__('FlsModule::fls.statisticsTitle')}}...</h2>
   </div>
@@ -106,61 +108,61 @@
       </div>
       <div class="staffCard__item">
         <div class="staffCard__image">
-          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/marlon.jpg')}}" alt="staff_photo">
+          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/staff/JulianRamirez.png')}}" alt="staff_photo">
         </div>
         <div class="staffCard">
           <div class="staffCard__name"><span>Julian Ramirez</span></div>
           <div class="staffCard__position"><span>Co-CEO / Webmaster COO</span></div>
           <div class="staffCard__ivaoCard">
-            <img src="https://status.ivao.aero/653841.png" alt="">
+            <img src="https://status.ivao.aero/653841.png" alt="staff_badge">
           </div>
         </div>
       </div>
       <div class="staffCard__item">
         <div class="staffCard__image">
-          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/marlon.jpg')}}" alt="staff_photo">
+          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/staff/MartinSierra.png')}}" alt="staff_photo">
         </div>
         <div class="staffCard">
           <div class="staffCard__name"><span>Martin Sierra</span></div>
           <div class="staffCard__position"><span>Webmaster</span></div>
           <div class="staffCard__ivaoCard">
-            <img src="https://status.ivao.aero/653841.png" alt="">
+            <img src="https://status.ivao.aero/653841.png" alt="staff_badge">
           </div>
         </div>
       </div>
       <div class="staffCard__item">
         <div class="staffCard__image">
-          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/marlon.jpg')}}" alt="staff_photo">
+          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/Logos/BlueIcon.png')}}" alt="staff_photo">
         </div>
         <div class="staffCard">
           <div class="staffCard__name"><span>Alejandro Hurtado</span></div>
           <div class="staffCard__position"><span>Public Relations</span></div>
           <div class="staffCard__ivaoCard">
-            <img src="https://status.ivao.aero/653841.png" alt="">
+            <img src="https://status.ivao.aero/653841.png" alt="staff_badge">
           </div>
         </div>
       </div>
       <div class="staffCard__item">
         <div class="staffCard__image">
-          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/marlon.jpg')}}" alt="staff_photo">
+          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/Logos/BlueIcon.png')}}" alt="staff_photo">
         </div>
         <div class="staffCard">
           <div class="staffCard__name"><span>Juan Pablo</span></div>
           <div class="staffCard__position"><span>Director Operaciones</span></div>
           <div class="staffCard__ivaoCard">
-            <img src="https://status.ivao.aero/653841.png" alt="">
+            <img src="https://status.ivao.aero/653841.png" alt="staff_badge">
           </div>
         </div>
       </div>
       <div class="staffCard__item">
         <div class="staffCard__image">
-          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/marlon.jpg')}}" alt="staff_photo">
+          <img class="rounded-pill" src="{{asset('fls-theme/frontend/img/Logos/BlueIcon.png')}}" alt="staff_photo">
         </div>
         <div class="staffCard">
-          <div class="staffCard__name"><span>Julian Ramirez</span></div>
+          <div class="staffCard__name"><span>Angelo Acevedo</span></div>
           <div class="staffCard__position"><span>Webmaster</span></div>
           <div class="staffCard__ivaoCard">
-            <img src="https://status.ivao.aero/653841.png" alt="">
+            <img src="https://status.ivao.aero/653841.png" alt="staff_badge">
           </div>
         </div>
       </div>
@@ -170,7 +172,7 @@
 
 {{--CARDS FLEET--}}
 <div class="fleet_container container-fluid d-grid w-100 h-100 p-5 gap-5">
-  <div class="container" data-aos="fade-left">
+  <div class="container" data-aos="zoom-in-down">
     <h2 class="fleet__title font-montbold">{{__('flsmodule::fls.fleetTitle')}}</h2>
     <h3 class="fleet__subtitle">{{__('FlsModule::fls.fleetSubtitle')}}</h3>
   </div>

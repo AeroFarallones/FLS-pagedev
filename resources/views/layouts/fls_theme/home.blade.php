@@ -64,7 +64,8 @@
 
 <div style="height: 100px"></div>
 
-{{-- STATS CARDS--}} <div class="container-fluid d-grid w-100 justify-content-center p-md-5 h-100 align-items-center gap-5" id="stats_card">
+{{-- STATS CARDS--}} 
+<div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5" id="stats_card">
   <div class="container" data-aos="fade-right">
     <h2 class="statistics__title">{{__('FlsModule::fls.statisticsTitle')}}...</h2>
   </div>
@@ -87,7 +88,7 @@
 </div>
 
 {{-- STAFF --}}
-<div class="container-fluid justify-content-center d-grid w-100 p-md-5 h-100 align-items-center gap-5">
+<div class="container-fluid d-grid w-100 p-5 h-100 align-items-center gap-5">
   <div class="container" data-aos="fade-right">
     <h2 class="staff__title">{{__('FlsModule::fls.staffTitle')}}</h2>
   </div>

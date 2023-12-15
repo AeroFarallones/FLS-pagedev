@@ -10,11 +10,12 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "@turf/center": "^6.0.1",
     "acorn": "^7.4.1",
     "animate.css": "~3.6",
     "axios": "^0.21.1",
-    "bootstrap": "~4.3",
+    "bootstrap": "^5.3.2",
     "bootstrap-sass": "^3.4.1",
     "bootstrap3": "npm:bootstrap@~3.4",
     "ckeditor4": "4.14.0",
@@ -65,5 +66,15 @@
     "vue-template-compiler": "^2.6.12",
     "webpack-bundle-analyzer": "^3.9.0",
     "webpack-dev-server": "^4.10.0"
-  }
+  },
+  "name": "phpvms",
+  "description": "[![Build](https://github.com/nabeelio/phpvms/workflows/Build/badge.svg?branch=dev)](https://github.com/nabeelio/phpvms/actions) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d668bebb0a3c46bda381af16ce3d9450)](https://www.codacy.com/app/nabeelio/phpvms?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nabeelio/phpvms&amp;utm_campaign=Badge_Grade) [![Latest Stable Version](https://poser.pugx.org/nabeel/phpvms/v/stable)](https://packagist.org/packages/nabeel/phpvms) ![StyleCI](https://github.styleci.io/repos/93688482/shield?branch=dev) [![License](https://poser.pugx.org/nabeel/phpvms/license)](https://packagist.org/packages/nabeel/phpvms)",
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

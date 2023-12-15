@@ -8,4 +8,8 @@ return [
     'fileonenow'     => 'File one now.',
     'weatherat'      => 'Weather at :ICAO',
     'recentreports'  => 'Recent Reports',
+    'avglanding'    => 'Average Landing Rate',
+    'avgburntfuel'  => 'Average Burnt Fuel',
+    'avgscore'  => 'Average Score',
+    'avgflighttime' => 'Average Flight Time',
 ];

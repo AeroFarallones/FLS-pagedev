@@ -34,7 +34,7 @@ class DownloadController extends Controller
          * Group all the files but compound the model with the ID,
          * since we can have multiple files for every `ref_model`
          */
-        $grouped_files = $files->groupBy(fn ($item, $key) => $item['ref_model'].'_'.$item['ref_model_id']);
+        $grouped_files = $files->groupBy(fn ($item, $key) => $item['ref_model'] . '_' . $item['ref_model_id']);
 
         /**
          * The $group here looks like: App\Models\Airport_KAUS
@@ -53,15 +53,15 @@ class DownloadController extends Controller
                 $category = end($category);
 
                 if ($category == 'Aircraft' && $airlines > 1) {
-                    $group_name = $category.' > '.$obj->subfleet->airline->name.' '.$obj->icao.' '.$obj->registration;
+                    $group_name = $category . ' > ' . $obj->subfleet->airline->name . ' ' . $obj->icao . ' ' . $obj->registration;
                 } elseif ($category == 'Aircraft') {
-                    $group_name = $category.' > '.$obj->icao.' '.$obj->registration;
+                    $group_name = $category . ' > ' . $obj->icao . ' ' . $obj->registration;
                 } elseif ($category == 'Airport') {
-                    $group_name = $category.' > '.$obj->icao.' : '.$obj->name.' ('.$obj->country.')';
+                    $group_name = $category . ' > ' . $obj->icao . ' : ' . $obj->name . ' (' . $obj->country . ')';
                 } elseif ($category == 'Subfleet' && $airlines > 1) {
-                    $group_name = $category.' > '.$obj->airline->name.' '.$obj->name;
+                    $group_name = $category . ' > ' . $obj->airline->name . ' ' . $obj->name;
                 } else {
-                    $group_name = $category.' > '.$obj->name;
+                    $group_name = $category . ' > ' . $obj->name;
                 }
 
                 $regrouped_files[$group_name] = $files;

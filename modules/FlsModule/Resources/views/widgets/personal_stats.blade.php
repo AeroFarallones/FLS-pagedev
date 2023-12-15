@@ -1,13 +1,13 @@
 @if($visible === true)
   @if($config['disp'] === 'full')
-    <div class="card mb-2 text-center">
-      <div class="card-body p-2">
+  <div class="card mb-2 text-white dashboard-card h-100">
+    <div class="card-body text-center profile-card-body">
+      <h3 class="text-white font-montbold">
         {{ $pstat }}
-      </div>
-      <div class="card-footer p-0 small fw-bold">
-        {{ $sname.' '.$speriod }}
-      </div>
+      </h3>
+      <h6 class="header font-montbold dashboard-text-margin pb-3">{{ $sname.' '.$speriod }}</h6>
     </div>
+  </div>
   @else
     {{ $pstat }}
   @endif

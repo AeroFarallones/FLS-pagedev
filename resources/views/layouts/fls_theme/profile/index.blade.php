@@ -81,44 +81,44 @@ $AdminCheck = false;
           </div>
         </div>
       </div>
-      <div class="card-footer p-1 small fw-bold" style="background-color: transparent; border-color: #00157f;">
+      <div class="card-footer p-1 small fw-bold card-footer-fls">
         <span class="float-start">
 
-          <a class="blue-fls" href="{{ route('FlsModule.hub', [$user->home_airport_id ?? '']) }}">
+          <a href="{{ route('FlsModule.hub', [$user->home_airport_id ?? '']) }}">
 
             {{ optional($user->home_airport)->full_name ?? $user->home_airport_id }}
           </a>
         </span>
         <span class="float-end">
           @if(filled($user->discord_id))
-          <i class="fab fa-discord mx-1" @ability('admin', 'admin-access' ) title="{{ $user->discord_id }}"
-            @endability></i>
+          <i class="fab fa-discord mx-1 color-blue-fls" @ability('admin', 'admin-access' )
+            title="{{ $user->discord_id }}" @endability></i>
           @endif
           @if($user->opt_in)
-          <i class="fas fa-envelope mx-1 blue-fls" title="Receives emails"></i>
+          <i class="fas fa-envelope mx-1 color-blue-fls" title="Receives emails"></i>
           @endif
           @if(filled($user->timezone))
-          <i class="fas fa-user-clock mx-1 blue-fls" title="@lang('common.timezone'): {{ $user->timezone }}"></i>
+          <i class="fas fa-user-clock mx-1 color-blue-fls" title="@lang('common.timezone'): {{ $user->timezone }}"></i>
           @endif
-          <i class="fas fa-calendar-plus mx-1 blue-fls"
+          <i class="fas fa-calendar-plus mx-1 color-blue-fls"
             title="Member since {{ $user->created_at->format('l d.M.Y') }}"></i>
         </span>
       </div>
       {{-- Action Buttons --}}
       @if($user->id === $Auth_ID)
-      <div class="card-footer p-1" style="background-color: transparent; border-color: #000a54;">
+      <div class="card-footer p-1 card-footer-fls">
         @if(isset($acars) && $acars === true)
-        <a href="{{ route('frontend.profile.acars') }}" class="btn btn-sm button-blue-fls m-0 mx-1 p-0 px-2"
+        <a href="{{ route('frontend.profile.acars') }}" class="btn button-blue-fls m-0 mx-1 p-0 px-2"
           onclick="alert('Copy or Save to \'My Documents/phpVMS\'')">
           <i class="fas fa-file-download text-white" title="Download vmsAcars Config"></i>
         </a>
         @endif
-        <a href="{{ route('frontend.profile.regen_apikey') }}" class="btn btn-sm button-blue-fls m-0 mx-1 p-0 px-2"
+        <a href="{{ route('frontend.profile.regen_apikey') }}" class="btn button-blue-fls m-0 mx-1 p-0 px-2"
           onclick="return confirm('Are you sure? This will reset your API key!')">
           <i class="fas fa-key text-white" title="@lang('profile.newapikey')"></i>
         </a>
         <a href="{{ route('frontend.profile.edit', [$user->id]) }}"
-          class="btn btn-sm button-blue-fls m-0 mx-1 p-0 px-2">
+          class="btn button-blue-fls m-0 mx-1 p-0 px-2">
           <i class="fas fa-edit text-white" title="@lang('common.edit')"></i>
         </a>
         @if($user->flights > 0 && $user->id === Auth::id())
@@ -133,14 +133,14 @@ $AdminCheck = false;
     <ul class="nav nav-pills nav-fill mb-2" id="details-tab" role="tablist">
       @if($Auth_ID)
       <li class="nav-item mx-1" role="presentation">
-        <button class="nav-link p-0 px-1 db-font-montbold" id="profile-tab" data-bs-toggle="pill"
+        <button class="p-0 px-1 font-montbold button-blue-fls" id="profile-tab" data-bs-toggle="pill"
           data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">
           Profile Details</button>
       </li>
       @endif
       @if($user->typeratings->count() > 0)
       <li class="nav-item mx-1" role="presentation">
-        <button class="nav-link p-0 px-1 db-font-montbold" id="typeratings-tab" data-bs-toggle="pill"
+        <button class="p-0 px-1 font-montbold button-blue-fls" id="typeratings-tab" data-bs-toggle="pill"
           data-bs-target="#typeratings" type="button" role="tab" aria-controls="typeratingss" aria-selected="false">
           Type Ratings
         </button>
@@ -148,7 +148,7 @@ $AdminCheck = false;
       @endif
       @if(filled($user->awards))
       <li class="nav-item mx-1" role="presentation">
-        <button class="nav-link p-0 px-1 db-font-montbold" id="awards-tab" data-bs-toggle="pill"
+        <button class="p-0 px-1 font-montbold button-blue-fls" id="awards-tab" data-bs-toggle="pill"
           data-bs-target="#awards" type="button" role="tab" aria-controls="awards" aria-selected="false">
           Awards
         </button>
@@ -156,7 +156,7 @@ $AdminCheck = false;
       @endif
       @if($user->flights > 0)
       <li class="nav-item mx-1" role="presentation">
-        <button class="nav-link p-0 px-1 active db-font-montbold" id="stats-tab" data-bs-toggle="pill"
+        <button class="p-0 px-1 active font-montbold button-blue-fls" id="stats-tab" data-bs-toggle="pill"
           data-bs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="true">
           Statistics
         </button>
@@ -166,127 +166,111 @@ $AdminCheck = false;
   </div>
   {{-- Info Boxes --}}
   <div class="col-md-9">
-    <div class="row">
-      <div class="col-md-1 clearfix">
-      </div>
+    <div class="row justify-content-center">
       <div class="col-md-2">
         {{-- Current Airport --}}
-        <div class="card text-center mb-2" style="border-color: #00157f;">
-          <div class="card-body p-2">
-            @if(filled($user->curr_airport_id) || filled($user->home_airport_id))
-            <a class="db-font-montbold blue-fls"
-              href="{{-- route('frontend.airports.show', [$user->curr_airport_id ?? $user->home_airport_id]) --}}"
-              title="{{ optional($user->current_airport)->name ?? optional($user->home_airport)->name }}">
-              {{ $user->curr_airport_id ?? $user->home_airport_id }}
-            </a>
-            @else
-            --
-            @endif
-          </div>
-          <div class="card-footer p-0 small fw-bold blue-fls"
-            style="background-color: transparent; border-color: #000a54;">
-            Current Location
+        <div class="card card-primary text-white dashboard-card h-100">
+          <div class="card-body text-center profile-card-body">
+            <h3>
+              @if(filled($user->curr_airport_id) || filled($user->home_airport_id))
+              <a class="font-montbold a-fls text-white"
+                href="{{-- route('frontend.airports.show', [$user->curr_airport_id ?? $user->home_airport_id]) --}}"
+                title="{{ optional($user->current_airport)->name ?? optional($user->home_airport)->name }}">
+                {{ $user->curr_airport_id ?? $user->home_airport_id }}
+              </a>
+              @else
+              ---
+              @endif
+            </h3>
+            <h6 class="header font-montbold dashboard-text-margin pb-3">Current Location</h6>
           </div>
         </div>
       </div>
-
       <div class="col-md-2">
         {{-- Last Pirep --}}
-        <div class="card text-center mb-2" style="border-color: #00157f;">
-          <div class="card-body p-2 db-font-montbold blue-fls">
-            @if($user->last_pirep)
-            {{ $user->last_pirep->submitted_at->diffForHumans() }}
-            @else
-            --
-            @endif
-          </div>
-          <div class="card-footer p-0 small fw-bold blue-fls"
-            style="background-color: transparent; border-color: #000a54;">
-            Last Flight
+        <div class="card card-primary text-white dashboard-card h-100">
+          <div class="card-body text-center profile-card-body">
+            <h3 class="text-white font-montbold">
+              @if($user->last_pirep)
+              {{ $user->last_pirep->submitted_at->diffForHumans() }}
+              @else
+              ---
+              @endif
+            </h3>
+            <h6 class="header font-montbold dashboard-text-margin pb-3">Last Flight</h6>
           </div>
         </div>
       </div>
-
       <div class="col-md-2">
         {{-- Flights --}}
-        <div class="card text-center mb-2" style="border-color: #00157f;">
-          <div class="card-body p-2 db-font-montbold blue-fls">
-            {{ $user->flights }}
-          </div>
-          <div class="card-footer p-0 small fw-bold db-font-montbold blue-fls"
-            style="background-color: transparent; border-color: #000a54;">
-            Flights
+        <div class="card card-primary text-white dashboard-card h-100">
+          <div class="card-body text-center profile-card-body">
+            <h3 class="text-white font-montbold">
+              {{ $user->flights }}
+            </h3>
+            <h6 class="header font-montbold dashboard-text-margin pb-3">Flights</h6>
           </div>
         </div>
       </div>
-
       <div class="col-md-2">
         {{-- Flight Time --}}
-        <div class="card text-center mb-2" style="border-color: #000a54;">
-          <div class="card-body p-2 db-font-montbold blue-fls">
-            @minutestotime($user->flight_time)
-          </div>
-          <div class="card-footer p-0 small fw-bold db-font-montbold blue-fls"
-            style="background-color: transparent; border-color: #000a54;">
-            Flight Time
+        <div class="card card-primary text-white dashboard-card h-100">
+          <div class="card-body text-center profile-card-body">
+            <h3 class="text-white font-montbold">
+              @minutestotime($user->flight_time)
+            </h3>
+            <h6 class="header font-montbold dashboard-text-margin pb-3">Flight Time</h6>
           </div>
         </div>
       </div>
-
       <div class="col-md-2">
         {{-- Transfer Time --}}
         @if(setting('pilots.allow_transfer_hours') === true || filled($user->transfer_time))
-        <div class="card text-center mb-2" style="border-color: #00157f;">
-          <div class="card-body p-2 db-font-montbold blue-fls">
-            @minutestohours($user->transfer_time)h
-          </div>
-          <div class="card-footer p-0 small fw-bold db-font-montbold blue-fls"
-            style="background-color: transparent; border-color: #000a54;">
-            Transfer Time
+        <div class="card card-primary text-white dashboard-card h-100">
+          <div class="card-body text-center profile-card-body">
+            <h3 class="text-white font-montbold">
+              @minutestohours($user->transfer_time)h
+            </h3>
+            <h6 class="header font-montbold dashboard-text-margin pb-3">Transfer Time</h6>
           </div>
         </div>
         @endif
       </div>
-      <div class="col-md-1 clearfix">
-      </div>
     </div>
 
     @if($user->flights > 0)
-    <div class="row">
-      <div class="col-md-1 clearfix">
-      </div>
+    <div class="row justify-content-center pt-3">
       <div class="col-md-2">
         @widget('FlsModule::PersonalStats', ['disp' => 'full', 'user' => $user->id, 'type' => 'avgscore'])
       </div>
       <div class="col-md-2">
         {{-- User Balance and Last Transactions Display --}}
         @if($Auth_ID || $AdminCheck)
-        <div class="card text-center mb-2" style="border-color: #00157f;">
-          <div class="card-body p-2">
-            <a class="db-font-montbold blue-fls" href="#" data-bs-toggle="modal"
-              data-bs-target="#JournalModal">{{ $user->journal->balance }}</a>
-          </div>
-          <div class="card-footer p-0 small fw-bold blue-fls"
-            style="background-color: transparent; border-color: #000a54;">
-            Current Balance
+        <div class="card card-primary text-white dashboard-card h-100">
+          <div class="card-body text-center profile-card-body">
+            <h3 class="text-white font-montbold">
+              <a class="font-montbold text-white" href="#" data-bs-toggle="modal"
+                data-bs-target="#JournalModal">{{ $user->journal->balance }}</a>
+            </h3>
+            <h6 class="header font-montbold dashboard-text-margin pb-3">Current Balance</h6>
           </div>
         </div>
         {{-- Transaction Modal --}}
         <div class="modal fade" id="JournalModal" tabindex="-1" aria-labelledby="JournalModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg" style="border-color: #00157f;">
-            <div class="modal-content" style="border-color: #00157f; border-width: 3px;">
-              <div class="modal-header p-1" style="border-color: #00157f;">
-                <h5 class="modal-title db-font-montbold blue-fls" id="JournalModalLabel">Journal Transactions & Summary
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-radius-1rem">
+              <div class="modal-header p-1 px-3 profile-card-modal text-white">
+                <h5 class="modal-title" id="JournalModalLabel">Journal Transactions & Summary
                 </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body p-0">
                 <table class="table table-sm table-borderless mb-0 text-center">
                   <tr>
-                    <th class="text-start db-font-montbold blue-fls">Description / Memo</th>
-                    <th class="db-font-montbold blue-fls">Credit</th>
-                    <th class="db-font-montbold blue-fls">Debit</th>
-                    <th class="text-end db-font-montbold blue-fls">Date</th>
+                    <th class="text-start font-montbold color-blue-fls">Description / Memo</th>
+                    <th class="font-montbold color-blue-fls">Credit</th>
+                    <th class="font-montbold color-blue-fls">Debit</th>
+                    <th class="text-end font-montbold color-blue-fls">Date</th>
                   </tr>
                   @if($user->journal->transactions->count() > 0)
                   @foreach($user->journal->transactions->sortbyDesc('created_at')->take(15) as $record)
@@ -316,9 +300,9 @@ $AdminCheck = false;
                 </table>
                 <table class="table table-sm table-borderless mb-0 text-center">
                   <tr>
-                    <th class="db-font-montbold blue-fls">Total Credit</th>
-                    <th class="db-font-montbold blue-fls">Total Debit</th>
-                    <th class="db-font-montbold blue-fls">Current Balance</th>
+                    <th class="font-montbold color-blue-fls">Total Credit</th>
+                    <th class="font-montbold color-blue-fls">Total Debit</th>
+                    <th class="font-montbold color-blue-fls">Current Balance</th>
                   </tr>
                   <tr>
                     <td>{{ money($user->journal->transactions->sum('credit'), setting('units.currency')) }}</td>
@@ -327,8 +311,8 @@ $AdminCheck = false;
                   </tr>
                 </table>
               </div>
-              <div class="modal-footer p-1" style="border-color: #00157f;">
-                <button type="button" class="btn btn-sm button-blue-fls m-0 mx-1 p-0 px-1 text-white db-font-montbold"
+              <div class="modal-footer p-1 card-footer-fls">
+                <button type="button" class="btn button-blue-fls m-0 mx-1 p-0 px-1"
                   data-bs-dismiss="modal">Close</button>
               </div>
             </div>
@@ -350,9 +334,7 @@ $AdminCheck = false;
         @widget('FlsModule::PersonalStats', ['disp' => 'full', 'user' => $user->id, 'type' => 'avgdistance'])
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-1 clearfix">
-      </div>
+    <div class="row pt-3 justify-content-center">
       <div class="col-md-2">
         @widget('FlsModule::PersonalStats', ['disp' => 'full', 'user' => $user->id, 'type' => 'totdistance'])
       </div>
@@ -366,10 +348,10 @@ $AdminCheck = false;
     @endif
   </div>
 </div>
-<div class="row">
-  <div class="col-md-4 clearfix">
+<div class="row pt-3">
+  <div class="col-md-2 clearfix">
   </div>
-  <div class="col-md-8">
+  <div class="col-md-10 px-3">
     <div class="tab-content mt-2" id="details-tabContent">
       @if($Auth_ID)
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">

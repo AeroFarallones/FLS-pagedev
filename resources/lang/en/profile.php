@@ -18,4 +18,6 @@ return [
     'transferhours'   => 'Transferred Hours',
     'opt-in'          => 'Opt-In',
     'opt-in-descrip'  => 'Yes, include me on non-administrative emails',
+    'registered'      => 'Registered',
+    'status'          => 'Status',
 ];

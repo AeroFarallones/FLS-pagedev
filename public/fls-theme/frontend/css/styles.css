@@ -218,6 +218,27 @@ button {
   margin-bottom: 0;
 }
 
+.profile-card-body {
+  background-color: #00157f !important;
+  border-radius: inherit !important;
+  color: white !important;
+  padding: 2rem 0 0.5rem 0 !important;
+}
+
+.profile-card-modal {
+  background-color: #00157f !important;
+  border-radius: inherit !important;
+  color: white !important;
+}
+
+.border-radius-1rem {
+  border-radius: 1rem!important;
+}
+
+.justify-content-center {
+  justify-content: center!important;
+}
+
 .color-white {
   color: white;
 }

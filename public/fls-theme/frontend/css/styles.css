@@ -3,7 +3,7 @@ body {
 }
 a {
   text-decoration: none !important;
-  color: #00157f!important;
+  color: #00157f !important;
 }
 
 a:hover {
@@ -232,11 +232,11 @@ button {
 }
 
 .border-radius-1rem {
-  border-radius: 1rem!important;
+  border-radius: 1rem !important;
 }
 
 .justify-content-center {
-  justify-content: center!important;
+  justify-content: center !important;
 }
 
 .color-white {
@@ -258,8 +258,8 @@ button {
   margin-bottom: 1.5rem;
 }
 
-.align-self-center{
-  align-self: center!important;
+.align-self-center {
+  align-self: center !important;
 }
 
 .flight-row-pirep {
@@ -319,12 +319,12 @@ button {
 .button-blue-fls.active {
   background: #fd7e14 !important;
   color: white !important;
-  }
+}
 
 .button-blue-fls:focus {
   background: #fd7e14 !important;
   color: white !important;
-  }
+}
 
 .mw-4 {
   min-width: 4rem !important;
@@ -352,23 +352,23 @@ button {
 }
 
 .badge {
-  border-radius: 1rem!important;
+  border-radius: 1rem !important;
 }
 
 .bg-info {
-  background-color: #00157f!important;
+  background-color: #00157f !important;
 }
 
 .bg-secondary {
-  background-color: #00157f!important;
+  background-color: #00157f !important;
 }
 
 .bg-success {
-  background-color: green!important;
+  background-color: green !important;
 }
 
 .bg-danger {
-  background-color: red!important;
+  background-color: red !important;
 }
 
 .m1 {
@@ -385,7 +385,7 @@ button {
 }
 
 .profile-border-radius {
-  border-radius: 50%!important;
+  border-radius: 50% !important;
 }
 
 #footeri {

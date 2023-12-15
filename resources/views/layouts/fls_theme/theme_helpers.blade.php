@@ -395,7 +395,7 @@
       if ($state === PirepState::IN_PROGRESS || $state === PirepState::DRAFT) {
         $color = 'info';
       } elseif ($state === PirepState::PENDING) {
-        $color = 'secondary';
+        $color = 'primary';
       } elseif ($state === PirepState::ACCEPTED) {
         $color = 'success';
       } elseif ($state === PirepState::CANCELLED || $state === PirepState::DELETED || $state === PirepState::REJECTED) {
